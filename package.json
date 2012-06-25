@@ -1,0 +1,19 @@
+{
+  "name": "simpleportal",
+  "keywords": ["simple", "portal"],
+  "description": "Minimal packages needed for a simple portal, part of Simple mobile portal",
+  "version": "0.1.0",
+  "author": "Faisal Kpttarathil <faisalk08@gmail.com>",
+  "directories" : {
+    "lib" : "./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/faisalk08/simpleportal.git"
+  },
+  "homepage": "https://github.com/faisalk08/simpleportal",
+  "main": "./lib/simpleportal.js",
+  "engines": { "node": ">= 0.4.0" },
+  "dependencies" : { "mustache": ">= 0.3.0", "connect": "= 1.8.7" , "dispatch":"", "mongodb":"", "oauth" : ""},
+  "licenses": [ { "type": "MIT" } ]
+}
