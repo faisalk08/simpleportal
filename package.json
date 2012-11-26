@@ -2,7 +2,7 @@
   "name": "simpleportal",
   "keywords": ["simple", "portal"],
   "description": "Minimal packages needed for a simple portal, part of Simple mobile portal",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "author": "Faisal Kottarathil <faisalk08@gmail.com>",
   "directories" : {
     "lib" : "./lib"
