@@ -10,7 +10,7 @@
         "selleck": "true",
         "ignorePaths": [ "node_modules" , "./default_/*"],
         "paths": "lib",
-        "outdir": "./docs",
+        "outdir": "./doc",
         "themedir": "node_modules/yuidoc-bootstrap-theme",
         "helpers": ["node_modules/yuidoc-bootstrap-theme/helpers/helpers.js"]
     }
