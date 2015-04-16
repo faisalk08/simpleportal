@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/serviceloader.js - Simpleportal</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="Simpleportal" src="../../../default_/resources/public/simpleportal/favicon.ico" style="max-height: 65%;" title="Simpleportal">
+            Simpleportal
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/Csvparser", "classes/db", "classes/DBPool", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/simpleportal.Csv", "classes/simpleportal.CsvReader", "classes/simpleportal.DispatchWrapper", "classes/simpleportal.Template", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/Base64.html">Base64</a></li>
+	                            <li><a href="../classes/configuration.html">configuration</a></li>
+	                            <li><a href="../classes/CRUDService.html">CRUDService</a></li>
+	                            <li><a href="../classes/Csvparser.html">Csvparser</a></li>
+	                            <li><a href="../classes/db.html">db</a></li>
+	                            <li><a href="../classes/DBPool.html">DBPool</a></li>
+	                            <li><a href="../classes/Encryption.html">Encryption</a></li>
+	                            <li><a href="../classes/filterloader.html">filterloader</a></li>
+	                            <li><a href="../classes/LocalCache.html">LocalCache</a></li>
+	                            <li><a href="../classes/Logger.html">Logger</a></li>
+	                            <li><a href="../classes/logger.html">logger</a></li>
+	                            <li><a href="../classes/notificationcenter.html">notificationcenter</a></li>
+	                            <li><a href="../classes/oauth.html">oauth</a></li>
+	                            <li><a href="../classes/pluginloader.html">pluginloader</a></li>
+	                            <li><a href="../classes/PluginUtil.html">PluginUtil</a></li>
+	                            <li><a href="../classes/Response.html">Response</a></li>
+	                            <li><a href="../classes/Restfulmongo.html">Restfulmongo</a></li>
+	                            <li><a href="../classes/router.html">router</a></li>
+	                            <li><a href="../classes/Server.html">Server</a></li>
+	                            <li><a href="../classes/Service.CRUDService.html">Service.CRUDService</a></li>
+	                            <li><a href="../classes/Service.RemoteService.html">Service.RemoteService</a></li>
+	                            <li><a href="../classes/Service.StorageService.html">Service.StorageService</a></li>
+	                            <li><a href="../classes/serviceloader.html">serviceloader</a></li>
+	                            <li><a href="../classes/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../classes/simpleportal.Csv.html">simpleportal.Csv</a></li>
+	                            <li><a href="../classes/simpleportal.CsvReader.html">simpleportal.CsvReader</a></li>
+	                            <li><a href="../classes/simpleportal.DispatchWrapper.html">simpleportal.DispatchWrapper</a></li>
+	                            <li><a href="../classes/simpleportal.Template.html">simpleportal.Template</a></li>
+	                            <li><a href="../classes/SimplePortalOAuth.html">SimplePortalOAuth</a></li>
+	                            <li><a href="../classes/startuploader.html">startuploader</a></li>
+	                            <li><a href="../classes/template.html">template</a></li>
+	                            <li><a href="../classes/util.html">util</a></li>
+	                            <li><a href="../classes/viewloader.html">viewloader</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/middleware.html">middleware</a></li>
+	                            <li><a href="../modules/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../modules/util.html">util</a></li>
+	                            <li><a href="../modules/wrapper.html">wrapper</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>lib/serviceloader.js <small>File</small></h1>
+                        </div>
+                        
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        /**
+                         * Service | API loader middleware for &#x60;simpleportal.Server&#x60;
+                         *
+                         * @property serviceloader
+                         * @for simpleportal
+                         * @type {serviceloader}
+                         * @static
+                         */
+                        
+                        /**
+                         * Service | API loader middleware for &#x60;simpleportal.Server&#x60;
+                         * 
+                         * @class serviceloader
+                         * @module middleware
+                         */
+                        var ServiceLoader = module.exports = {};
+                        
+                        var fs = require(&#x27;fs&#x27;);
+                        
+                        var simpleportal = require(&#x27;./simpleportal&#x27;);
+                        var util = require(&#x27;./util&#x27;);
+                        var logger = require(&quot;./logger&quot;);
+                        
+                        var router = require(&#x27;./router&#x27;);
+                        
+                        ServiceLoader.serviceUrl = &#x27;/api&#x27;;
+                        ServiceLoader.servicedir = &#x27;api&#x27;;
+                        
+                        /**
+                         * Description
+                         * @method registerService
+                         * @param {} file
+                         * @param {} configuration
+                         * @param {} dbInstance
+                         * @param {} callback
+                         * @return 
+                         */
+                        function registerService(file, configuration, dbInstance, callback){
+                        	logger.getInstance().info(&#x27;Simple Portal : serviceloader&#x27;, &#x27;registerService  -- &#x27; + file);
+                        	
+                        	if( fs.existsSync(file) &amp;&amp; /\.js$/.test(file)){
+                        		var path = fs.realpathSync(file);
+                        		
+                        		var startindex=0;
+                        		
+                        		if(file.lastIndexOf(&#x27;/&#x27;) &gt;= 0)
+                        			startindex=file.lastIndexOf(&#x27;/&#x27;)+1;
+                        		
+                        		var name = file.substring(startindex, file.lastIndexOf(&#x27;.js&#x27;));
+                        		
+                                var service = name;
+                                
+                                if(name == &#x27;index&#x27;){
+                                	service = file.substring(file.lastIndexOf(&#x27;/&#x27;) +1, (file.length-1))
+                                }
+                                
+                                if(ServiceLoader[service]){
+                                	callback(&#x27;Service - &#x27; +service+ &#x27; already registered&#x27;);
+                                }else{
+                                	ServiceLoader.__defineGetter__(service, function(){
+                                        return require(path);
+                                    });
+                                    
+                                    ServiceLoader.updateServiceRouter(ServiceLoader[service], configuration, dbInstance);
+                                    
+                                    callback();
+                                }
+                        	}else
+                        		callback(&#x27;No such service file found - &#x27; + file);
+                        }
+                        
+                        /**
+                         * Description
+                         * @method getServices
+                         * @param {} dir
+                         * @param {} includeindex
+                         * @return services
+                         */
+                        function getServices(dir, includeindex){
+                        	includeindex = includeindex||false;
+                        	var services = [];
+                        	
+                        	if(fs.existsSync(dir)){
+                        		fs.readdirSync(dir).forEach(function(filename){
+                        		    if (/\.js$/.test(filename)) {
+                        	            if((includeindex &amp;&amp; filename == &#x27;index.js&#x27;) || filename != &#x27;index.js&#x27;){
+                        	                var name = filename.substr(0, filename.lastIndexOf(&#x27;.&#x27;));
+                        	                var service = name;
+                        	                if(name == &#x27;index&#x27;){
+                        	                	service = dir.substring(dir.lastIndexOf(&#x27;/&#x27;) +1, dir.length)
+                        	                }
+                        	                var path = fs.realpathSync(dir + &#x27;/&#x27; + name + &#x27;.js&#x27;);
+                        	                
+                        	                services.push({path:path, name:service});
+                        	            }
+                        		    }else{
+                        		    	stats = fs.lstatSync(dir + &#x27;/&#x27; + filename);
+                        
+                        			    // Is it a directory?
+                        			    if (stats.isDirectory()&amp;&amp;!(filename==&#x27;html5&#x27;||filename==&#x27;lib&#x27;||filename==&#x27;util&#x27;||filename==&#x27;models&#x27;||filename==&#x27;views&#x27;)) {
+                        			    	var subservices = getServices(dir + &#x27;/&#x27; + filename, true);
+                        			    	if(subservices.length &gt; 0)
+                        			    		for(var i in subservices)
+                        			    			services.push(subservices[i]);
+                        			    }
+                        		    }
+                        		});	
+                        	}
+                        	
+                        	return services;
+                        }
+                        
+                        /**
+                         * Description
+                         * @method loadService____
+                         * @param {} servicprops
+                         * @return 
+                         */
+                        function loadService____(servicprops){
+                        	logger.getInstance().info(&#x27;Simple Portal -ServiceLoader&#x27;, &#x27;loadService____  -- &#x27; + servicprops.name);
+                        	
+                        	if(!ServiceLoader[servicprops.name]){
+                        		ServiceLoader.__defineGetter__(servicprops.name, function(){
+                                    return require(servicprops.path);
+                                });
+                        	}
+                        }
+                        
+                        /**
+                         * Description
+                         * @method unLoadServices
+                         * @param {} dir
+                         * @param {} includeindex
+                         * @param {} callback
+                         * @return 
+                         */
+                        function unLoadServices(dir, includeindex, callback){
+                        	var servicesfound = getServices(dir, includeindex);
+                        	
+                        	var totcount = servicesfound.length;
+                        	var fincount =0;
+                        	if(servicesfound)
+                        		for(var i in servicesfound){
+                        			var servicprops =servicesfound[i];
+                        			delete ServiceLoader[servicprops.name];
+                        		}
+                        	
+                        	if(callback)
+                        		callback();
+                        }
+                        
+                        /**
+                         * Description
+                         * @method loadServices
+                         * @param {} dir
+                         * @param {} includeindex
+                         * @param {} callback
+                         * @return 
+                         */
+                        function loadServices(dir, includeindex, callback){
+                        	var servicesfound = getServices(dir, includeindex);
+                        	
+                        	var totcount = servicesfound.length;
+                        	var fincount =0;
+                        	if(servicesfound)
+                        		for(var i in servicesfound){
+                        			var servicprops =servicesfound[i];
+                        			loadService____(servicprops);
+                        			
+                        			if(totcount-1 == fincount++)
+                        				if(callback)
+                        					callback();
+                        		}
+                        	else if(callback)
+                        		callback();
+                        }
+                        
+                        /**
+                         * Description
+                         * @method loadServices
+                         * @param {} configuration
+                         * @param {} callback
+                         * @return 
+                         */
+                        ServiceLoader.loadServices = function(configuration, callback){
+                        	var servicedir_ = configuration&amp;&amp;configuration.servicedir ?  configuration.servicedir : ServiceLoader.servicedir;
+                        	logger.getInstance().info(&#x27;Simple Portal : serviceloader&#x27;, &#x27;loadServices  -- &#x27; + servicedir_);
+                        	
+                        	if(!fs.existsSync(servicedir_)){
+                        		if(callback)
+                        			callback();	
+                        	}else{
+                        		var stats = fs.lstatSync(servicedir_);
+                        		if (stats.isDirectory()) {
+                        			if(ServiceLoader.configuration&amp;&amp;ServiceLoader.configuration.services&amp;&amp;configuration&amp;&amp;configuration.services){
+                        				simpleportal.util.extendJSON(ServiceLoader.configuration.services, configuration.services);
+                        			}
+                        			
+                        			loadServices(servicedir_, false, callback);
+                        		}else if(callback)
+                        			callback();	
+                        	}
+                        }
+                        
+                        /**
+                         * Description
+                         * @method unLoadServices
+                         * @param {} configuration
+                         * @param {} callback
+                         * @return 
+                         */
+                        ServiceLoader.unLoadServices = function(configuration, callback){
+                        	var servicedir_ = configuration&amp;&amp;configuration.servicedir ?  configuration.servicedir : ServiceLoader.servicedir;
+                        	logger.getInstance().info(&#x27;Simple Portal : serviceloader&#x27;, &#x27;loadServices  -- &#x27; + servicedir_);
+                        	if(!fs.existsSync(servicedir_)){
+                        		if(callback)
+                        			callback();	
+                        	}else{
+                        		var stats = fs.lstatSync(servicedir_);
+                        		if (stats.isDirectory()) {
+                        			unLoadServices(servicedir_, false, callback);
+                        		}else if(callback)
+                        			callback();
+                        	}
+                        }
+                        
+                        ServiceLoader.services={};
+                        ServiceLoader.services.service={};
+                        
+                        /**
+                         * Description
+                         * @method getServiceDetails
+                         * @param {} servicename
+                         * @return servicedetails
+                         */
+                        function getServiceDetails(servicename){
+                        	var servicedetails;
+                        	if(typeof ServiceLoader[servicename] == &#x27;string&#x27; || typeof ServiceLoader[servicename] == &#x27;function&#x27;){
+                        	} else {
+                        		var service_=ServiceLoader[servicename];
+                        		var childServices = service_.service;
+                        		if(childServices&amp;&amp;servicename !=&#x27;services&#x27;){
+                        			var serviceparams=service_;
+                        			
+                        			var urlservices=[];
+                        			if (serviceparams.service) {
+                        				for(var key in serviceparams.service){
+                        					var keyparts =key.split(&#x27;/&#x27;);
+                        					var method = &#x27;GET&#x27;;
+                        					var uri = &#x27;/&#x27;;
+                        					
+                        					if(keyparts.length &gt; 1)
+                        						method = keyparts[0].trim();
+                        					
+                        					if(keyparts.length &gt; 1)
+                        						uri = key.substring(method.length +1, key.length).trim();
+                        					
+                        					urlservices.push({method:method, uri:uri});
+                        					
+                        					servicedetails={
+                        						primaryKey:serviceparams.primaryKey,
+                        						primaryKeyFields:serviceparams.primaryKeyFields,
+                        						remoteservice:serviceparams.remoteservice,
+                        						modify:serviceparams.modify,
+                        						dbid:serviceparams.dbid, 
+                        						collection:serviceparams.collection, 
+                        						name:serviceparams.name, 
+                        						model:serviceparams.model, 
+                        						services:urlservices, 
+                        						configuration:serviceparams.configuration
+                        					};
+                        				}
+                        			}
+                        		}
+                        	}
+                        	
+                        	return servicedetails;
+                        }
+                        
+                        ServiceLoader.services.service[&#x27;POST /&#x27;] = function(request, response, callback){
+                        	console.log(request.body);
+                        	callback(&#x27;No function to upload the service!!&#x27;);
+                        }
+                        
+                        ServiceLoader.services.service[&#x27;POST /:id/register&#x27;] = function(request, response, callback){
+                        	if(request.user.role&amp;&amp;request.user.role==&#x27;superadmin&#x27;)
+                        		registerService(servicedir+ &#x27;/&#x27; + request.pathGroup + &#x27;.js&#x27;, ServiceLoader.configuration, ServiceLoader.dbInstance, function(error){
+                        			if(!error)
+                        				callback(error, &#x27;Your service - &#x27;+ request.pathGroup  + &#x27;registered successfully&#x27;);
+                        			else
+                        				callback(error);
+                        		});
+                        	else
+                        		callback(&#x27;Permission denied&#x27;);
+                        }
+                        
+                        ServiceLoader.services.service[&#x27;GET /:id&#x27;] = function(request, response, callback){
+                        	if(request.user.role&amp;&amp;request.user.role==&#x27;superadmin&#x27;)
+                        		callback(null, getServiceDetails(request.pathGroup))
+                        	else
+                        		callback(&#x27;Permission denied&#x27;);
+                        }
+                        
+                        ServiceLoader.services.service[&#x27;GET /&#x27;] = function(request, response, callback){
+                        	if(request.user.role&amp;&amp;request.user.role==&#x27;superadmin&#x27;){
+                        		var result =[];
+                        		for(var subModule in ServiceLoader){
+                        			var details = getServiceDetails(subModule);
+                        			if(details)
+                        				result.push(details);
+                        		}
+                        		callback(null, result);
+                        	} else
+                        		callback(&#x27;Permission denied&#x27;);
+                        };
+                        
+                        /**
+                         * Function called after Simpleportal server init 
+                         * 
+                         * @method initRouter
+                         * 
+                         * @param {} router
+                         * @param {} callback
+                         */
+                        ServiceLoader.initRouter = function(router, callback){
+                        	logger.getInstance().info(&#x27;Simple Portal - ServiceLoader&#x27;, &#x27;############################## ------- Initializing service routers ---------- ##############################&#x27;);
+                            
+                        	router.dispatch.addServiceHandlers(ServiceLoader, ServiceLoader.serviceUrl, ServiceLoader.call);
+                        	router.dispatch.addServiceGlobalHandlers(ServiceLoader, ServiceLoader.serviceUrl, ServiceLoader.call);
+                        	
+                        	if(callback)
+                        		callback();
+                        }
+                        
+                        /**
+                         * Description
+                         * @method updateServiceRouter
+                         * @param {} service
+                         * @param {} configuration
+                         * @param {} dbInstance
+                         * @return 
+                         */
+                        ServiceLoader.updateServiceRouter = function(service, configuration, dbInstance){
+                        	logger.getInstance().info(&#x27;Simple Portal -ServiceLoader&#x27;, &#x27;Updating the Service routers &#x27;);
+                        
+                        	//service.init(configuration, dbInstance);
+                        	//service.startup();
+                        	
+                        	if(ServiceLoader.configuration&amp;&amp;ServiceLoader.configuration.services&amp;&amp;configuration&amp;&amp;configuration.services){
+                        		simpleportal.util.extendJSON(ServiceLoader.configuration.services, configuration.services);
+                        	}
+                        	
+                        	//var serviceurl = ServiceLoader.serviceUrl;
+                            	
+                        	//router.dispatch.addServiceHandlers(service, serviceurl, ServiceLoader.call);
+                        	//router.dispatch.addServiceGlobalHandlers(service, serviceurl, ServiceLoader.call);
+                        }
+                        
+                        /**
+                         * Description
+                         * @method call
+                         * @param {} service
+                         * @param {} method
+                         * @param {} request
+                         * @param {} response
+                         * @param {} next
+                         * @return 
+                         */
+                        ServiceLoader.call = function(service, method, request, response, next){
+                        	if(!ServiceLoader[service])
+                        		if(next)
+                        			next();
+                        		else{
+                        			util.sendServiceResponse(response, &#x27;Service Not found&#x27;, {});
+                        			return;
+                        		}
+                        	else{
+                        		var caller = ServiceLoader[service].service[method];
+                        		if(!caller)
+                        			if(next)
+                        				next();
+                        			else{
+                        				util.sendServiceResponse(response, &#x27;Service Not found&#x27;, {});
+                        				return;
+                        			}
+                        			//for (caller in ServiceLoader[service].service) break;
+                        		else{
+                        			if(typeof caller == &#x27;string&#x27;)
+                        				caller = ServiceLoader[service].service[caller];
+                        			
+                        			if(caller){
+                        				logger.getInstance().info(&#x27;Simple Portal -ServiceLoader&#x27;, &#x27;Request for service - &#x27;+ service + &#x27; method - &#x27;+ method +&#x27; -- is made&#x27;);
+                        				
+                        				caller(request, response, function(error, results, headers){
+                        					util.sendServiceResponse(response, error, results, headers);
+                        				});
+                        			}else
+                        				util.sendServiceResponse(response, &#x27;Service Not found&#x27;, {});
+                        		}
+                        	}
+                        }
+                        
+                        /**
+                         * Description
+                         * @method updateConfiguration
+                         * @param {} configuration
+                         * @return 
+                         */
+                        ServiceLoader.updateConfiguration=function(configuration){
+                        	ServiceLoader.configuration=configuration;
+                        }
+                        
+                        /**
+                         * To register services 
+                         * 
+                         * @method __registerServices
+                         * 
+                         * @param {} servicedir
+                         * @param {} services
+                         * @param {} configuration
+                         * @param {} callback
+                         * 
+                         * @private
+                         */
+                        __registerServices=function(servicedir, services, configuration, callback){
+                        	var __registerServices_count = services.length;
+                        	var __registerServices_fincount =0;
+                        	
+                        	for(var i in services)
+                        		registerService(services[i], configuration, ServiceLoader.dbInstance, function(error){
+                        			if(error)
+                        				errors.push(error);
+                        			
+                        			if( __registerServices_fincount++ == __registerServices_count-1 )
+                        				callback(errors);
+                        		});
+                        }
+                        
+                        /**
+                         * Description
+                         * @method registerServices
+                         * @param {} servicedir
+                         * @param {} configuration
+                         * @param {} callback
+                         * @return 
+                         */
+                        ServiceLoader.registerServices=function(servicedir, configuration, callback){
+                        	logger.getInstance().info(&#x27;Simple Portal : serviceloader&#x27;, &#x27;registerServices  -- &#x27; + servicedir);
+                        	
+                        	if(fs.readdirSync(servicedir).length == 0)
+                        		callback();
+                        	else{
+                        		var services_ = 
+                        		fs.readdirSync(servicedir).forEach(function(filename){
+                        			if(/\.js$/.test(filename)){
+                        				services_.push(servicedir+ &#x27;/&#x27; + services[i]);
+                        			}
+                        		});
+                        		
+                        		__registerServices(services_, configuration, callback);
+                        	}
+                        };
+                        
+                        new simpleportal.CRUDService({service:ServiceLoader, modify:true, collection:&#x27;service&#x27;, userrole:&#x27;superadmin&#x27;});
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

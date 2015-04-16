@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/wrapper/template.js - Simpleportal</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="Simpleportal" src="../../../default_/resources/public/simpleportal/favicon.ico" style="max-height: 65%;" title="Simpleportal">
+            Simpleportal
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/Csvparser", "classes/db", "classes/DBPool", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/simpleportal.Csv", "classes/simpleportal.CsvReader", "classes/simpleportal.DispatchWrapper", "classes/simpleportal.Template", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/Base64.html">Base64</a></li>
+	                            <li><a href="../classes/configuration.html">configuration</a></li>
+	                            <li><a href="../classes/CRUDService.html">CRUDService</a></li>
+	                            <li><a href="../classes/Csvparser.html">Csvparser</a></li>
+	                            <li><a href="../classes/db.html">db</a></li>
+	                            <li><a href="../classes/DBPool.html">DBPool</a></li>
+	                            <li><a href="../classes/Encryption.html">Encryption</a></li>
+	                            <li><a href="../classes/filterloader.html">filterloader</a></li>
+	                            <li><a href="../classes/LocalCache.html">LocalCache</a></li>
+	                            <li><a href="../classes/Logger.html">Logger</a></li>
+	                            <li><a href="../classes/logger.html">logger</a></li>
+	                            <li><a href="../classes/notificationcenter.html">notificationcenter</a></li>
+	                            <li><a href="../classes/oauth.html">oauth</a></li>
+	                            <li><a href="../classes/pluginloader.html">pluginloader</a></li>
+	                            <li><a href="../classes/PluginUtil.html">PluginUtil</a></li>
+	                            <li><a href="../classes/Response.html">Response</a></li>
+	                            <li><a href="../classes/Restfulmongo.html">Restfulmongo</a></li>
+	                            <li><a href="../classes/router.html">router</a></li>
+	                            <li><a href="../classes/Server.html">Server</a></li>
+	                            <li><a href="../classes/Service.CRUDService.html">Service.CRUDService</a></li>
+	                            <li><a href="../classes/Service.RemoteService.html">Service.RemoteService</a></li>
+	                            <li><a href="../classes/Service.StorageService.html">Service.StorageService</a></li>
+	                            <li><a href="../classes/serviceloader.html">serviceloader</a></li>
+	                            <li><a href="../classes/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../classes/simpleportal.Csv.html">simpleportal.Csv</a></li>
+	                            <li><a href="../classes/simpleportal.CsvReader.html">simpleportal.CsvReader</a></li>
+	                            <li><a href="../classes/simpleportal.DispatchWrapper.html">simpleportal.DispatchWrapper</a></li>
+	                            <li><a href="../classes/simpleportal.Template.html">simpleportal.Template</a></li>
+	                            <li><a href="../classes/SimplePortalOAuth.html">SimplePortalOAuth</a></li>
+	                            <li><a href="../classes/startuploader.html">startuploader</a></li>
+	                            <li><a href="../classes/template.html">template</a></li>
+	                            <li><a href="../classes/util.html">util</a></li>
+	                            <li><a href="../classes/viewloader.html">viewloader</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/middleware.html">middleware</a></li>
+	                            <li><a href="../modules/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../modules/util.html">util</a></li>
+	                            <li><a href="../modules/wrapper.html">wrapper</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>lib/wrapper/template.js <small>File</small></h1>
+                        </div>
+                        
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        var fs = require(&quot;fs&quot;);
+                        
+                        var simpleportal = require(&#x27;simpleportal&#x27;);
+                        
+                        var Template = 
+                        /**
+                          * @class simpleportal.Template
+                          * @module simpleportal
+                          * @submodule wrapper
+                          * 
+                          * @constructor
+                          * 
+                          * @param {} options
+                          */
+                         module.exports = function Template(options) {
+                        	var instance = this;
+                        	
+                        	instance.file = options.file;
+                        	instance.data = options.data||{};
+                        	
+                        	instance.html=&#x27;&#x27;;
+                        	instance.templateBody=&#x27;&#x27;;
+                        	instance.partials=&#x27;&#x27;;
+                        	instance.error=[];
+                        	instance.exception=options.exception||instance.data.exception;
+                        	instance.engine = options.engine;
+                        }
+                        
+                        /**
+                         * @property ENGINES
+                         * @type array
+                         */
+                        Template.ENGINES = {
+                        	&#x27;ejs&#x27;:  &#x27;ejs&#x27;,
+                        	&#x27;mustache&#x27;:   &#x27;mustache&#x27;
+                        };
+                        
+                        /**
+                         * @property EXCEPTION_TEMPLATE_FILE
+                         * @type string
+                         */
+                        Template.EXCEPTION_TEMPLATE_FILE = &#x27;./default_/resources/templates/exception.ejs&#x27;; 
+                        
+                        /**
+                         * @property EXCEPTION_TEMPLATE
+                         * @type string
+                         */
+                        Template.EXCEPTION_TEMPLATE = &#x27;&lt;div&gt;&lt;%if (loginRequired){%&gt;&lt;a rel=&quot;external&quot; href=&quot;/oauth/login&quot;&gt;Login Required please Login&lt;/a&gt;&lt;%} %&gt;&lt;/div&gt;&#x27;;
+                        
+                        /**
+                         * To get the template engin
+                         * 
+                         * @method templateEngine
+                         * 
+                         * @return engine Template engine
+                         */
+                        Template.prototype.templateEngine = function(){
+                        	var instance = this;
+                        	if(instance.engine)
+                        		return Template.ENGINES[instance.engine];
+                        	
+                        	var file = instance.file;
+                        	var tmp     = file.lastIndexOf(&quot;.&quot;);
+                            var ext     = file.substring((tmp + 1));
+                            var engine    = Template.ENGINES[ext];
+                            
+                            var file = instance.file||Template.ERROR_FILE;
+                            
+                            return engine;
+                        }
+                        
+                        /**
+                         * To render formatted html file in to the http response
+                         * 
+                         * @method render
+                         * @param {} response http response
+                         * @param {callback} callback The callback to excecute when complete 
+                         */
+                        Template.prototype.render = function(response, callback){
+                        	var instance = this;
+                        	if(typeof response == &#x27;function&#x27;)
+                        		callback = response;
+                        	
+                        	if(instance.error &amp;&amp; instance.error.length &gt; 0){
+                        		if(callback)
+                        			callback(null, instance.html);
+                        		else
+                        			response.send(200, {}, instance.error.join(&#x27;, &#x27;));
+                        	} else if(instance.data &amp;&amp; instance.data.hasOwnProperty(&#x27;loginRequired&#x27;)){
+                        		instance.templateBody = Template.EXCEPTION_TEMPLATE;
+                        		
+                        		instance.compile();
+                        		instance.sendToResponse(response, callback);
+                        	}else
+                        		fs.readFile(instance.file, &#x27;utf-8&#x27;, function(err, templateBody) {
+                        			instance.templateBody = templateBody;
+                        			instance.compile();
+                        			instance.sendToResponse(response, callback);
+                        			/*var error = &#x27;&#x27;;
+                        			
+                        			if(instance.error &amp;&amp; instance.error.length &gt; 0)
+                        				instance.html = instance.error.join(&#x27;, &#x27;);
+                        			if(callback)
+                        				callback(null, instance.html);
+                        			else if(response.getHeader(&#x27;Content-Type&#x27;) &amp;&amp; 
+                        				(
+                        					response.getHeader(&#x27;Content-Type&#x27;).indexOf(&#x27;text/json&#x27;) != -1 || 
+                        					response.getHeader(&#x27;Content-Type&#x27;).indexOf(&#x27;application/json&#x27;) != -1
+                        				)
+                        			)
+                        				response.json(instance.html, error);
+                        			else
+                        				response.send(200, {}, instance.html);*/
+                        	    });
+                        }
+                        
+                        /**
+                         * Description
+                         * @method sendToResponse
+                         * @param {} response
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        Template.prototype.sendToResponse = function(response, callback){
+                        	var instance = this;
+                        	var error;
+                        	if(instance.error &amp;&amp; instance.error.length &gt; 0)
+                        		error = instance.error.join(&#x27;, &#x27;);
+                        	
+                        	if(callback)
+                        		callback(error, instance.html);
+                        	
+                        	else if(response.getHeader(&#x27;Content-Type&#x27;) &amp;&amp; 
+                        		(
+                        			response.getHeader(&#x27;Content-Type&#x27;).indexOf(&#x27;text/json&#x27;) != -1 || 
+                        			response.getHeader(&#x27;Content-Type&#x27;).indexOf(&#x27;application/json&#x27;) != -1
+                        		)
+                        	)
+                        		response.json(instance.html, error);
+                        	else
+                        		response.send(200, {}, instance.html);
+                        }
+                        
+                        /**
+                         * To compile the template using template engine and the data provided
+                         * 
+                         * @method compile
+                         */
+                        Template.prototype.compile = function(){
+                        	var instance = this;
+                        	
+                        	if(instance.exception){
+                        		instance.html = &#x27;&#x27;;
+                        		instance.error.push(instance.exception);
+                        	}else if(instance.templateEngine(instance.file) == &#x27;ejs&#x27;){
+                        		var templatetool = require(&#x27;ejs&#x27;);
+                        		var fn = templatetool.compile(instance.templateBody);
+                        		
+                                try{
+                                	instance.html = fn(instance.data);
+                                }catch(error){
+                                    console.log(&#x27;*********Error while processing template........&#x27;);
+                                    console.log(error);
+                                    instance.error.push(error);
+                                    instance.html = &#x27;&#x27;;
+                                }
+                        	} else if(instance.templateEngine(instance.file) == &#x27;mustache&#x27;){
+                        		var templatetool = require(&#x27;mustache&#x27;);
+                        		var html = templatetool.to_html(instance.templateBody, instance.data, instance.partials);
+                        	    
+                        		instance.html = html;
+                        	}
+                        }
+                        
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

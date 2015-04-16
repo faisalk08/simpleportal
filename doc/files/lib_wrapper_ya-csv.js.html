@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/wrapper/ya-csv.js - Simpleportal</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="Simpleportal" src="../../../default_/resources/public/simpleportal/favicon.ico" style="max-height: 65%;" title="Simpleportal">
+            Simpleportal
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/Csvparser", "classes/db", "classes/DBPool", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/simpleportal.Csv", "classes/simpleportal.CsvReader", "classes/simpleportal.DispatchWrapper", "classes/simpleportal.Template", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/Base64.html">Base64</a></li>
+	                            <li><a href="../classes/configuration.html">configuration</a></li>
+	                            <li><a href="../classes/CRUDService.html">CRUDService</a></li>
+	                            <li><a href="../classes/Csvparser.html">Csvparser</a></li>
+	                            <li><a href="../classes/db.html">db</a></li>
+	                            <li><a href="../classes/DBPool.html">DBPool</a></li>
+	                            <li><a href="../classes/Encryption.html">Encryption</a></li>
+	                            <li><a href="../classes/filterloader.html">filterloader</a></li>
+	                            <li><a href="../classes/LocalCache.html">LocalCache</a></li>
+	                            <li><a href="../classes/Logger.html">Logger</a></li>
+	                            <li><a href="../classes/logger.html">logger</a></li>
+	                            <li><a href="../classes/notificationcenter.html">notificationcenter</a></li>
+	                            <li><a href="../classes/oauth.html">oauth</a></li>
+	                            <li><a href="../classes/pluginloader.html">pluginloader</a></li>
+	                            <li><a href="../classes/PluginUtil.html">PluginUtil</a></li>
+	                            <li><a href="../classes/Response.html">Response</a></li>
+	                            <li><a href="../classes/Restfulmongo.html">Restfulmongo</a></li>
+	                            <li><a href="../classes/router.html">router</a></li>
+	                            <li><a href="../classes/Server.html">Server</a></li>
+	                            <li><a href="../classes/Service.CRUDService.html">Service.CRUDService</a></li>
+	                            <li><a href="../classes/Service.RemoteService.html">Service.RemoteService</a></li>
+	                            <li><a href="../classes/Service.StorageService.html">Service.StorageService</a></li>
+	                            <li><a href="../classes/serviceloader.html">serviceloader</a></li>
+	                            <li><a href="../classes/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../classes/simpleportal.Csv.html">simpleportal.Csv</a></li>
+	                            <li><a href="../classes/simpleportal.CsvReader.html">simpleportal.CsvReader</a></li>
+	                            <li><a href="../classes/simpleportal.DispatchWrapper.html">simpleportal.DispatchWrapper</a></li>
+	                            <li><a href="../classes/simpleportal.Template.html">simpleportal.Template</a></li>
+	                            <li><a href="../classes/SimplePortalOAuth.html">SimplePortalOAuth</a></li>
+	                            <li><a href="../classes/startuploader.html">startuploader</a></li>
+	                            <li><a href="../classes/template.html">template</a></li>
+	                            <li><a href="../classes/util.html">util</a></li>
+	                            <li><a href="../classes/viewloader.html">viewloader</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/middleware.html">middleware</a></li>
+	                            <li><a href="../modules/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../modules/util.html">util</a></li>
+	                            <li><a href="../modules/wrapper.html">wrapper</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>lib/wrapper/ya-csv.js <small>File</small></h1>
+                        </div>
+                        
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        var sys;
+                        try {
+                          sys    = require(&#x27;util&#x27;); 
+                        } catch (e) {
+                          sys    = require(&#x27;sys&#x27;);
+                        }
+                        var events = require(&#x27;events&#x27;),
+                            fs     = require(&#x27;fs&#x27;);
+                        
+                        var csv = exports;
+                        
+                        /**
+                         * Provides Base CSV Reading capabilities
+                         * @class simpleportal.CsvReader
+                         * @module simpleportal
+                         * @submodule wrapper
+                         * 
+                         * @extends EventEmitter
+                         * 
+                         * @constructor
+                         * @param readStream {ReadStread} An instance of the ReadStream Cl
+                         * @param options {Object} optional paramaters for the reader &lt;br/&gt;
+                         *     - separator {String}
+                         *     - quote {String}
+                         *     - escape {String}
+                         *     - comment {String}
+                         *     - columnNames {Boolean}
+                         *     - columnsFromHeader {Boolean}
+                         *     - nestedQuotes {Boolean}
+                         */
+                        var CsvReader = 
+                         csv.CsvReader = function(readStream, options) {
+                            var self = this;
+                            _setOptions(self, options);
+                        
+                            self.parsingStatus = {
+                                rows:          0,
+                                openRecord:    [],
+                                openField:     &#x27;&#x27;,
+                                lastChar:      &#x27;&#x27;,
+                                quotedField:   false,
+                                commentedLine: false
+                            };
+                        
+                            if (readStream) {
+                                readStream.addListener(&#x27;data&#x27;, this.parse.bind(this));
+                                readStream.addListener(&#x27;error&#x27;, this.emit.bind(this, &#x27;error&#x27;));
+                                readStream.addListener(&#x27;end&#x27;, this.end.bind(this));
+                        
+                        
+                                /**
+                                 * Pauses the readStream
+                                 * @method pause
+                                 * @return self
+                                 */
+                                self.pause = function(){
+                                    readStream.pause();
+                                    return self;
+                                }
+                        
+                                /**
+                                 * Resumes the readStream
+                                 * @method resume
+                                 * @return self
+                                 */
+                                self.resume = function(){
+                                    readStream.resume();
+                                    return self;
+                                }
+                        
+                                /**
+                                 * Closes the readStream
+                                 * @method destoy
+                                 * @return self
+                                 */
+                                self.destoy = function(){
+                                    readStream.destroy();
+                                    return self;
+                                }
+                        
+                                /**
+                                 * Closes the readStream when its file stream has been drained
+                                 * @method destroySoon
+                                 * @return self
+                                 */
+                                self.destroySoon = function(){
+                                    readstream.destroy();
+                                    return self;
+                                }
+                            }
+                        
+                        };
+                        sys.inherits(CsvReader, events.EventEmitter);
+                        
+                        /**
+                         * Parses incoming data as a readable CSV file
+                         * @method parse
+                         * @param data {Array} Array of values to parse from the incommin file
+                         * @return 
+                         */
+                        CsvReader.prototype.parse = function(data) {
+                            var ps = this.parsingStatus;
+                            if (ps.openRecord.length == 0) {
+                                if (data.charCodeAt(0) === 0xFEFF) {
+                                    data = data.slice(1);
+                                }
+                            }
+                            for (var i = 0; i &lt; data.length; i++) {
+                                var c = data.charAt(i);
+                                switch (c) {
+                                    // escape and separator may be the same char, typically &#x27;&quot;&#x27;
+                                    case this.escapechar:
+                                    case this.quotechar:
+                                        if (ps.commentedLine) break;
+                                        var isEscape = false;
+                                        if (c === this.escapechar) {
+                                            var nextChar = data.charAt(i + 1);
+                                            if (this._isEscapable(nextChar)) {
+                                                this._addCharacter(nextChar);
+                                                i++;
+                                                isEscape = true;
+                                            }
+                                        }
+                                        if (!isEscape &amp;&amp; (c === this.quotechar)) {
+                                            if (ps.openField &amp;&amp; !ps.quotedField) {
+                                                ps.quotedField = true;
+                                                break;
+                                            }
+                                            if (ps.quotedField) {
+                                                // closing quote should be followed by separator unless the nested quotes option is set
+                                                var nextChar = data.charAt(i + 1);
+                                                if (nextChar &amp;&amp; nextChar != &#x27;\r&#x27; &amp;&amp; nextChar != &#x27;\n&#x27; &amp;&amp; nextChar !== this.separator &amp;&amp; this.nestedQuotes != true) {
+                                                    console.log(&#x27;Some problem in the csv&#x27;);
+                                                	//throw new Error(&quot;separator expected after a closing quote; found &quot; + nextChar);
+                                                } else {
+                                                    ps.quotedField = false;
+                                                }
+                                            } else if (ps.openField === &#x27;&#x27;) {
+                                                ps.quotedField = true;
+                                            }
+                                        }
+                                        break;
+                                    case this.separator:
+                                        if (ps.commentedLine) break;
+                                        if (ps.quotedField) {
+                                            this._addCharacter(c);
+                                        } else {
+                                            this._addField();
+                                        }
+                                        break;
+                                    case &#x27;\n&#x27;:
+                                        // handle CRLF sequence
+                                        if (!ps.quotedField &amp;&amp; (ps.lastChar === &#x27;\r&#x27;)) {
+                                            break;
+                                        }
+                                    case &#x27;\r&#x27;:
+                                        if (ps.commentedLine) {
+                                            ps.commentedLine = false;
+                                        } else if (ps.quotedField) {
+                                            this._addCharacter(c);
+                                        } else {
+                                            this._addField();
+                                            this._addRecord();
+                                        }
+                                        break;
+                                    case this.commentchar:
+                                        if (ps.commentedLine) break;
+                                        if (ps.openRecord.length === 0 &amp;&amp; ps.openField === &#x27;&#x27; &amp;&amp; !ps.quotedField) {
+                                            ps.commentedLine = true;
+                                        } else {
+                                            this._addCharacter(c);
+                                        }
+                                    default:
+                                        if (ps.commentedLine) break;
+                                        this._addCharacter(c);
+                                }
+                                ps.lastChar = c;
+                            }
+                        };
+                        
+                        
+                        /**
+                         * Description
+                         * @method end
+                         * @return 
+                         */
+                        CsvReader.prototype.end = function() {
+                            var ps = this.parsingStatus;
+                            if (ps.quotedField) {
+                                this.emit(&#x27;error&#x27;, new Error(&#x27;Input stream ended but closing quotes expected&#x27;));
+                            } else {
+                                // dump open record
+                                if (ps.openField) {
+                                    this._addField();
+                                }
+                                if (ps.openRecord.length &gt; 0) {
+                                    this._addRecord();
+                                }
+                                this.emit(&#x27;end&#x27;);
+                            }
+                        }
+                        CsvReader.prototype._isEscapable = function(c) {
+                            if ((c === this.escapechar) || (c === this.quotechar)) {
+                                return true;
+                            }
+                            return false;
+                        };
+                        
+                        CsvReader.prototype._addCharacter = function(c) {
+                            this.parsingStatus.openField += c;
+                        };
+                        
+                        CsvReader.prototype._addField = function() {
+                            var ps = this.parsingStatus;
+                            ps.openRecord.push(ps.openField);
+                            ps.openField = &#x27;&#x27;;
+                            ps.quotedField = false;
+                        };
+                        
+                        /**
+                         * Description
+                         * @method setColumnNames
+                         * @param {} names
+                         * @return 
+                         */
+                        CsvReader.prototype.setColumnNames = function(names) {
+                            this.columnNames = names;
+                        };
+                        
+                        CsvReader.prototype._addRecord = function() {
+                            var ps = this.parsingStatus;
+                            if (this.columnsFromHeader &amp;&amp; ps.rows === 0) {
+                                this.setColumnNames(ps.openRecord);
+                            } else if (this.columnNames != null &amp;&amp; this.columnNames.length &gt; 0) {
+                                var objResult = {};
+                                for (var i = 0; i &lt; this.columnNames.length; i++) {
+                                    objResult[this.columnNames[i]] = ps.openRecord[i];
+                                }
+                                this.emit(&#x27;data&#x27;, objResult);
+                            } else {
+                                this.emit(&#x27;data&#x27;, ps.openRecord);
+                            }
+                            ps.rows++;
+                            ps.openRecord = [];
+                            ps.openField = &#x27;&#x27;;
+                            ps.quotedField = false;
+                        };
+                        
+                        /**
+                         * Description
+                         * @method createCsvFileReader
+                         * @param {} path
+                         * @param {} options
+                         * @return NewExpression
+                         */
+                        csv.createCsvFileReader = function(path, options) {
+                            options = options || {};
+                            var readStream = fs.createReadStream(path, {
+                                &#x27;flags&#x27;: options.flags || &#x27;r&#x27;
+                            });
+                            readStream.setEncoding(options.encoding || &#x27;utf8&#x27;);
+                            return new CsvReader(readStream, options);
+                        };
+                        
+                        /**
+                         * Description
+                         * @method createCsvStreamReader
+                         * @param {} readStream
+                         * @param {} options
+                         * @return NewExpression
+                         */
+                        csv.createCsvStreamReader = function(readStream, options) {
+                            if (options === undefined &amp;&amp; typeof readStream === &#x27;object&#x27;) {
+                                options = readStream;
+                                readStream = undefined;
+                            }
+                            options = options || {};
+                            if (readStream) readStream.setEncoding(options.encoding || &#x27;utf8&#x27;);
+                            return new CsvReader(readStream, options);
+                        };
+                        
+                        var CsvWriter = 
+                        /**
+                          * Description
+                          * @method CsvWriter
+                          * @param {} writeStream
+                          * @param {} options
+                          * @return 
+                          */
+                         csv.CsvWriter = function(writeStream, options) {
+                            var self = this;
+                            self.writeStream = writeStream;
+                            options = options || {};
+                            _setOptions(self, options);
+                            self.encoding = options.encoding || &#x27;utf8&#x27;;
+                        
+                            if (typeof writeStream.setEncoding === &#x27;function&#x27;) {
+                                writeStream.setEncoding(self.encoding);
+                            }
+                        
+                            writeStream.addListener(&#x27;drain&#x27;, this.emit.bind(this, &#x27;drain&#x27;));
+                            writeStream.addListener(&#x27;error&#x27;, this.emit.bind(this, &#x27;error&#x27;));
+                            writeStream.addListener(&#x27;close&#x27;, this.emit.bind(this, &#x27;close&#x27;));
+                        };
+                        sys.inherits(CsvWriter, events.EventEmitter);
+                        
+                        /**
+                         * Description
+                         * @method writeRecord
+                         * @param {} rec
+                         * @return 
+                         */
+                        CsvWriter.prototype.writeRecord = function(rec) {
+                            if (!rec) return; // ignore empty records
+                            if (!Array.isArray(rec)) {
+                                throw new Error(&quot;CsvWriter.writeRecord only takes an array as an argument&quot;);
+                            }
+                            _writeArray(this, rec);
+                        };
+                        
+                        function _writeArray(writer, arr) {
+                            var out = [];
+                            for (var i = 0; i &lt; arr.length; i++) {
+                                if (i != 0) out.push(writer.separator);
+                                out.push(writer.quotechar);
+                                _appendField(out, writer, arr[i]);
+                                out.push(writer.quotechar);
+                            }
+                            out.push(&quot;\r\n&quot;);
+                            writer.writeStream.write(out.join(&#x27;&#x27;), this.encoding);
+                        };
+                        
+                        function _appendField(outArr, writer, field) {
+                            // Make sure field is a string
+                            if(typeof(field) !== &#x27;string&#x27;) {
+                              // We are not interested in outputting &quot;null&quot; or &quot;undefined&quot;
+                              if(typeof(field) !== &#x27;undefined&#x27; &amp;&amp; field !== null) {
+                                field = String(field);
+                              } else {
+                                outArr.push(&#x27;&#x27;);
+                                return;
+                              }
+                            }
+                        
+                            for (var i = 0; i &lt; field.length; i++) {
+                                if (field.charAt(i) === writer.quotechar || field.charAt(i) === writer.escapechar) {
+                                    outArr.push(writer.escapechar);
+                                }
+                                outArr.push(field.charAt(i));
+                            }
+                        };
+                        
+                        /**
+                         * Description
+                         * @method createCsvFileWriter
+                         * @param {} path
+                         * @param {} options
+                         * @return NewExpression
+                         */
+                        csv.createCsvFileWriter = function(path, options) {
+                            options = options || {&#x27;flags&#x27;: &#x27;w&#x27;};
+                            var writeStream = fs.createWriteStream(path, {
+                                &#x27;flags&#x27;: options.flags || &#x27;w&#x27;
+                            });
+                            return new CsvWriter(writeStream, options);
+                        };
+                        
+                        /**
+                         * Description
+                         * @method createCsvStreamWriter
+                         * @param {} writeStream
+                         * @param {} options
+                         * @return NewExpression
+                         */
+                        csv.createCsvStreamWriter = function(writeStream, options) {
+                            return new CsvWriter(writeStream, options);
+                        };
+                        
+                        // ===============
+                        // =   utils     =
+                        // ===============
+                        
+                        function _setOptions(obj, options) {
+                            options = options || {};
+                            obj.separator   = options.separator   || &#x27;,&#x27;;
+                            obj.quotechar   = options.quote       || &#x27;&quot;&#x27;;
+                            obj.escapechar  = options.escape      || &#x27;&quot;&#x27;;
+                            obj.commentchar = options.comment     || &#x27;&#x27;;
+                            obj.columnNames = options.columnNames || [];
+                            obj.columnsFromHeader = options.columnsFromHeader || false;
+                            obj.nestedQuotes = options.nestedQuotes || false;
+                        };
+                        
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

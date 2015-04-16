@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/util.js - Simpleportal</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="Simpleportal" src="../../../default_/resources/public/simpleportal/favicon.ico" style="max-height: 65%;" title="Simpleportal">
+            Simpleportal
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/Csvparser", "classes/db", "classes/DBPool", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/simpleportal.Csv", "classes/simpleportal.CsvReader", "classes/simpleportal.DispatchWrapper", "classes/simpleportal.Template", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/Base64.html">Base64</a></li>
+	                            <li><a href="../classes/configuration.html">configuration</a></li>
+	                            <li><a href="../classes/CRUDService.html">CRUDService</a></li>
+	                            <li><a href="../classes/Csvparser.html">Csvparser</a></li>
+	                            <li><a href="../classes/db.html">db</a></li>
+	                            <li><a href="../classes/DBPool.html">DBPool</a></li>
+	                            <li><a href="../classes/Encryption.html">Encryption</a></li>
+	                            <li><a href="../classes/filterloader.html">filterloader</a></li>
+	                            <li><a href="../classes/LocalCache.html">LocalCache</a></li>
+	                            <li><a href="../classes/Logger.html">Logger</a></li>
+	                            <li><a href="../classes/logger.html">logger</a></li>
+	                            <li><a href="../classes/notificationcenter.html">notificationcenter</a></li>
+	                            <li><a href="../classes/oauth.html">oauth</a></li>
+	                            <li><a href="../classes/pluginloader.html">pluginloader</a></li>
+	                            <li><a href="../classes/PluginUtil.html">PluginUtil</a></li>
+	                            <li><a href="../classes/Response.html">Response</a></li>
+	                            <li><a href="../classes/Restfulmongo.html">Restfulmongo</a></li>
+	                            <li><a href="../classes/router.html">router</a></li>
+	                            <li><a href="../classes/Server.html">Server</a></li>
+	                            <li><a href="../classes/Service.CRUDService.html">Service.CRUDService</a></li>
+	                            <li><a href="../classes/Service.RemoteService.html">Service.RemoteService</a></li>
+	                            <li><a href="../classes/Service.StorageService.html">Service.StorageService</a></li>
+	                            <li><a href="../classes/serviceloader.html">serviceloader</a></li>
+	                            <li><a href="../classes/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../classes/simpleportal.Csv.html">simpleportal.Csv</a></li>
+	                            <li><a href="../classes/simpleportal.CsvReader.html">simpleportal.CsvReader</a></li>
+	                            <li><a href="../classes/simpleportal.DispatchWrapper.html">simpleportal.DispatchWrapper</a></li>
+	                            <li><a href="../classes/simpleportal.Template.html">simpleportal.Template</a></li>
+	                            <li><a href="../classes/SimplePortalOAuth.html">SimplePortalOAuth</a></li>
+	                            <li><a href="../classes/startuploader.html">startuploader</a></li>
+	                            <li><a href="../classes/template.html">template</a></li>
+	                            <li><a href="../classes/util.html">util</a></li>
+	                            <li><a href="../classes/viewloader.html">viewloader</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/middleware.html">middleware</a></li>
+	                            <li><a href="../modules/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../modules/util.html">util</a></li>
+	                            <li><a href="../modules/wrapper.html">wrapper</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>lib/util.js <small>File</small></h1>
+                        </div>
+                        
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        /*!
+                         * Simple Node Mobile Portal
+                         * Copyright(c) 2012 Faisal Kottarathil
+                         * MIT Licensed
+                         */
+                        /**
+                         * Utilities classes 
+                         *
+                         * @property util
+                         * @for simpleportal
+                         * @type {util}
+                         * @static
+                         */
+                        
+                        /**
+                         * Utilities classes 
+                         * 
+                         * @class util
+                         * @module middleware
+                         * @static
+                         */
+                        var util = module.exports = {};
+                        
+                        var fs = require(&#x27;fs&#x27;);
+                        var path = require(&#x27;path&#x27;);
+                        var http = require(&#x27;http&#x27;);
+                        var https = require(&#x27;https&#x27;);
+                        var url = require(&#x27;url&#x27;);
+                        
+                        var OAuth = require(&#x27;oauth&#x27;).OAuth;
+                        
+                        var logger = require(&quot;./logger&quot;);
+                        
+                        /**
+                         * mime type mapping based on the file extension
+                         * 
+                         * @property mimes
+                         * @type object 
+                         */
+                        util.mimes = {
+                            &#x27;css&#x27;:  &#x27;text/css&#x27;,
+                            &#x27;js&#x27;:   &#x27;text/javascript&#x27;,
+                            &#x27;htm&#x27;:  &#x27;text/html&#x27;,
+                            &#x27;html&#x27;: &#x27;text/html&#x27;,
+                            &#x27;ico&#x27;:  &#x27;image/vnd.microsoft.icon&#x27;
+                        };
+                        
+                        /**
+                         * To get Mime type from the file path
+                         * 
+                         * @method getMimeType
+                         * @param {string} file file path with extension
+                         * 
+                         * @return mime
+                         */
+                        util.getMimeType = function(file){
+                            var tmp     = file.lastIndexOf(&quot;.&quot;);
+                            var ext     = file.substring((tmp + 1));
+                            var mime    = mimes[ext];
+                            
+                            return mime;
+                        }
+                        
+                        /**
+                         * To call a certain functions from a similar objects
+                         * 
+                         * @method callModuleFunctions
+                         * 
+                         * @param {} modulestocall
+                         * @param {} functionName
+                         * @param {} args
+                         * @param {} args1
+                         */
+                        util.callModuleFunctions = function(modulestocall, functionName, args, args1){
+                        	if(modulestocall&amp;&amp;modulestocall.length &gt; 0){
+                        		for(var i =0 ; i&lt; modulestocall.length; i++ ){
+                        			var moduletocall= modulestocall[i];
+                        			
+                        			if(moduletocall[functionName]){
+                        				moduletocall[functionName](args, args1);
+                        			}
+                        		}
+                        	}
+                        }
+                        
+                        /**
+                         * To get all sub modules inside a module with a certain function
+                         * 
+                         * @method getModuleFunctions
+                         * 
+                         * @param {object} module Object where the sub modules are searched for 
+                         * @param {boolean} callChild boolean value whether include deep search
+                         * @param {string} functionName Function name you want to search inside the sub modules
+                         * @param {} args
+                         * @param {} args1
+                         * 
+                         * @return modulestocall Array of submodules
+                         */
+                        util.getModuleFunctions = function(module, callChild, functionName, args, args1){
+                        	var modulestocall=[];
+                            
+                        	if(module){
+                                if(typeof module == &#x27;function&#x27;){
+                                } else {
+                                    if(module[functionName]&amp;&amp;typeof module[functionName] == &#x27;function&#x27;){
+                                    	modulestocall.push(module);
+                                    }
+                                    if(callChild){
+                                    	for(var function_ in module){
+                                            if(typeof module[function_] == &#x27;string&#x27; || typeof module[function_] == &#x27;function&#x27;){
+                                            } else {
+                                            	var submodulestocall=util.getModuleFunctions(module[function_], false, functionName, args, args1);
+                                            	if(submodulestocall&amp;&amp;submodulestocall.length&gt;0){
+                                            		for(var i in submodulestocall){
+                                            			modulestocall.push(submodulestocall[i]);
+                                            		}
+                                            	}
+                                            }
+                                        }	
+                                    }
+                                }
+                            }
+                        	return modulestocall;
+                        }
+                        
+                        /**
+                         * To call a module function 
+                         * 
+                         * @method callModuleFunction
+                         * @param {object} module Object where the sub modules are searched for 
+                         * @param {boolean} callChild boolean value whether include deep search
+                         * @param {string} functionName Function name you want to search inside the sub modules
+                         * @param {} args
+                         * @param {} args1
+                         */
+                        util.callModuleFunction = function(module, callChild, functionName, args, args1){
+                            var modulestocall=util.getModuleFunctions(module, callChild, functionName, args, args1);
+                            
+                            if(modulestocall.length &gt; 1){
+                            	var totalcallback;
+                            	if(typeof args1 == &#x27;function&#x27;){
+                                	var count =modulestocall.length;
+                                	
+                                    var totalcallback = function(){
+                                    	if(count-- == 1)
+                                    		args1();
+                                    }	
+                                }
+                                util.callModuleFunctions(modulestocall, functionName, args, totalcallback);
+                            }else if(modulestocall.length == 1)
+                        	    util.callModuleFunctions(modulestocall, functionName, args, args1);
+                            else if(modulestocall.length == 0&amp;&amp;typeof args1==&#x27;function&#x27;)
+                        	    args1();
+                        };
+                        
+                        /**
+                         * To read a file from the server
+                         * 
+                         * Only used for reading file with charset utf8
+                         * 
+                         * @method readFile
+                         * 
+                         * @param {} file
+                         * @param {callback} callback The callback to excecute when complete
+                         * @return 
+                         */
+                        util.readFile = function(file, callback){
+                            fs.readFile(file, &#x27;utf8&#x27;, function (err, data) {
+                                if (err) {
+                                    callback(&#x27;Error while reading --&#x27; + err);
+                                }else
+                                    callback(null, data);
+                            });
+                        }
+                        
+                        /**
+                         * To write html file in to the http response
+                         * 
+                         * @method writeHtml
+                         * @param {} response Http response
+                         * @param {} file File to be written in to the response
+                         */
+                        util.writeHtml = function(response, file){
+                            var mime = getMimeType(file) || &#x27;text/plain&#x27;;
+                            
+                            response.writeHead(200, {&#x27;content-type&#x27;: mime});
+                            var rs = fs.createReadStream(file);
+                            util.pump(rs, response);
+                        }
+                        
+                        /**
+                         * To Make an empty html file
+                         * 
+                         * @method makeHTML
+                         * @param {string} content Html body 
+                         * @return html Formatted html string
+                         */
+                        util.makeHTML = function(content){
+                            var html = &#x27;&#x27;;
+                            
+                            html = &#x27;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt;&#x27;+content+&#x27;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&#x27;
+                            
+                            return html;
+                        }
+                        
+                        /**
+                         * To get JSON data from a remote Server
+                         * 
+                         * @method getRemoteJSON
+                         * 
+                         * @param {} server_options Remote server configuration
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        function getRemoteJSON(server_options, callback){
+                            server_options.headers = server_options.headers||{};
+                            
+                            server_options.headers[&#x27;Accept&#x27;] = &#x27;application/json&#x27;;
+                            if(server_options.secure&amp;&amp;server_options.port&amp;&amp;(Number(server_options.port)) != 443){
+                            	if((Number(server_options.port) == 80 || server_options.port == 443))
+                            		server_options.port=&#x27;443&#x27;;
+                            }
+                            if(server_options.secure){
+                            	var request = https.request(server_options, function(response) {
+                        	        response.setEncoding(&#x27;utf8&#x27;);
+                        	        var content = &#x27;&#x27;;
+                        	        
+                        	        var headers = response.headers;
+                        	        
+                        	        response.on(&#x27;data&#x27;, function (chunk) {
+                        	            content += chunk;
+                        	        });
+                        	        
+                        	        response.on(&#x27;error&#x27;, function (chunk) {
+                        	        	console.log(&#x27;Hello there is some error when connecting remotely&#x27;);
+                        	        });
+                        	        
+                        	        response.on(&#x27;end&#x27;, function (chunk) {
+                        	            try{
+                        	            	if(response.statusCode == 200)
+                        		            	if(!content||content == &#x27;&#x27;)
+                        		            		callback(null, {}, headers);
+                        		            	else{
+                        		            		content = JSON.parse(content);
+                        			                callback(null, content, headers);
+                        		            	}
+                        	            	else{
+                        	            		callback(content, {}, headers);
+                        	            	}
+                        	            	/*
+                        	                content = JSON.parse(content);
+                        	                callback(null, content, headers);*/
+                        	            }catch(error){
+                        	                callback(error);
+                        	            }
+                        	        });
+                        	    });	
+                            }else {
+                                var request = http.request(server_options, function(response) {
+                        	        response.setEncoding(&#x27;utf8&#x27;);
+                        	        var content = &#x27;&#x27;;
+                        	        
+                        	        var headers = response.headers;
+                        	        
+                        	        response.on(&#x27;data&#x27;, function (chunk) {
+                        	            content += chunk;
+                        	        });
+                        	        
+                        	        response.on(&#x27;error&#x27;, function (chunk) {
+                        	        	console.log(&#x27;Hello there is some error when connecting remotely&#x27;);
+                        	        });
+                        
+                        	        response.on(&#x27;end&#x27;, function (chunk) {
+                        	            try{
+                        	            	if(response.statusCode == 200)
+                        		            	if(!content||content == &#x27;&#x27;)
+                        		            		callback(null, {}, headers);
+                        		            	else{
+                        		            		content = JSON.parse(content);
+                        			                callback(null, content, headers);
+                        		            	}
+                        	            	else{
+                        	            		callback(content, {}, headers);
+                        	            	}/*
+                        	            	
+                        	                content = JSON.parse(content);
+                        	                callback(null, content, headers);*/
+                        	            }catch(error){
+                        	                callback(error);
+                        	            }
+                        	        });
+                        	    });
+                            }
+                        
+                            request.on(&#x27;error&#x27;, function(e) {
+                            	logger.getInstance().error(&#x27;Simple Portal-util&#x27;,&#x27;problem with request: &#x27; + e.message);
+                            	callback(e.message);
+                            });
+                        
+                            request.end();
+                        }
+                        
+                        /**
+                         * To post JSON data to a remote Server
+                         * 
+                         * @method postToRemoteJSON
+                         * 
+                         * @param {} server_options Remote server configuration
+                         * @param {callback} callback The callback to excecute when complete
+                         * @param {} postdata
+                         */
+                        function postToRemoteJSON(server_options, callback, postdata){
+                        	if(server_options.secure&amp;&amp;server_options.port&amp;&amp;(Number(server_options.port)) != 443){
+                            	if((Number(server_options.port) == 80 || server_options.port == 443))
+                            		server_options.port=&#x27;443&#x27;;
+                            }
+                            
+                            server_options.headers = server_options.headers||{};
+                            
+                            server_options.headers[&#x27;Accept&#x27;] = &#x27;application/json&#x27;;
+                            server_options.headers[&#x27;Content-Type&#x27;] = &#x27;application/json&#x27;;
+                            var postdata = postdata||server_options.postdata;
+                            
+                            delete server_options.postdata;
+                            
+                            if (server_options.secure){
+                            	var request = https.request(server_options, function(response) {
+                        	        response.setEncoding(&#x27;utf8&#x27;);
+                        	        var content = &#x27;&#x27;;
+                        	        
+                        	        var headers = response.headers;
+                        	        
+                        	        response.on(&#x27;data&#x27;, function (chunk) {
+                        	            content += chunk;
+                        	        });
+                        	        
+                        	        response.on(&#x27;error&#x27;, function (chunk) {
+                        	        	console.log(&#x27;Hello there is some error&#x27;);
+                        	        });
+                        	        
+                        	        response.on(&#x27;end&#x27;, function (chunk) {
+                        	            try{
+                        	            	if(response.statusCode == 200)
+                        		            	if(!content||content == &#x27;&#x27;)
+                        		            		callback(null, {}, headers);
+                        		            	else{
+                        		            		content = JSON.parse(content);
+                        			                callback(null, content, headers);
+                        		            	}
+                        	            	else
+                        	            		callback(content, {}, headers);
+                        	            }catch(error){
+                        	                callback(error);
+                        	            }
+                        	        });
+                        	    });	
+                            } else{
+                                var request = http.request(server_options, function(response) {
+                        	        response.setEncoding(&#x27;utf8&#x27;);
+                        	        var content = &#x27;&#x27;;
+                        	        
+                        	        var headers = response.headers;
+                        	        
+                        	        response.on(&#x27;data&#x27;, function (chunk) {
+                        	            content += chunk;
+                        	        });
+                        	        
+                        	        response.on(&#x27;error&#x27;, function (chunk) {
+                        	        	console.log(&#x27;Hello there is some error&#x27;);
+                        	        });
+                        
+                        	        response.on(&#x27;end&#x27;, function (chunk) {
+                        
+                        		        try{
+                        		        	if(response.statusCode == 301){
+                        	            		
+                        	            	} else if(response.statusCode == 200)
+                        		            	if(!content||content == &#x27;&#x27;)
+                        		            		callback(null, {}, headers);
+                        		            	else{
+                        		            		content = JSON.parse(content);
+                        			                callback(null, content, headers);
+                        		            	}
+                        	            	else
+                        	            		callback(content, {}, headers);
+                        	            }catch(error){
+                        	                callback(error);
+                        	            }
+                        	        });
+                        	    });	
+                            }
+                            
+                            request.on(&#x27;error&#x27;, function(e) {
+                            	logger.getInstance().error(&#x27;Simple Portal-util&#x27;,&#x27;problem with request: &#x27; + e.message);
+                            	callback(e.message);
+                            });
+                        
+                            request.end(postdata);
+                        }
+                        
+                        /**
+                         * To construct a url from Server options
+                         * 
+                         * @method constructUrl
+                         * 
+                         * @param {} urlOptions JSOn options containing host,port, and other information regarding a server
+                         * 
+                         * @return path Formatted url string
+                         */
+                        util.constructUrl = function(urlOptions){
+                            var protocol = &#x27;http://&#x27;
+                            if(urlOptions.secure){
+                            	protocol = &#x27;https://&#x27;
+                            	if((Number(urlOptions.port) == 80 || urlOptions.port == 443))
+                            		urlOptions.port=&#x27;443&#x27;;
+                            }
+                            
+                            var host = urlOptions.host;
+                            var port = urlOptions.port;
+                            var path = urlOptions.path;
+                            
+                            port =  (Number(port) == 80 || port == 443) ? &#x27;&#x27; : &#x27;:&#x27; + port;
+                            
+                            path = protocol + host + port + (path ? path : &#x27;&#x27;);
+                            
+                            return path;
+                        }
+                        
+                        /**
+                         * To post data to a remote server
+                         * 
+                         * @method post
+                         * @param {} server_options Remote server options
+                         * @param {} request Http request from the user
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        util.post = function(server_options, request, callback){
+                            if(typeof request == &#x27;function&#x27;){
+                                callback = request;
+                                request = null;
+                            }
+                            
+                            if(request &amp;&amp; server_options.oauth){
+                                if(request.session.oauth &amp;&amp; request.session.oauth.loggedIn){
+                                	var path = util.constructUrl(server_options);
+                                	
+                                	if(request.session.oauth.oauthquery){
+                                    	var params = [];
+                                    	for(var i in request.session.oauth.oauthquery){
+                        					var q = request.session.oauth.oauthquery[i];
+                        					
+                        					//if(i.indexOf(&#x27;oauth_&#x27;) &gt; -1)
+                        					params.push(i + &#x27;=&#x27; + q);
+                        				}
+                                    	
+                                    	var url_seperator=&#x27;&amp;&#x27;;
+                                        if(server_options.path.indexOf(&#x27;?&#x27;) == -1)
+                                                url_seperator=&#x27;?&#x27;;
+                        
+                                        if(params.length &gt; 0)
+                                    		server_options.path = server_options.path + url_seperator + params.join(&#x27;&amp;&#x27;);
+                                    }else{
+                                    	var oa = new OAuth(request.session.oauth._requestUrl,
+                            	            request.session.oauth._accessUrl,
+                            	            request.session.oauth._consumerKey,
+                            	            request.session.oauth._consumerSecret,
+                            	            request.session.oauth._version,
+                            	            request.session.oauth._authorize_callback,
+                            	            request.session.oauth._signatureMethod
+                            	        );
+                                        var sign_url = oa.signUrl(path, request.session.oauth.access_token,
+                                                                        request.session.oauth.access_token_secret, (server_options.method||&quot;GET&quot;));
+                                        var parsedUrl= url.parse(sign_url, false );
+                                        server_options.path = parsedUrl.path;
+                                    }
+                                	
+                                    postToRemoteJSON(server_options, callback);
+                                } else
+                                    callback(null, {loginRequired:true});
+                            } else{
+                            	postToRemoteJSON(server_options, callback);
+                            }
+                        }
+                        
+                        /**
+                         * To get json data from remote server
+                         * 
+                         * @method getJSON
+                         * @param {} server_options Remote server options
+                         * @param {} request Http request from the user
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        util.getJSON = function(server_options, request, callback){
+                            if(typeof request == &#x27;function&#x27;){
+                                callback = request;
+                                request = null;
+                            }
+                            
+                            if(request &amp;&amp; server_options.oauth){
+                                if(request.session.oauth &amp;&amp; request.session.oauth.loggedIn){
+                                    var path = util.constructUrl(server_options);
+                                    
+                                    if(request.session.oauth.oauthquery){
+                                    	var params = [];
+                                    	for(var i in request.session.oauth.oauthquery){
+                        					var q = request.session.oauth.oauthquery[i];
+                        					
+                        					//if(i.indexOf(&#x27;oauth_&#x27;) &gt; -1)
+                        					params.push(i + &#x27;=&#x27; + q);
+                        				}
+                                    	
+                                    	var url_seperator=&#x27;&amp;&#x27;;
+                                        if(server_options.path.indexOf(&#x27;?&#x27;) == -1)
+                                                url_seperator=&#x27;?&#x27;;
+                        
+                                        if(params.length &gt; 0)
+                                                server_options.path = server_options.path + url_seperator + params.join(&#x27;&amp;&#x27;);
+                                    }else{
+                                    	var oa = new OAuth(request.session.oauth._requestUrl,
+                            	            request.session.oauth._accessUrl,
+                            	            request.session.oauth._consumerKey,
+                            	            request.session.oauth._consumerSecret,
+                            	            request.session.oauth._version,
+                            	            request.session.oauth._authorize_callback,
+                            	            request.session.oauth._signatureMethod
+                            	        );
+                                	
+                                    	var sign_url = oa.signUrl(path, request.session.oauth.access_token,request.session.oauth.access_token_secret, &quot;GET&quot;);
+                                    	var parsedUrl= url.parse(sign_url, false );
+                                    	server_options.path = parsedUrl.path;
+                                    }
+                                    getRemoteJSON(server_options, callback);
+                                }else
+                                    callback(null, {loginRequired:true});
+                            } else{
+                                getRemoteJSON(server_options, callback);
+                            }
+                        }
+                        
+                        /**
+                         * To remove html tags from an html text and replaced with escape charectors
+                         * 
+                         * @method convertHtmlToText
+                         * @param {} inputText Text to be formatted
+                         * @return returnText Formatted text
+                         */
+                        util.convertHtmlToText = function(inputText) {
+                            var returnText = &quot;&quot; + inputText;
+                        
+                            //-- remove BR tags and replace them with line break
+                            returnText=returnText.replace(/&lt;br&gt;/gi, &quot;\n&quot;);
+                            returnText=returnText.replace(/&lt;br\s\/&gt;/gi, &quot;\n&quot;);
+                            returnText=returnText.replace(/&lt;br\/&gt;/gi, &quot;\n&quot;);
+                        
+                            returnText=returnText.replace(/(?:(?:\r\n|\r|\n)\s*){2,}/gim, &quot;\n\n&quot;);
+                        
+                            //-- get rid of more than 2 spaces:
+                            returnText = returnText.replace(/ +(?= )/g,&#x27;&#x27;);
+                        
+                            //-- get rid of html-encoded characters:
+                            returnText=returnText.replace(/&amp;nbsp;/gi,&quot; &quot;);
+                            returnText=returnText.replace(/&amp;amp;/gi,&quot;&amp;&quot;);
+                            returnText=returnText.replace(/&amp;quot;/gi,&#x27;&quot;&#x27;);
+                            returnText=returnText.replace(/&amp;lt;/gi,&#x27;&lt;&#x27;);
+                            returnText=returnText.replace(/&amp;gt;/gi,&#x27;&gt;&#x27;);
+                        
+                            //-- return
+                            return returnText;
+                        }
+                        
+                        
+                        /**
+                         * To send the response back to user 
+                         * 
+                         * @method sendServiceResponse
+                         * 
+                         * @param {} response Http response
+                         * @param {} error Error to be thrown to the response
+                         * @param {} results Data need to be send to the reponse
+                         * @param {} headers Response headers
+                         */
+                        util.sendServiceResponse = function(response, error, results, headers){
+                        	results = results||{};
+                        	var body = JSON.stringify(results);
+                        	headers = headers||{};
+                        	
+                        	if(error &amp;&amp; typeof error == &#x27;object&#x27; &amp;&amp; error+&#x27;&#x27; ==&#x27;{}&#x27;)
+                        		error=null;
+                        	
+                        	if(error){
+                        		logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, error);
+                        		body = JSON.stringify({exception:error});
+                        	} else if(results &amp;&amp; results.contentType){
+                        		body = JSON.stringify(results.data);
+                        	}
+                        	
+                        	if(response.callback){
+                        		body = response.callback.replace(/[^\w$.]/g, &#x27;&#x27;) + &#x27;(&#x27; + body + &#x27;);&#x27;;
+                        		results.contentType = &#x27;text/javascript&#x27;;
+                        		headers[&#x27;Content-Type&#x27;] = &#x27;text/javascript&#x27;;
+                        	}
+                        
+                        	if(error &amp;&amp; error == &#x27;Permission denied&#x27;){
+                        		logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, error);
+                        		headers[&#x27;Content-Type&#x27;] = &#x27;application/json; charset=UTF-8&#x27;;
+                        		response.send(403, headers, body);
+                        	} else if(error){
+                        		logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, error);
+                        		headers[&#x27;Content-Type&#x27;] = &#x27;application/json; charset=UTF-8&#x27;;
+                        		response.send(400, headers, body);
+                        	} else if(results &amp;&amp; results.loginRequired){
+                        		logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, &#x27;Login required&#x27;);
+                        		var httpstatus = 301;
+                        		if(results.httpstatus)
+                        			httpstatus = results.httpstatus;
+                        		headers[&#x27;Location&#x27;] = &#x27;/oauth/login&#x27;;
+                        		
+                        		response.send(httpstatus, headers);
+                        	} else if(results &amp;&amp; results.redirectUrl){
+                        		var httpstatus = 301;
+                        		if(results.httpstatus)
+                        			httpstatus = results.httpstatus;
+                        		headers[&#x27;Location&#x27;] = results.redirectUrl;
+                        		response.send(httpstatus, headers);
+                        	} else if(results &amp;&amp; results.contentType){
+                        		headers[&#x27;Content-Type&#x27;] = results.contentType;
+                        		response.send(200, headers, body);
+                        	} else {
+                        		headers[&#x27;Content-Type&#x27;] = &#x27;application/json; charset=UTF-8&#x27;;
+                        		
+                        		response.send(200, headers, body);
+                        	}
+                        }
+                        
+                        
+                        /**
+                         * To retreive query parameters as a key value pair
+                         * 
+                         * @method getParamValues
+                         * @param {} request http request
+                         * @return {object} values JSON object with all key value pair
+                         */
+                        util.getParamValues = function(request) {
+                        	var parsedUrl= url.parse(request.url, false);
+                        	var queryParam = parsedUrl.query;
+                        	
+                        	var values = {};
+                        	
+                        	if (queryParam) {
+                        		var params = queryParam.split(&#x27;&amp;&#x27;);
+                        		
+                        		for (i = 0; i &lt; params.length; i++) {
+                        			var key_value = params[i].split(&#x27;=&#x27;);
+                        			
+                        			if (key_value.length &gt; 1) {
+                        				values[key_value[0]] = key_value[1];
+                        			}
+                        		}
+                        	}
+                        	
+                        	return values;
+                        }
+                        
+                        /**
+                         * To make a url query string from the query parameters
+                         * 
+                         * @method makeURLString
+                         * @param {object} queryParams Query parameter as key value pair object
+                         * @param {string} appendar The appender used for seperating the query parameters
+                         * @return {string} A formatted url query string
+                         */
+                        util.makeURLString = function(queryParams, appendar) {
+                        	var queryParams = queryParams||{};
+                        	
+                        	var querystring = [];
+                        	appendar = appendar||&#x27;&amp;&#x27;;
+                        	
+                        	if (queryParams) {
+                        		for (var key in queryParams) {
+                        			var value = queryParams[key];
+                        			if(typeof value == &#x27;object&#x27;){
+                        				querystring.push(key + &#x27;=&#x27; +  util.makeURLString(value, &#x27;:&#x27;));
+                        			} else if(value != &#x27;&#x27;)
+                        				querystring.push(key + &#x27;=&#x27; +  value);
+                        		}
+                        	}
+                        	
+                        	return querystring.join(appendar);
+                        }
+                        
+                        /**
+                         * To generate Id from a text
+                         * 
+                         * @method generateId
+                         * 
+                         * @param {} name text which needs to be formatted
+                         * 
+                         * @return name Formatted text with all special characters 
+                         */
+                        util.generateId = function(name) {
+                        	if (name) {
+                        		name = name.replace(/(undefined|null|[^a-zA-Z0-9]+)/g, &#x27;&#x27;).toLowerCase();
+                        	}
+                        	
+                        	return name;
+                        }
+                        
+                        /**
+                         * To get 
+                         * @method getArrayValues
+                         * @param {} value
+                         * @param {} seperator
+                         * @param {} defaultKey
+                         * @return arrayResult
+                         */
+                        util.getArrayValues = function(value, seperator, defaultKey) {
+                        	if(!value &amp;&amp; value.length == 0)
+                        		return [];
+                        	if(value == &#x27;&#x27;)
+                        		return [];
+                        	if(typeof value == &#x27;array&#x27;||(typeof value ==&#x27;object&#x27; &amp;&amp; value.length &gt; 0))
+                        		return value;
+                        	
+                        	value = String(value);
+                        	var arrayString = value.split(seperator || &quot;,&quot;);
+                        	var arrayResult = new Array();
+                        	
+                        	for (i=0; i &lt; arrayString.length; i++) {
+                        		if (defaultKey || defaultKey != null) {
+                        			var tempValue = {};
+                        			tempValue[defaultKey] = arrayString[i].trim();
+                        			arrayResult.push(tempValue);
+                        		} else {
+                        			var val = arrayString[i].trim();
+                        			if(val != &#x27;&#x27;)
+                        				arrayResult.push(arrayString[i].trim());
+                        		}
+                        	}
+                        	
+                        	return arrayResult;
+                        }
+                        
+                        /**
+                         * Description
+                         * @method mkdirParent
+                         * @param {} dirPath
+                         * @param {} mode
+                         * @return 
+                         */
+                        util.mkdirParent = function(dirPath, mode) {
+                        	//Call the standard fs.mkdir
+                        	try{
+                        		fs.mkdirSync(dirPath, mode);
+                        	}catch(error){
+                        		 //When it fail in this way, do the custom steps
+                        	    if (error &amp;&amp; error.errno === 34) {
+                        	    	//Create all the parents recursively
+                        	    	util.mkdirParent(path.dirname(dirPath), mode);
+                        	      	
+                        	    	//And then the directory
+                        	    	util.mkdirParent(dirPath, mode);
+                        	    }
+                        	}
+                        };
+                        
+                        /**
+                         * Description
+                         * @method checkDirSync
+                         * @param {} dir
+                         * @param {callback} callback The callback to excecute when complete
+                         * @return 
+                         */
+                        util.checkDirSync = function(dir, callback){
+                        	if (!fs.existsSync(dir)) {
+                        		util.mkdirParent(dir, 0755);
+                        	}
+                        }
+                        
+                        /**
+                         * Description
+                         * @method checkDir
+                         * @param {} dir
+                         * @param {callback} callback The callback to excecute when complete
+                         * @return 
+                         */
+                        util.checkDir = function(dir, callback){
+                        	try {
+                        		fs.lstat(dir, function(err, stats) {
+                        			if (!err &amp;&amp; stats.isDirectory()) {
+                        				callback();
+                        			} else{
+                        				fs.mkdir(dir, 0755, function (err) {
+                        					callback(err);
+                        				});
+                        			}
+                        		});
+                        	} catch (e) {
+                        		logger.getInstance().error(&#x27;Simple Portal-util&#x27;, e);
+                        		callback(e);
+                        	}
+                        }
+                        
+                        /**
+                         * Description
+                         * @method moveFile
+                         * @param {} destdir
+                         * @param {} destFile
+                         * @param {} sourceFile
+                         * @param {callback} callback The callback to excecute when complete
+                         * @return 
+                         */
+                        util.moveFile = function(destdir, destFile, sourceFile, callback){
+                        	util.checkDir(destdir, function(error){
+                        		if(error){
+                        			callback(error);
+                        		} else{
+                        			var is = fs.createReadStream(sourceFile)
+                        			var os = fs.createWriteStream(destdir + &#x27;/&#x27; + destFile);
+                        			is.pipe(os, function(error) {
+                        				callback(error);
+                        			});
+                        		}
+                        	});
+                        }
+                        
+                        /**
+                         * Description
+                         * @method arraycontains
+                         * @param {} array
+                         * @param {} value
+                         * @return 
+                         */
+                        util.arraycontains = function(array, value){
+                        	if(!array)
+                        		return false;
+                        	for(var i=0; i&lt;array.length; i++) {
+                                if (array[i] == value) return true;
+                            }
+                        }
+                        
+                        /**
+                         * Description
+                         * @method clone
+                         * @param {} o
+                         * @param {} ignorefunctions
+                         * @return 
+                         */
+                        util.clone = function(o, ignorefunctions) {
+                        	if(o){
+                        		var ret = {};
+                        		
+                        		Object.keys(o).forEach(function (val) {
+                        			if(ignorefunctions&amp;&amp;typeof o[val] == &#x27;function&#x27;){}
+                        			else if(typeof o[val] == &#x27;object&#x27;){
+                        				ret[val] = util.clone(o[val], ignorefunctions);
+                        			}else
+                        				ret[val] = o[val];
+                        		});
+                        	
+                        		return ret;
+                        	}else
+                        		return o;
+                        }
+                        
+                        /**
+                         * Description
+                         * @method readJSONFile
+                         * @param {} file
+                         * @return fixedJSON
+                         */
+                        util.readJSONFile = function(file) {
+                        	var filejson = fs.readFileSync(file)+&#x27;&#x27;; 
+                        	
+                        	var fixedJSON = null;
+                        	try{
+                        		fixedJSON = JSON.parse(filejson);
+                        	}catch(error){
+                        		var fixedJSON = filejson.replace(/https:/g, &#x27;https_colon_&#x27;);
+                        		fixedJSON = fixedJSON.replace(/http:/g, &#x27;http_colon_&#x27;);
+                        		fixedJSON = fixedJSON.replace(/localhost:/g, &#x27;localhost_colon_&#x27;);
+                        		fixedJSON = fixedJSON.replace(/([&#x27;&quot;])?([a-zA-Z0-9_\;\&amp;\.\/]+)([&#x27;&quot;])?:/g, &#x27;&quot;$2&quot;: &#x27;);
+                        		fixedJSON = fixedJSON.replace(/http_colon_/g, &#x27;http:&#x27;);
+                        		fixedJSON = fixedJSON.replace(/https_colon_/g, &#x27;https:&#x27;);
+                        		fixedJSON = fixedJSON.replace(/localhost_colon_/g, &#x27;localhost:&#x27;);
+                        		
+                        		fixedJSON = JSON.parse(fixedJSON);
+                        	}
+                        	return fixedJSON;
+                        }
+                        
+                        /**
+                         * Description
+                         * @method extendJSON
+                         * @param {} target
+                         * @return target
+                         */
+                        util.extendJSON = function(target) {
+                        	var instance = this;
+                        	
+                        	var sources = [].slice.call(arguments, 1);
+                            sources.forEach(function (source) {
+                                for (var prop in source) {
+                                    target[prop] = source[prop];
+                                }
+                            });
+                            return target;
+                        }
+                        
+                        /**
+                         * Description
+                         * @method deleteFolderRecursiveSync
+                         * @param {} path
+                         * @return 
+                         */
+                        util.deleteFolderRecursiveSync = function(path) {
+                            var files = [];
+                            
+                            if( fs.existsSync(path) ) {
+                                files = fs.readdirSync(path);
+                                
+                                files.forEach(function(file,index){
+                                    var curPath = path + &quot;/&quot; + file;
+                                    
+                                    if(fs.lstatSync(curPath).isDirectory()) { // recurse
+                                    	util.deleteFolderRecursiveSync(curPath);
+                                    } else { // delete file
+                                        fs.unlinkSync(curPath);
+                                    }
+                                });
+                                
+                                fs.rmdirSync(path);
+                            }
+                        };
+                        
+                        /**
+                         * Description
+                         * @method getServerPath
+                         * @param {} path
+                         * @param {} skipjx
+                         * @return 
+                         */
+                        util.getServerPath = function(path, skipjx){
+                        	if(path &amp;&amp; path != &#x27;&#x27; &amp;&amp; path.indexOf(&#x27;/&#x27;) == 0)
+                        		return path;
+                        	else{
+                        		var serverroot = &#x27;.&#x27;;
+                        		if(skipjx||process.mainModule.filename.indexOf(&#x27;.js.jx&#x27;) == -1)
+                        			serverroot =process.mainModule.filename.substring(0, process.mainModule.filename.lastIndexOf(&#x27;/&#x27;));
+                        		
+                        		if(path &amp;&amp; path != &#x27;&#x27;)
+                        			serverroot = serverroot + &#x27;/&#x27; + path;
+                        		
+                        		return serverroot;	
+                        	}
+                        }
+                        
+                        /**
+                         * Description
+                         * @method getExtension
+                         * @param {} filename
+                         * @return ConditionalExpression
+                         */
+                        util.getExtension = function (filename) {
+                        	var i = filename.lastIndexOf(&#x27;.&#x27;);
+                        	
+                            return (i &lt; 0) ? &#x27;&#x27; : (filename.substr(i)).toLowerCase();
+                        };
+                        
+                        /**
+                         * Description
+                         * @method capitaliseFirstLetter
+                         * @param {} string
+                         * @return BinaryExpression
+                         */
+                        util.capitaliseFirstLetter = function(string){
+                        	if(!string)
+                        		return string;
+                        	return string.charAt(0).toUpperCase() + string.slice(1);
+                        };
+                        
+                        /**
+                         * Description
+                         * @method lowercaseFirstLetter
+                         * @param {} string
+                         * @return BinaryExpression
+                         */
+                        util.lowercaseFirstLetter = function(string){
+                        	if(!string)
+                        		return string;
+                        	return string.charAt(0).toLowerCase() + string.slice(1);
+                        }
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

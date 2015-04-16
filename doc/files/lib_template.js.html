@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/template.js - Simpleportal</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="Simpleportal" src="../../../default_/resources/public/simpleportal/favicon.ico" style="max-height: 65%;" title="Simpleportal">
+            Simpleportal
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/Csvparser", "classes/db", "classes/DBPool", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/simpleportal.Csv", "classes/simpleportal.CsvReader", "classes/simpleportal.DispatchWrapper", "classes/simpleportal.Template", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/Base64.html">Base64</a></li>
+	                            <li><a href="../classes/configuration.html">configuration</a></li>
+	                            <li><a href="../classes/CRUDService.html">CRUDService</a></li>
+	                            <li><a href="../classes/Csvparser.html">Csvparser</a></li>
+	                            <li><a href="../classes/db.html">db</a></li>
+	                            <li><a href="../classes/DBPool.html">DBPool</a></li>
+	                            <li><a href="../classes/Encryption.html">Encryption</a></li>
+	                            <li><a href="../classes/filterloader.html">filterloader</a></li>
+	                            <li><a href="../classes/LocalCache.html">LocalCache</a></li>
+	                            <li><a href="../classes/Logger.html">Logger</a></li>
+	                            <li><a href="../classes/logger.html">logger</a></li>
+	                            <li><a href="../classes/notificationcenter.html">notificationcenter</a></li>
+	                            <li><a href="../classes/oauth.html">oauth</a></li>
+	                            <li><a href="../classes/pluginloader.html">pluginloader</a></li>
+	                            <li><a href="../classes/PluginUtil.html">PluginUtil</a></li>
+	                            <li><a href="../classes/Response.html">Response</a></li>
+	                            <li><a href="../classes/Restfulmongo.html">Restfulmongo</a></li>
+	                            <li><a href="../classes/router.html">router</a></li>
+	                            <li><a href="../classes/Server.html">Server</a></li>
+	                            <li><a href="../classes/Service.CRUDService.html">Service.CRUDService</a></li>
+	                            <li><a href="../classes/Service.RemoteService.html">Service.RemoteService</a></li>
+	                            <li><a href="../classes/Service.StorageService.html">Service.StorageService</a></li>
+	                            <li><a href="../classes/serviceloader.html">serviceloader</a></li>
+	                            <li><a href="../classes/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../classes/simpleportal.Csv.html">simpleportal.Csv</a></li>
+	                            <li><a href="../classes/simpleportal.CsvReader.html">simpleportal.CsvReader</a></li>
+	                            <li><a href="../classes/simpleportal.DispatchWrapper.html">simpleportal.DispatchWrapper</a></li>
+	                            <li><a href="../classes/simpleportal.Template.html">simpleportal.Template</a></li>
+	                            <li><a href="../classes/SimplePortalOAuth.html">SimplePortalOAuth</a></li>
+	                            <li><a href="../classes/startuploader.html">startuploader</a></li>
+	                            <li><a href="../classes/template.html">template</a></li>
+	                            <li><a href="../classes/util.html">util</a></li>
+	                            <li><a href="../classes/viewloader.html">viewloader</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/middleware.html">middleware</a></li>
+	                            <li><a href="../modules/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../modules/util.html">util</a></li>
+	                            <li><a href="../modules/wrapper.html">wrapper</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>lib/template.js <small>File</small></h1>
+                        </div>
+                        
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        /*!
+                         * Simple Node Mobile Portal
+                         * Copyright(c) 2012 Faisal Kottarathil
+                         * MIT Licensed
+                         */
+                        /**
+                         * Template middleware for &#x60;simpleportal.Server&#x60;
+                         *
+                         * @property template
+                         * @for simpleportal
+                         * @type {template}
+                         * @static
+                         */
+                        
+                        /**
+                         * Template middleware for &#x60;simpleportal.Server&#x60;
+                         * 
+                         * @class template
+                         * @module middleware
+                         * @static
+                         */
+                        var template = module.exports = {};
+                        
+                        var fs = require(&#x27;fs&#x27;);
+                        
+                        //var mustache = require(&quot;mustache&quot;);
+                        
+                        var util = require(&quot;./util&quot;);
+                        
+                        var templates = {};
+                        var options ={};
+                        var logger = require(&quot;./logger&quot;);
+                        
+                        var templatetool = require(&quot;ejs&quot;);
+                        
+                        /**
+                         * Description
+                         * @method render
+                         * @param {} file
+                         * @param {} content
+                         * @param {} callback
+                         * @return 
+                         */
+                        template.render = function(file, content, callback){
+                        	fs.readFile(file, &#x27;utf8&#x27;, function (err, templateBody) {
+                                if (err) throw err;
+                                
+                                var html = templatetool.render(templateBody+&#x27;&#x27;, content);
+                                
+                                callback(null, html);
+                            });
+                        }
+                        
+                        /**
+                         * Description
+                         * @method parseTemplateFile
+                         * @param {} file
+                         * @param {} content
+                         * @param {} callback
+                         * @return 
+                         */
+                        template.parseTemplateFile = function(file, content, callback){
+                            fs.readFile(file, &#x27;utf8&#x27;, function (err, templateBody) {
+                                if (err) throw err;
+                                
+                                var html = templatetool.to_html(templateBody, content);
+                        	
+                                callback(null, html);
+                            });
+                        }
+                        
+                        /**
+                         * Description
+                         * @method compile
+                         * @param {} templateBody
+                         * @param {} data
+                         * @param {} partials
+                         * @param {} callback
+                         * @return 
+                         */
+                        template.compile = function(templateBody, data, partials, callback){
+                            var html = templatetool.to_html(templateBody, data, partials);
+                            
+                            callback(null, html);
+                        }
+                        
+                        /**
+                         * Description
+                         * @method parse
+                         * @param {} templateName
+                         * @param {} content
+                         * @param {} callback
+                         * @return 
+                         */
+                        template.parse = function(templateName, content, callback){
+                        	var templateBody;//@TODO - need to use caching here!!
+                        	if(templateBody){
+                        		compile_(templateBody, content, callback);
+                        	} else{
+                        		read(templateName, function (templateBody) {
+                        			compile_(templateBody, content, callback);
+                        		});
+                        	}
+                        	
+                        	/**
+                        	 * Description
+                        	 * @method compile_
+                        	 * @param {} templateBody
+                        	 * @param {} content
+                        	 * @param {} callback
+                        	 * @return 
+                        	 */
+                        	function compile_(templateBody, content, callback){
+                        		var partials = templates;
+                        		if(content.template){
+                        			for(partial in content.template){
+                        				partials[partial] = template.get(content.template[partial]) || content.template[partial];
+                        			}
+                        		}
+                        		
+                        		template.compile(templateBody, content.data, partials, function(error, html){
+                        			callback(error, html);
+                        		});	
+                        	}
+                        }
+                        
+                        /**
+                         * Description
+                         * @method cache
+                         * @param {} dir
+                         * @param {} prefix
+                         * @return 
+                         */
+                        template.cache = function(dir, prefix){
+                        	try{
+                        		if(fs.existsSync(dir)){
+                        			var files = fs.readdirSync(dir);
+                        			for (var i in files) {
+                        				var currentFile = dir + &#x27;/&#x27; + files[i];
+                        				var stats = fs.statSync(currentFile);
+                        				if (stats.isFile() &amp;&amp; isStringEndsWith(files[i], &#x27;.mustache&#x27;)) {
+                        					read((prefix ? prefix+&#x27;/&#x27; : &#x27;&#x27;) + files[i]);
+                        				} else if (stats.isDirectory())
+                        					template.cache(currentFile, (prefix ? prefix+&#x27;/&#x27; : &#x27;&#x27;) + files[i]);
+                        			}
+                        		}
+                        	}catch(err){
+                        		console.log(err);
+                        	}
+                        }
+                        
+                        /**
+                         * Description
+                         * @method read
+                         * @param {} file
+                         * @param {} name
+                         * @param {} callback
+                         * @return 
+                         */
+                        function read(file, name, callback){
+                        	if(file.indexOf(&#x27;/&#x27;) == 0 || file.indexOf(&#x27;.&#x27;) == 0){
+                        		//path absolute or relative
+                        		readFile(file, null, callback);
+                        	} else{
+                        		//relative to configuration
+                        		if(typeof name == &#x27;function&#x27;){
+                        			callback = name;
+                        			name = file;
+                        		} else if(name){}
+                        		else
+                        			name = file;
+                        		
+                        		name = name.substring(0, name.indexOf(&#x27;.mustache&#x27;));
+                        		
+                        		readFile(file, name, callback);
+                        	}
+                        	
+                        	/**
+                        	 * Description
+                        	 * @method readFile
+                        	 * @param {} file
+                        	 * @param {} cacheName
+                        	 * @param {} callback
+                        	 * @return 
+                        	 */
+                        	function readFile(file, cacheName, callback){
+                        		if(!isStringEndsWith(file, &#x27;.mustache&#x27;))
+                        			file = file + &#x27;.mustache&#x27;;
+                        		
+                        		if(file.indexOf(options.root) != 0)
+                        			file = options.root + &#x27;/&#x27; + file;
+                        		
+                        		if(typeof cacheName == &#x27;function&#x27;){
+                        			callback = cacheName;
+                        			cacheName = null;
+                        		}
+                        		
+                        		util.readFile(file, function(err, templateBody){
+                        			if(err){
+                        				logger.getInstance().error(&#x27;Simple Portal -template&#x27;, err);
+                        				if(callback)
+                        					callback(err);
+                        			} else{
+                        				if(cacheName){
+                        					templates[cacheName]= templateBody.toString();
+                        				}
+                        				
+                        				if(callback)
+                        					callback(templateBody);
+                        			}
+                        		});
+                        	}
+                        }
+                        
+                        /**
+                         * Description
+                         * @method get
+                         * @param {} templateName
+                         * @return MemberExpression
+                         */
+                        template.get = function(templateName){
+                        	return templates[templateName];
+                        }
+                        
+                        /**
+                         * Description
+                         * @method init
+                         * @param {} configuration
+                         * @return 
+                         */
+                        template.init = function(configuration){
+                        	logger.getInstance().debug(&#x27;Simple Portal -template&#x27;, &#x27;Initializing Simple Template engine&#x27;);
+                        	
+                        	if(configuration &amp;&amp; configuration.resources &amp;&amp; configuration.resources.template){
+                        		if(configuration.resources.root)
+                        			configuration.resources.template.root = (configuration.resources.root) + configuration.resources.template.root;
+                        		
+                        		options  = configuration.resources.template;
+                        		options.homePage = configuration.homePage;
+                        		
+                        		template.cache(util.getServerPath(options.root));
+                        	} else
+                        		logger.getInstance().debug(&#x27;Simple Portal -template&#x27;, &#x27;Template configuration is not done properly!!!&#x27;);
+                        }
+                        
+                        
+                        /**
+                         * Description
+                         * @method renderPage
+                         * @param {} response
+                         * @param {} templateData
+                         * @param {} callback
+                         * @return 
+                         */
+                        template.renderPage = function(response, templateData, callback){
+                        	if(templateData.data.error || templateData.data.exception){
+                        		if(templateData.data.exception)
+                        			templateData.data.error = templateData.data.exception;
+                        		
+                        		template.parse(templateData.layout, 
+                        			{
+                        				data:templateData.data, 
+                        				template:{
+                        					&#x27;pages/content&#x27;:&#x27;pages/common/error&#x27;
+                        				}
+                        			}, function(error, html){
+                        				callback(null, html);
+                        			}
+                        		);
+                        	} else{
+                        		template.parse(templateData.layout, 
+                        			{
+                        				data:templateData.data,
+                        				template:templateData.template
+                        			}, function(error, html){
+                        				callback(error, html);
+                        			}
+                        		);
+                        	}
+                        }
+                        
+                        /**
+                         * Description
+                         * @method detailPage
+                         * @param {} request
+                         * @param {} response
+                         * @param {} options
+                         * @return 
+                         */
+                        template.detailPage = function(request, response, options){
+                        	var error = options.error;
+                        	var result = options.result;
+                        	var model = options.model;
+                        	var layout = options.layout;
+                        	var contentPage = options.contentPage;
+                        	var pageTitle = options.pageTitle;
+                        	
+                        	var data = result||{};
+                        	
+                        	if(error){
+                        		logger.getInstance().error(&#x27;Simple Portal -template&#x27;, &#x27;Some error from --&#x27; + model + &#x27;--&#x27; + error);
+                        	} else if(result.redirectUrl){
+                        		response.writeHead(301, {&#x27;Location&#x27;:result.redirectUrl});
+                        		response.end();
+                        	} else{
+                        		logger.getInstance().debug(&#x27;Simple Portal -template&#x27;, &#x27;data returned - &#x27; + result.toString());
+                        	}
+                        	
+                        	layout = layout||&#x27;layout&#x27;;
+                        	model = model||&#x27;model&#x27;;
+                        	contentPage = contentPage||&#x27;pages/&#x27; + model + &#x27;/details&#x27;;
+                        	data[&#x27;error&#x27;] = error;
+                        	if(pageTitle)
+                        		data[&#x27;pageTitle&#x27;] = pageTitle;
+                        	
+                        	template.renderPage(
+                        		response,
+                        		{
+                        			layout:layout,
+                        			data:data,
+                        			template:{
+                        				&#x27;pages/content&#x27;:contentPage
+                        			}, error:error
+                        		}, function(error, html){
+                        			response.send(200, {}, html);
+                        		}
+                        	);
+                        }
+                        
+                        /**
+                         * Description
+                         * @method listPage
+                         * @param {} request
+                         * @param {} response
+                         * @param {} options
+                         * @return 
+                         */
+                        template.listPage = function(request, response, options){
+                        	var error = options.error;
+                        	var result = options.result;
+                        	var model = options.model;
+                        	var layout = options.layout;
+                        	var contentPage = options.contentPage;
+                        	var pageTitle = options.pageTitle;
+                        	
+                        	layout = layout||&#x27;layout&#x27;;
+                        	model = model||&#x27;model&#x27;;
+                        	contentPage = contentPage||&#x27;pages/&#x27; + model + &#x27;/list&#x27;;
+                        	
+                        	var data = {};
+                        	if(result &amp;&amp; result[model]){
+                        		data = result;
+                        		data[&#x27;empty&#x27;] = data[model].length==0;
+                        		data[&#x27;error&#x27;] = error;
+                        	}else{
+                        		result = result||{};
+                        		data[model] = result;
+                        		data[&#x27;empty&#x27;] = result.length==0;
+                        		data[&#x27;error&#x27;] = error;
+                        	}
+                        	
+                        	if(error){
+                        		logger.getInstance().error(&#x27;Simple Portal -template&#x27;, &#x27;Some error from --&#x27; + model + &#x27;--&#x27; + error);
+                        	} else if(result.redirectUrl){
+                        		response.writeHead(301, {&#x27;Location&#x27;:result.redirectUrl});
+                        		response.end();
+                        	} else{
+                        		logger.getInstance().debug(&#x27;Simple Portal -template&#x27;, &#x27;data returned - &#x27; + result.toString());
+                        	}
+                        	
+                        	if(pageTitle)
+                        		data[&#x27;pageTitle&#x27;] = pageTitle;
+                        	
+                        	template.renderPage(
+                        		response,
+                        		{
+                        			layout:  request.ajax ? contentPage : layout,
+                        			data:data,
+                        			template:{
+                        				&#x27;pages/content&#x27;:contentPage
+                        			}, error:error
+                        		}, function(error, html){
+                        			response.send(200, {}, html);
+                        		}
+                        	);
+                        }
+                        
+                        /**
+                         * Description
+                         * @method initRouter
+                         * @param {} configuration
+                         * @param {} callback
+                         * @return 
+                         */
+                        template.initRouter = function(configuration, callback){
+                        	logger.getInstance().info(&#x27;Simple Portal - templateloader&#x27;, &#x27;############################## ------- Initializing template routers ---------- ##############################&#x27;);
+                        	
+                        	if(callback)
+                        		callback();
+                        }
+                        
+                        /**
+                         * private util function
+                         * @method isStringEndsWith
+                         * @param {} string
+                         * @param {} substring
+                         * @return LogicalExpression
+                         */
+                        function isStringEndsWith(string, substring) {
+                          return string.length &gt;= substring.length &amp;&amp; string.substring(string.length - substring.length) == substring;
+                        }
+                        
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

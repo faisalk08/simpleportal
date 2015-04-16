@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/util/wrench.js - Simpleportal</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="Simpleportal" src="../../../default_/resources/public/simpleportal/favicon.ico" style="max-height: 65%;" title="Simpleportal">
+            Simpleportal
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/Csvparser", "classes/db", "classes/DBPool", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/simpleportal.Csv", "classes/simpleportal.CsvReader", "classes/simpleportal.DispatchWrapper", "classes/simpleportal.Template", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/Base64.html">Base64</a></li>
+	                            <li><a href="../classes/configuration.html">configuration</a></li>
+	                            <li><a href="../classes/CRUDService.html">CRUDService</a></li>
+	                            <li><a href="../classes/Csvparser.html">Csvparser</a></li>
+	                            <li><a href="../classes/db.html">db</a></li>
+	                            <li><a href="../classes/DBPool.html">DBPool</a></li>
+	                            <li><a href="../classes/Encryption.html">Encryption</a></li>
+	                            <li><a href="../classes/filterloader.html">filterloader</a></li>
+	                            <li><a href="../classes/LocalCache.html">LocalCache</a></li>
+	                            <li><a href="../classes/Logger.html">Logger</a></li>
+	                            <li><a href="../classes/logger.html">logger</a></li>
+	                            <li><a href="../classes/notificationcenter.html">notificationcenter</a></li>
+	                            <li><a href="../classes/oauth.html">oauth</a></li>
+	                            <li><a href="../classes/pluginloader.html">pluginloader</a></li>
+	                            <li><a href="../classes/PluginUtil.html">PluginUtil</a></li>
+	                            <li><a href="../classes/Response.html">Response</a></li>
+	                            <li><a href="../classes/Restfulmongo.html">Restfulmongo</a></li>
+	                            <li><a href="../classes/router.html">router</a></li>
+	                            <li><a href="../classes/Server.html">Server</a></li>
+	                            <li><a href="../classes/Service.CRUDService.html">Service.CRUDService</a></li>
+	                            <li><a href="../classes/Service.RemoteService.html">Service.RemoteService</a></li>
+	                            <li><a href="../classes/Service.StorageService.html">Service.StorageService</a></li>
+	                            <li><a href="../classes/serviceloader.html">serviceloader</a></li>
+	                            <li><a href="../classes/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../classes/simpleportal.Csv.html">simpleportal.Csv</a></li>
+	                            <li><a href="../classes/simpleportal.CsvReader.html">simpleportal.CsvReader</a></li>
+	                            <li><a href="../classes/simpleportal.DispatchWrapper.html">simpleportal.DispatchWrapper</a></li>
+	                            <li><a href="../classes/simpleportal.Template.html">simpleportal.Template</a></li>
+	                            <li><a href="../classes/SimplePortalOAuth.html">SimplePortalOAuth</a></li>
+	                            <li><a href="../classes/startuploader.html">startuploader</a></li>
+	                            <li><a href="../classes/template.html">template</a></li>
+	                            <li><a href="../classes/util.html">util</a></li>
+	                            <li><a href="../classes/viewloader.html">viewloader</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/middleware.html">middleware</a></li>
+	                            <li><a href="../modules/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../modules/util.html">util</a></li>
+	                            <li><a href="../modules/wrapper.html">wrapper</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>lib/util/wrench.js <small>File</small></h1>
+                        </div>
+                        
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        var wrench_ = require(&#x27;wrench&#x27;);
+                        
+                        var fs = require(&quot;fs&quot;);
+                        var wrench = wrench_;
+                        
+                        wrench_.copyDirSyncRecursive_=wrench.copyDirSyncRecursive;
+                        /**
+                         *  wrench.copyDirSyncRecursive(&quot;directory_to_copy&quot;, &quot;new_directory_location&quot;, opts);
+                         *  
+                         *  Recursively dives through a directory and moves all its files to a new location. This is a
+                         *  Synchronous function, which blocks things until it&#x27;s done. If you need/want to do this in
+                         *  an Asynchronous manner, look at wrench.copyDirRecursively() below.
+                         *  Note: Directories should be passed to this function without a trailing slash.
+                         *  
+                         * @method copyDirSyncRecursive
+                         * @param {} sourceDir
+                         * @param {} newDirLocation
+                         * @param {} opts
+                         * @return 
+                         */
+                        wrench.copyDirSyncRecursive = function(sourceDir, newDirLocation, opts) {
+                        	if (!opts || !opts.preserve) {
+                                try {
+                                    if(fs.statSync(newDirLocation).isDirectory()) exports.rmdirSyncRecursive(newDirLocation);
+                                } catch(e) { }
+                            }
+                        
+                            /*  Create the directory where all our junk is moving to; read the mode of the source directory and mirror it */
+                            var checkDir = fs.statSync(sourceDir);
+                            try {
+                                fs.mkdirSync(newDirLocation, checkDir.mode);
+                            } catch (e) {
+                                //if the directory already exists, that&#x27;s okay
+                                if (e.code !== &#x27;EEXIST&#x27;) throw e;
+                            }
+                        
+                            var files = fs.readdirSync(sourceDir);
+                        
+                            for(var i = 0; i &lt; files.length; i++) {
+                                // ignores all files or directories which match the RegExp in opts.filter
+                        		if(typeof opts !== &#x27;undefined&#x27;) {
+                                    if(!opts.whitelist &amp;&amp; opts.filter &amp;&amp; files[i].match(opts.filter)) continue;
+                        		    // if opts.whitelist is true every file or directory which doesn&#x27;t match opts.filter will be ignored
+                        		    if(opts.whitelist &amp;&amp; opts.filter &amp;&amp; !files[i].match(opts.filter)) continue;
+                                    if (opts.excludeHiddenUnix &amp;&amp; /^\./.test(files[i])) continue;
+                                }
+                        
+                                var currFile = fs.lstatSync(sourceDir + &quot;/&quot; + files[i]);
+                        
+                                /**
+                                 * Description
+                                 * @method fCopyFile
+                                 * @param {} srcFile
+                                 * @param {} destFile
+                                 * @return 
+                                 */
+                                var fCopyFile = function(srcFile, destFile) {
+                                	if(typeof opts !== &#x27;undefined&#x27; &amp;&amp; opts.checktimestamp &amp;&amp; fs.existsSync(destFile)){
+                                    	var destStat = fs.statSync(destFile);
+                                    	var srcStat = fs.statSync(srcFile);
+                                    	
+                                    	if(isNewer(srcStat.mtime, destStat.mtime)){
+                                    		var contents = fs.readFileSync(srcFile);
+                             	            fs.writeFileSync(destFile, contents);
+                                    	}
+                                    }else if(typeof opts !== &#x27;undefined&#x27; &amp;&amp; opts.preserveFiles &amp;&amp; fs.existsSync(destFile)) return;
+                                    else{
+                        	            var contents_ = fs.readFileSync(srcFile);
+                        	            fs.writeFileSync(destFile, contents_);
+                                    }
+                                };
+                        
+                                if(currFile.isDirectory()) {
+                                    /*  recursion this thing right on back. */
+                                    wrench.copyDirSyncRecursive_(sourceDir + &quot;/&quot; + files[i], newDirLocation + &quot;/&quot; + files[i], opts);
+                                } else if(currFile.isSymbolicLink()) {
+                                    var symlinkFull = fs.readlinkSync(sourceDir + &quot;/&quot; + files[i]);
+                        
+                                    if (!opts.inflateSymlinks) {
+                                        fs.symlinkSync(symlinkFull, newDirLocation + &quot;/&quot; + files[i]);
+                                        continue;
+                                    }
+                        
+                                    var tmpCurrFile = fs.lstatSync(sourceDir + &quot;/&quot; + symlinkFull);
+                                    if (tmpCurrFile.isDirectory()) {
+                                    	wrench.copyDirSyncRecursive_(sourceDir + &quot;/&quot; + symlinkFull, newDirLocation + &quot;/&quot; + files[i], opts);
+                                    } else {
+                                        /*  At this point, we&#x27;ve hit a file actually worth copying... so copy it on over. */
+                                        fCopyFile(sourceDir + &quot;/&quot; + symlinkFull, newDirLocation + &quot;/&quot; + files[i]);
+                                    }
+                                } else {
+                                    /*  At this point, we&#x27;ve hit a file actually worth copying... so copy it on over. */
+                                    fCopyFile(sourceDir + &quot;/&quot; + files[i], newDirLocation + &quot;/&quot; + files[i]);
+                                }
+                            }
+                        };
+                        
+                        /**
+                         * Function to compare two files
+                         * 
+                         * @method isNewer
+                         * 
+                         * @param {} a
+                         * @param {} b
+                         * @return BinaryExpression
+                         * 
+                         * @private
+                         */
+                        function isNewer(a, b) {
+                            return a.getTime() &gt; b.getTime();
+                        }
+                        
+                        /*
+                         * Exporting the room service.
+                         */
+                        module.exports = wrench;
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/pluginloader.js - Simpleportal</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="Simpleportal" src="../../../default_/resources/public/simpleportal/favicon.ico" style="max-height: 65%;" title="Simpleportal">
+            Simpleportal
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/Csvparser", "classes/db", "classes/DBPool", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/simpleportal.Csv", "classes/simpleportal.CsvReader", "classes/simpleportal.DispatchWrapper", "classes/simpleportal.Template", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/Base64.html">Base64</a></li>
+	                            <li><a href="../classes/configuration.html">configuration</a></li>
+	                            <li><a href="../classes/CRUDService.html">CRUDService</a></li>
+	                            <li><a href="../classes/Csvparser.html">Csvparser</a></li>
+	                            <li><a href="../classes/db.html">db</a></li>
+	                            <li><a href="../classes/DBPool.html">DBPool</a></li>
+	                            <li><a href="../classes/Encryption.html">Encryption</a></li>
+	                            <li><a href="../classes/filterloader.html">filterloader</a></li>
+	                            <li><a href="../classes/LocalCache.html">LocalCache</a></li>
+	                            <li><a href="../classes/Logger.html">Logger</a></li>
+	                            <li><a href="../classes/logger.html">logger</a></li>
+	                            <li><a href="../classes/notificationcenter.html">notificationcenter</a></li>
+	                            <li><a href="../classes/oauth.html">oauth</a></li>
+	                            <li><a href="../classes/pluginloader.html">pluginloader</a></li>
+	                            <li><a href="../classes/PluginUtil.html">PluginUtil</a></li>
+	                            <li><a href="../classes/Response.html">Response</a></li>
+	                            <li><a href="../classes/Restfulmongo.html">Restfulmongo</a></li>
+	                            <li><a href="../classes/router.html">router</a></li>
+	                            <li><a href="../classes/Server.html">Server</a></li>
+	                            <li><a href="../classes/Service.CRUDService.html">Service.CRUDService</a></li>
+	                            <li><a href="../classes/Service.RemoteService.html">Service.RemoteService</a></li>
+	                            <li><a href="../classes/Service.StorageService.html">Service.StorageService</a></li>
+	                            <li><a href="../classes/serviceloader.html">serviceloader</a></li>
+	                            <li><a href="../classes/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../classes/simpleportal.Csv.html">simpleportal.Csv</a></li>
+	                            <li><a href="../classes/simpleportal.CsvReader.html">simpleportal.CsvReader</a></li>
+	                            <li><a href="../classes/simpleportal.DispatchWrapper.html">simpleportal.DispatchWrapper</a></li>
+	                            <li><a href="../classes/simpleportal.Template.html">simpleportal.Template</a></li>
+	                            <li><a href="../classes/SimplePortalOAuth.html">SimplePortalOAuth</a></li>
+	                            <li><a href="../classes/startuploader.html">startuploader</a></li>
+	                            <li><a href="../classes/template.html">template</a></li>
+	                            <li><a href="../classes/util.html">util</a></li>
+	                            <li><a href="../classes/viewloader.html">viewloader</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/middleware.html">middleware</a></li>
+	                            <li><a href="../modules/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../modules/util.html">util</a></li>
+	                            <li><a href="../modules/wrapper.html">wrapper</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>lib/pluginloader.js <small>File</small></h1>
+                        </div>
+                        
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        
+                        /**
+                         * Plugin loader middleware for &#x60;simpleportal.Server&#x60;
+                         *
+                         * @property pluginloader
+                         * @for simpleportal
+                         * @type {pluginloader}
+                         * @static
+                         */
+                        
+                        /**
+                         * Plugin loader middleware for &#x60;simpleportal.Server&#x60;
+                         * 
+                         * @class pluginloader
+                         * @module middleware
+                         * @static
+                         */
+                        var PluginLoader = module.exports = {};
+                        
+                        var fs = require(&#x27;fs&#x27;);
+                        var util = require(&#x27;./util&#x27;);
+                        
+                        var simpleportal = require(&#x27;./simpleportal&#x27;);
+                        
+                        var logger = require(&quot;./logger&quot;);
+                        var router = require(&#x27;./router&#x27;);
+                        
+                        PluginLoader.services={};
+                        PluginLoader.services.service={};
+                        
+                        PluginLoader.plugindirs = [];
+                        
+                        PluginLoader.plugindir = &#x27;resources/plugin&#x27;;
+                        PluginLoader.pluginUrl=&#x27;/plugin&#x27;;
+                        
+                        /**
+                         * To get the details of a plugin
+                         * 
+                         * @method getPluginDetails
+                         * 
+                         * @param {string} pluginid id of the plugin 
+                         * 
+                         * @return {object} plugindetails object of the plugin setting
+                         */
+                        PluginLoader.getPluginDetails = function(pluginid){
+                        	var plugindetails;
+                        	
+                        	return plugindetails;
+                        }
+                        
+                        /**
+                         * To load plugin from a specific plugin settings
+                         * 
+                         * @method __loadPlugin
+                         * 
+                         * @param {} pluginsetting
+                         * @param {} configuration
+                         * @param {} dbInstance
+                         * @param {callback} callback The callback to excecute when complete
+                         * @private
+                         */
+                        __loadPlugin = function(pluginsetting, configuration, dbInstance, callback){
+                        	logger.getInstance().info(&#x27;Simple Portal : pluginloader&#x27;, &#x27;__loadPlugin  -- &#x27; + pluginsetting.id);
+                        	
+                        	if(pluginsetting.plugintype == &#x27;webapp&#x27;){
+                        		if(PluginLoader.configuration.webapps)
+                        			PluginLoader.configuration.webapps.push(pluginsetting.id);
+                        		else
+                        			PluginLoader.configuration.webapps = [pluginsetting.id];
+                        		
+                        		if(PluginLoader.configuration.webappuris)
+                        			PluginLoader.configuration.webappuris.push(pluginsetting.webappuri||&#x27;/&#x27;+pluginsetting.id);
+                        		else
+                        			PluginLoader.configuration.webappuris = [pluginsetting.webappuri||&#x27;/&#x27;+pluginsetting.id];	
+                        	}else {
+                        		logger.getInstance().info(&#x27;Simple Portal : pluginloader&#x27;, &#x27;__loadPlugin  -- &#x27; + pluginsetting.id  +&#x27; -- is -- &#x27; + pluginsetting.plugintype);
+                        	}
+                        	
+                        	if(!pluginsetting.disabled&amp;&amp;pluginsetting.installed)
+                        		if(PluginLoader.plugins[pluginsetting.plugintype])
+                        			PluginLoader.plugins[pluginsetting.plugintype].push(pluginsetting);
+                        		
+                        	if(!pluginsetting.disabled&amp;&amp;pluginsetting.installed &amp;&amp; pluginsetting.servicedir){
+                        		if(fs.existsSync(pluginsetting.installeddir + &#x27;/&#x27; + pluginsetting.servicedir)){
+                        			var services_ = {};
+                        			if(pluginsetting.configuration&amp;&amp;pluginsetting.configuration.services)
+                        				services_ =pluginsetting.configuration.services;
+                        			
+                        			simpleportal.serviceloader.loadServices({servicedir:pluginsetting.installeddir + &#x27;/&#x27; + pluginsetting.servicedir, services:services_}, callback);
+                        		}else
+                        			callback();
+                        	} else if(!pluginsetting.disabled){
+                        		logger.getInstance().info(&#x27;Simple Portal : pluginloader&#x27;, &#x27;__loadPlugin  -- &#x27; + pluginsetting.id  +&#x27; -- is -- &#x27; + pluginsetting.installeddir + &#x27; -- &#x27;+ pluginsetting.installed);
+                        		callback();
+                        	} else
+                        		callback();
+                        }
+                        
+                        /**
+                         * To register a plugin within a directory
+                         * 
+                         * @method registerPlugin
+                         * @param {} file plugin directory path
+                         * @param {} configuration 
+                         * @param {} dbInstance OPtional db instance if not mentioned will use the default instance
+                         * @param {callback} callback The callback to excecute when complete
+                         * @private
+                         * @deprecated 
+                         */
+                        PluginLoader.registerPlugin = function(file, configuration, dbInstance, callback){
+                        	logger.getInstance().info(&#x27;Simple Portal : pluginloader&#x27;, &#x27;registerPlugin  -- &#x27; + file);
+                        	
+                        	if( fs.existsSync(file) &amp;&amp; !/\.$/.test(file)){
+                        		var path = fs.realpathSync(file);
+                        		var startindex=0;
+                        		if(file.lastIndexOf(&#x27;/&#x27;) &gt;= 0)
+                        			startindex=file.lastIndexOf(&#x27;/&#x27;)+1;
+                        		var plugin = file.substring(startindex);
+                        		var pluginsetting = {id:plugin};
+                        		
+                        		PluginLoader.readPluginSetting(pluginsetting);
+                        		
+                        		if(pluginsetting.plugintype == &#x27;webapp&#x27;){
+                        			if(PluginLoader.configuration.webapps)
+                        				PluginLoader.configuration.webapps.push(pluginsetting.id);
+                        			else
+                        				PluginLoader.configuration.webapps = [pluginsetting.id];
+                        			
+                        			if(PluginLoader.configuration.webappuris)
+                        				PluginLoader.configuration.webappuris.push(pluginsetting.webappuri||&#x27;/&#x27;+pluginsetting.id);
+                        			else
+                        				PluginLoader.configuration.webappuris = [pluginsetting.webappuri||&#x27;/&#x27;+pluginsetting.id];	
+                        		}else {
+                        			logger.getInstance().info(&#x27;Simple Portal : pluginloader&#x27;, &#x27;registerPlugin  -- &#x27; + pluginsetting.id  +&#x27; -- is -- &#x27; + pluginsetting.plugintype);
+                        		}
+                        		
+                        		if(!pluginsetting.disabled&amp;&amp;pluginsetting.installed &amp;&amp; pluginsetting.servicedir){
+                        			if(PluginLoader.plugins[pluginsetting.plugintype])
+                        				PluginLoader.plugins[pluginsetting.plugintype].push(pluginsetting);
+                        			
+                        			if(fs.existsSync(pluginsetting.installeddir + &#x27;/&#x27; + pluginsetting.servicedir)){
+                        				simpleportal.serviceloader.registerServices(pluginsetting.installeddir + &#x27;/&#x27; + pluginsetting.servicedir, pluginsetting.configuration, function(error){
+                        					callback(error);	
+                        				});
+                        			}else
+                        				callback();
+                        		} else if(!pluginsetting.disabled){
+                        			logger.getInstance().info(&#x27;Simple Portal : pluginloader&#x27;, &#x27;registerPlugin  -- &#x27; + pluginsetting.id  +&#x27; -- is -- &#x27; + pluginsetting.installeddir);
+                        			callback();
+                        		}else
+                        			callback();
+                        	}else
+                        		callback(&#x27;No such plugin  found - &#x27; + file);
+                        }
+                        
+                        /**
+                         * To get all the plugins registered 
+                         * 
+                         * @method getPlugins
+                         * @param {string} type plugin type if not mentioned complete plugins will be send 
+                         * 
+                         * @return object or array accoring to the plugin type
+                         */
+                        PluginLoader.getPlugins = function(type){
+                        	if(type &amp;&amp; PluginLoader.plugins[type])
+                        		return PluginLoader.plugins[type];
+                        	else
+                        		return PluginLoader.plugins;
+                        }
+                        
+                        /**
+                         * To load plugin froma list
+                         * 
+                         * @method loadPluginFromList
+                         * 
+                         * @param {} pluginsettinglist
+                         * @param {} configuration
+                         * @param {callback} callback The callback to excecute when complete
+                         * 
+                         * @private
+                         */
+                        loadPluginFromList=function(pluginsettinglist, configuration, callback){
+                        	var __registerPlugins_count = pluginsettinglist.length,
+                        		__registerPlugins_count_fincount=0,
+                        		errors;
+                        	
+                        	for(var i in pluginsettinglist){
+                        		var pluginsetting = pluginsettinglist[i];
+                        		
+                        		__loadPlugin(pluginsetting, configuration, PluginLoader.dbInstance, function(error){
+                        			if(error){
+                        				errors=errors||[];
+                        				errors.push(error);
+                        			}	
+                        			
+                        			if(__registerPlugins_count_fincount++ == __registerPlugins_count-1)
+                        				callback(errors);
+                        		});
+                        	}	
+                        }
+                        
+                        /**
+                         * To unload plugins from a directory
+                         * 
+                         * @method unLoadPluginFromDirectory
+                         * 
+                         * @param {} plugindir
+                         * @param {} configuration
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        PluginLoader.unLoadPluginFromDirectory=function(plugindir, configuration, callback){
+                        	logger.getInstance().info(&#x27;Simple Portal : PluginLoader : unLoadPluginFromDirectory&#x27;, plugindir);
+                        	
+                        	if(!fs.existsSync(plugindir))
+                        		callback();
+                        	else{
+                        		var pluginlist = [];
+                        		var pluginsettinglist = []; 
+                        		
+                        		fs.readdirSync(plugindir).forEach(function(filename){
+                        			if(!/\.$/.test(filename)){
+                        				pluginlist.push({installeddir:plugindir+ &#x27;/&#x27; + filename, id:filename});
+                        			}
+                        		});
+                        		
+                        		for(var i in pluginlist){
+                        			var pluginsetting = pluginlist[i];
+                        			
+                        			pluginsetting = PluginLoader.readPluginSetting(pluginsetting, plugindir);
+                        			
+                        			if(pluginsetting&amp;&amp;!pluginsetting.disabled&amp;&amp;pluginsetting.installed)
+                        				pluginsettinglist.push(pluginsetting);
+                        		}
+                        		
+                        		loadPluginFromList(pluginsettinglist, configuration, callback);
+                        	}
+                        };
+                        
+                        /**
+                         * To load plugin from a directory
+                         * 
+                         * @method loadPluginFromDirectory
+                         * @param {} plugindir Plugin directory
+                         * @param {} configuration
+                         * @param {callback} callback The callback to excecute when complete
+                         * @return 
+                         */
+                        PluginLoader.loadPluginFromDirectory=function(plugindir, configuration, callback){
+                        	if(!PluginLoader.plugins)
+                        		PluginLoader.plugins={util:[], webapp:[], theme:[]};
+                        	
+                        	if(!fs.existsSync(plugindir))
+                        		callback();
+                        	else{
+                        		logger.getInstance().info(&#x27;Simple Portal : PluginLoader : loadPluginFromDirectory&#x27;, plugindir);
+                        		
+                        		var pluginlist = [],
+                        			pluginsettinglist = []; 
+                        		
+                        		var jsfiles = fs.readdirSync(plugindir).filter(function(v){ return !/\./.test(v)&amp;&amp;fs.existsSync(plugindir+&#x27;/&#x27;+v+&#x27;/plugin.json&#x27;); });
+                        		
+                        		jsfiles.forEach(function(filename){
+                        			pluginlist.push({installeddir:plugindir+ &#x27;/&#x27; + filename, id:filename});
+                        		});
+                        		
+                        		for(var i in pluginlist){
+                        			var pluginsetting = pluginlist[i];
+                        			
+                        			pluginsetting = PluginLoader.readPluginSetting(pluginsetting, plugindir);
+                        			
+                        			if(!pluginsetting.installeddir)
+                        				pluginsetting.installeddir = plugindir + &#x27;/&#x27; + pluginsetting.id;
+                        			
+                        			if(pluginsetting&amp;&amp;!pluginsetting.disabled&amp;&amp;pluginsetting.installed)
+                        				pluginsettinglist.push(pluginsetting);
+                        		}
+                        		
+                        		pluginsettinglist = pluginsettinglist.sort(function(a, b){
+                        			return (a.priority||0) &gt; (b.priority||0);
+                        		});
+                        		
+                        		if(pluginsettinglist&amp;&amp;pluginsettinglist.length &gt;0){
+                        			if(!simpleportal.util.arraycontains(PluginLoader.plugindirs, plugindir) &amp;&amp; plugindir != PluginLoader.plugindir){
+                        				PluginLoader.plugindirs.push(plugindir);
+                        			}	
+                        			
+                        			loadPluginFromList(pluginsettinglist, configuration, callback);
+                        		}else
+                        			callback();
+                        	}
+                        };
+                        
+                        /**
+                         * To update the configuration of the &#x60;simpleportal.pluginloader&#x60;
+                         * 
+                         * @method updateConfiguration
+                         * @param {} configuration Configuration you want to update
+                         */
+                        PluginLoader.updateConfiguration=function(configuration){
+                        	PluginLoader.configuration=configuration;
+                        }
+                        
+                        /**
+                         * To read plugin settings from the plugin.json file
+                         * 
+                         * @method readPluginSetting
+                         * 
+                         * @param {} pluginsettings plugin details
+                         * @param {} plugindir Directry where plugin will be searched for
+                         * 
+                         * @return {object} pluginsettings parsed json data from the plugin.json file 
+                         */
+                        PluginLoader.readPluginSetting = function(pluginsettings, plugindir){
+                        	var deployedroot = simpleportal.util.getServerPath(plugindir||PluginLoader.plugindir);
+                        	
+                        	if(pluginsettings[&#x27;public&#x27;]&amp;&amp;pluginsettings.publicappdir)
+                        		deployedroot = simpleportal.util.getServerPath(pluginsettings.publicappdir);
+                        	
+                        	var deployedpath = deployedroot + &#x27;/&#x27; + pluginsettings.id;
+                        	
+                        	logger.getInstance().info(&#x27;Simple Portal : PluginLoader : readPluginSetting&#x27;, &#x27;reading plugin settings -&#x27; + deployedpath);
+                        	
+                        	if(fs.existsSync(deployedpath)){
+                        		pluginsettings.installeddir=deployedpath;
+                        		
+                        		if(fs.existsSync(deployedpath + &#x27;/plugin.json&#x27;)){
+                        			var exisitingpluginsetting = simpleportal.util.readJSONFile(deployedpath + &#x27;/plugin.json&#x27;);
+                        			
+                        			if(exisitingpluginsetting&amp;&amp;exisitingpluginsetting.version)
+                        				pluginsettings.curversion=exisitingpluginsetting.version;
+                        
+                        			pluginsettings.installed=true;
+                        			pluginsettings = simpleportal.util.extendJSON(pluginsettings, exisitingpluginsetting);
+                        		}
+                        		
+                        		if(pluginsettings.dependencies&amp;&amp;pluginsettings.dependencies.length &gt; 0){
+                        			pluginsettings.missingdependencies=[];
+                        			
+                        			for(var index in pluginsettings.dependencies){
+                        				if(pluginsettings.dependencies[index] != pluginsettings.id){ // infinite loop in case self dependancy
+                        					var dependappid = pluginsettings.dependencies[index],
+                        						missing = true;
+                        					
+                        					var setting_ = PluginLoader.readPluginSetting({id:dependappid}); // check this dependency is missing!!
+                        					missing = !setting_.installed;
+                        					
+                        					if(missing){
+                        						for(var i in PluginLoader.plugindirs){
+                        							if(missing){
+                        								var plugindir_ = PluginLoader.plugindirs[i];
+                        								var setting_ = PluginLoader.readPluginSetting({id:dependappid}, plugindir_); // check this dependency in alternate directories
+                        								
+                        								missing = !setting_.installed;
+                        							}
+                        						}
+                        					} 
+                        					
+                        					if(missing)
+                        						pluginsettings.missingdependencies.push(setting_.id);
+                        				}
+                        			}
+                        		}
+                        	}else{
+                        		pluginsettings.installed=false;
+                        		
+                        		delete pluginsettings.installeddir;
+                        		delete pluginsettings.missingdependencies;
+                        	}
+                        	
+                        	return pluginsettings;
+                        }
+                        
+                        /**
+                         * To load a plugin based on the pluginsettings provided
+                         * 
+                         * @method loadPlugin
+                         * 
+                         * @param {} pluginsetting plugin settings
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        PluginLoader.loadPlugin = function(pluginsetting, callback){
+                        	var instance = this;
+                        	
+                        	logger.getInstance().debug(&#x27;Simple Portal : loadPlugin&#x27;, &#x27;Loading plugins --&#x27; + pluginsetting.installeddir);
+                        	
+                        	simpleportal.pluginloader.readPluginSetting(pluginsetting);
+                        	
+                        	loadPlugin(pluginsetting, pluginsetting.configuration, PluginLoader.dbInstance, callback);
+                        }
+                        
+                        PluginLoader.services.service[&#x27;GET /:id&#x27;] = function(request, response, callback){
+                        	if(request.user.role&amp;&amp;request.user.role==&#x27;superadmin&#x27;)
+                        		callback(null, getServiceDetails(request.pathGroup))
+                        	else
+                        		callback(&#x27;Permission denied&#x27;);
+                        }
+                        
+                        PluginLoader.services.service[&#x27;GET /&#x27;] = function(request, response, callback){
+                        	if(request.user.role&amp;&amp;request.user.role==&#x27;superadmin&#x27;){
+                        		var result =[];
+                        		for(var subModule in PluginLoader){
+                        			var details = PluginLoader.getPluginDetails(subModule);
+                        			if(details)
+                        				result.push(details);
+                        		}
+                        		callback(null, result);
+                        	} else
+                        		callback(&#x27;Permission denied&#x27;);
+                        };
+                        
+                        /**
+                         * To unload a plugin from the &#x60;simpleportal.Server&#x60;
+                         * 
+                         * @method unLoadPlugins
+                         * @param {} configuration plugin configuration
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        PluginLoader.unLoadPlugins = function(configuration, callback){
+                        	var plugindir = configuration&amp;&amp;configuration.plugindir ?  configuration.plugindir : PluginLoader.plugindir;
+                        	logger.getInstance().info(&#x27;Simple Portal : pluginloader&#x27;, &#x27;unLoadPlugins  -- &#x27; + plugindir);
+                        	
+                        	var errors = [];
+                        	if(!fs.existsSync(plugindir))
+                        		callback();
+                        	else{
+                        		var stats = fs.lstatSync(plugindir);
+                        		
+                        		if (stats.isDirectory()) {
+                        			PluginLoader.__unLoadPlugins(plugindir, {}, function(error){
+                        				if(error)
+                        					errors.push(error);
+                        				
+                        				if(callback)
+                        					callback(errors);
+                        			});
+                        		}else if(callback)
+                        			callback();
+                        	}
+                        }
+                        
+                        /**
+                         * To load plugins based ona plugin directory confoguration
+                         * 
+                         * @method loadPlugins
+                         * 
+                         * @param {} configuration Configuration for the plugin directory
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        PluginLoader.loadPlugins = function(configuration, callback){
+                        	var plugindir = configuration&amp;&amp;configuration.plugindir ?  configuration.plugindir : PluginLoader.plugindir;
+                        	
+                        	logger.getInstance().info(&#x27;Simple Portal : pluginloader&#x27;, &#x27;loadPlugins  -- &#x27; + plugindir);
+                        	
+                        	if(!PluginLoader.plugins)
+                        		PluginLoader.plugins={util:[], webapp:[], theme:[]};
+                        	
+                        	var errors;
+                        	if(!fs.existsSync(plugindir))
+                        		callback();
+                        	else{
+                        		var stats = fs.lstatSync(plugindir);
+                        		
+                        		if (stats.isDirectory()) {
+                        			PluginLoader.loadPluginFromDirectory(plugindir, {}, function(error){
+                        				if(error){
+                        					errors=errors||[];
+                        					errors.push(error);	
+                        				}	
+                        				
+                        				if(callback)
+                        					callback(errors);
+                        			});
+                        		}else if(callback)
+                        			callback();
+                        	}
+                        };
+                        
+                        /**
+                         * To initialize the router required for the &#x60;simpleportal.Server&#x60;
+                         * 
+                         * @method initRouter
+                         * @param {} router router object where the oauth handlers will be registered
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        PluginLoader.initRouter = function(router, callback){
+                        	logger.getInstance().info(&#x27;Simple Portal - PluginLoader : initRouter&#x27;, &#x27;Initializing plugin routers&#x27;);
+                        	
+                        	router.dispatch.addServiceHandlers(PluginLoader, PluginLoader.pluginUrl, simpleportal.serviceloader.call);
+                        	router.dispatch.addServiceGlobalHandlers(PluginLoader, PluginLoader.pluginUrl, simpleportal.serviceloader.call);
+                        	
+                        	if(callback)
+                        		callback();
+                        }
+                        
+                        new simpleportal.CRUDService({name:&#x27;pluginloader&#x27;, service:PluginLoader, modify:true, collection:&#x27;pluginloader&#x27;, userrole:&#x27;superadmin&#x27;});
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

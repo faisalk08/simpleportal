@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/wrapper/server.js - Simpleportal</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="Simpleportal" src="../../../default_/resources/public/simpleportal/favicon.ico" style="max-height: 65%;" title="Simpleportal">
+            Simpleportal
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/Csvparser", "classes/db", "classes/DBPool", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/simpleportal.Csv", "classes/simpleportal.CsvReader", "classes/simpleportal.DispatchWrapper", "classes/simpleportal.Template", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/Base64.html">Base64</a></li>
+	                            <li><a href="../classes/configuration.html">configuration</a></li>
+	                            <li><a href="../classes/CRUDService.html">CRUDService</a></li>
+	                            <li><a href="../classes/Csvparser.html">Csvparser</a></li>
+	                            <li><a href="../classes/db.html">db</a></li>
+	                            <li><a href="../classes/DBPool.html">DBPool</a></li>
+	                            <li><a href="../classes/Encryption.html">Encryption</a></li>
+	                            <li><a href="../classes/filterloader.html">filterloader</a></li>
+	                            <li><a href="../classes/LocalCache.html">LocalCache</a></li>
+	                            <li><a href="../classes/Logger.html">Logger</a></li>
+	                            <li><a href="../classes/logger.html">logger</a></li>
+	                            <li><a href="../classes/notificationcenter.html">notificationcenter</a></li>
+	                            <li><a href="../classes/oauth.html">oauth</a></li>
+	                            <li><a href="../classes/pluginloader.html">pluginloader</a></li>
+	                            <li><a href="../classes/PluginUtil.html">PluginUtil</a></li>
+	                            <li><a href="../classes/Response.html">Response</a></li>
+	                            <li><a href="../classes/Restfulmongo.html">Restfulmongo</a></li>
+	                            <li><a href="../classes/router.html">router</a></li>
+	                            <li><a href="../classes/Server.html">Server</a></li>
+	                            <li><a href="../classes/Service.CRUDService.html">Service.CRUDService</a></li>
+	                            <li><a href="../classes/Service.RemoteService.html">Service.RemoteService</a></li>
+	                            <li><a href="../classes/Service.StorageService.html">Service.StorageService</a></li>
+	                            <li><a href="../classes/serviceloader.html">serviceloader</a></li>
+	                            <li><a href="../classes/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../classes/simpleportal.Csv.html">simpleportal.Csv</a></li>
+	                            <li><a href="../classes/simpleportal.CsvReader.html">simpleportal.CsvReader</a></li>
+	                            <li><a href="../classes/simpleportal.DispatchWrapper.html">simpleportal.DispatchWrapper</a></li>
+	                            <li><a href="../classes/simpleportal.Template.html">simpleportal.Template</a></li>
+	                            <li><a href="../classes/SimplePortalOAuth.html">SimplePortalOAuth</a></li>
+	                            <li><a href="../classes/startuploader.html">startuploader</a></li>
+	                            <li><a href="../classes/template.html">template</a></li>
+	                            <li><a href="../classes/util.html">util</a></li>
+	                            <li><a href="../classes/viewloader.html">viewloader</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/middleware.html">middleware</a></li>
+	                            <li><a href="../modules/simpleportal.html">simpleportal</a></li>
+	                            <li><a href="../modules/util.html">util</a></li>
+	                            <li><a href="../modules/wrapper.html">wrapper</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>lib/wrapper/server.js <small>File</small></h1>
+                        </div>
+                        
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        var http = require(&quot;http&quot;);
+                        var events = require(&#x27;events&#x27;);
+                        var mime=require(&#x27;mime&#x27;);
+                        var simpleportal = require(&#x27;simpleportal&#x27;);
+                        
+                        var util = require(&quot;util&quot;);
+                        var logger = require(&#x27;simpleportal&#x27;).logger;
+                        
+                        var fs=require(&#x27;fs&#x27;);
+                        var connect = require(&#x27;connect&#x27;);
+                        
+                        //var services = simpleportal.serviceloader;
+                        //var views = simpleportal.views;
+                        
+                        /**
+                         * Simpleportal server, connectjs server wrapped with usefull functions from Simpleportal
+                        
+                        	Example:
+                        
+                        	var app = new simpleportal.Server();
+                        
+                        	app.createServer();
+                        	
+                         * 
+                         * @class Server
+                         * @module simpleportal
+                         * @submodule wrapper
+                         * 
+                         * @constructor
+                         * @param options The options object
+                         */
+                        var Server = 
+                         module.exports = function Server(options) {
+                        	var instance = this;
+                        	options = options || {};
+                        	instance.options = options;
+                        	
+                        	if(options &amp;&amp; options.configure){
+                        		instance.configure = options.configure;
+                        	}
+                        
+                        	instance.router = simpleportal.router;
+                        	
+                        	events.EventEmitter.call(instance);
+                        }
+                        
+                        util.inherits(Server, events.EventEmitter);
+                        
+                        /**
+                         * Method to configure the connect Server, allows overriding default features of Simpleportal server
+                         * 
+                         * @method configureconnect
+                         */
+                        Server.prototype.configureconnect = function() {
+                        	var instance = this;
+                        	
+                        	var configuration = instance.configuration;
+                        	
+                        	simpleportal.util.callModuleFunction(simpleportal.viewloader, true, &#x27;loadService&#x27;, instance, function(){
+                        		logger.getInstance().info(&#x27;Simpleportal - Server:configureconnect&#x27; , &#x27;Registered services needed for views&#x27;);
+                        	});
+                        	
+                        	logger.getInstance().info(&#x27;Simpleportal - Server:configureconnect&#x27; , &#x27;REGSISTERING APP REQUEST FILTER&#x27;);
+                        	
+                        	if(simpleportal.filterloader.filters.length != 0){
+                        		for(var i = 0; i &lt; simpleportal.filterloader.filters.length;i++){
+                        			var filterconfig = {homeuri:configuration.homeuri};
+                        			if(configuration.webapps&amp;&amp;configuration.webappuris)
+                        				filterconfig = {webapps:configuration.webapps, webappuris:configuration.webappuris};
+                        			
+                        			var filtername = simpleportal.filterloader.filters[i];
+                        			
+                        			if(configuration&amp;&amp;configuration.filter&amp;&amp;configuration.filter[filtername])
+                        				filterconfig=simpleportal.util.extendJSON(filterconfig, configuration.filter[filtername]);
+                        			
+                        			if(filterconfig &amp;&amp; filterconfig.disabled)
+                        				logger.getInstance().info(&#x27;Simpleportal - Server:configureconnect&#x27; , &#x27;DISABLED  --- FILTER - &#x27; + filtername);
+                        			else{
+                        				logger.getInstance().info(&#x27;Simpleportal - Server:configureconnect&#x27; , &#x27;FILTER - &#x27; + filtername);
+                        				
+                        				instance.server.use(new require(simpleportal.util.getServerPath(simpleportal.filterloader.filterdir + &#x27;/&#x27; +filtername + &#x27;.js&#x27;, true))(filterconfig));
+                        			}
+                        		}
+                        	}
+                        	
+                        	logger.getInstance().info(&#x27;Simpleportal - Server:configureconnect&#x27; , &#x27;REGSITERING WEBAPP STATIC FILES&#x27;);
+                        	
+                        	var webapps =  simpleportal.pluginloader.getPlugins(&#x27;webapp&#x27;);
+                        	webapps.forEach(function(webappsetting){
+                        		instance.loadPluginURI(webappsetting);
+                        	});
+                        }
+                        
+                        /**
+                         * Method for configuring the Simple portal server
+                         * 
+                         * @method configure
+                         * @private
+                         */
+                        Server.prototype.configure = function() {
+                        	var instance = this;
+                        	var configuration = instance.configuration;
+                        	
+                        	var staticResourceDir = simpleportal.util.getServerPath(configuration.resources.root + &#x27;public/&#x27;);
+                        	
+                        	instance.server.use(connect.compress({
+                        		filter : function(req, res){
+                        			return /html|text|css|javascript/.test(res.getHeader(&#x27;Content-Type&#x27;));
+                        		}
+                        	}));
+                        	
+                        	if (fs.existsSync(staticResourceDir + &#x27;/favicon.ico&#x27;))
+                        		instance.server.use(connect.favicon(staticResourceDir + &#x27;/favicon.ico&#x27;));
+                        	else if(fs.existsSync(&#x27;./node_modules/simpleportal/default_/resources/public/simpleportal/favicon.ico&#x27;))
+                        		instance.server.use(connect.favicon(&#x27;./node_modules/simpleportal/default_/resources/public/simpleportal/favicon.ico&#x27;));
+                        	
+                        	if (fs.existsSync(staticResourceDir))
+                        		instance.server.use(connect.static(staticResourceDir));
+                        	
+                        	if(configuration.resources.publicdirs &amp;&amp; typeof configuration.resources.publicdirs.length != &#x27;undefined&#x27;){
+                        		configuration.resources.publicdirs.forEach(function(resource){
+                        			if(fs.existsSync(resource))
+                        				instance.server.use(connect.static(resource));
+                        		});
+                        	}
+                        	
+                        	if(instance.configureconnect)
+                        		instance.configureconnect();
+                        	else{
+                        		instance.server.use(connect.cookieParser(&#x27;keyboard cat&#x27;));
+                        		instance.server.use(connect.session({ secret:&#x27;keyboard cat&#x27;, cookie: { maxAge: 60000 }}));
+                        	}
+                        }
+                        
+                        /**
+                         * To stop the Server
+                         * 
+                         * @method stopServer
+                         * @private 
+                         */
+                        Server.prototype.stopServer = function() {
+                        	var instance = this;
+                        	
+                        	instance.emit(&#x27;shutdown&#x27;);
+                        }
+                        
+                        /**
+                         * To shutdown the process , should be last method before the server is shuts down its services.
+                         * 
+                         * @method closeServer
+                         * @private 
+                         */
+                        Server.prototype.closeServer = function() {
+                        	var instance = this;
+                        	
+                        	process.exit();
+                        }
+                        
+                        /**
+                         * To start the Simpleportal server
+                         * 
+                         * @method startServer
+                         * @private
+                         */
+                        Server.prototype.startServer = function() {
+                        	var instance = this;
+                        	try{
+                        		var server = connect.createServer();
+                        		instance.server = server;
+                        		
+                        		instance.configure();
+                        		
+                        		if(fs.existsSync(&#x27;./node_modules/simpleportal/default_/resources/public&#x27;))
+                        			instance.server.use(connect.static(&#x27;./node_modules/simpleportal/default_/resources/public&#x27;));
+                        		
+                        		instance.emit(&#x27;start&#x27;, {});
+                        
+                        		server.listen(instance.configuration.port || 9665);
+                        		
+                        		logger.getInstance().info(&#x27;Simple Portal -server&#x27;, &#x27;Server started, and listening on port - &#x27;+ instance.configuration.port);
+                        	} catch(error){
+                        		console.log(error);
+                        		logger.getInstance().error(&#x27;Simple Portal -server&#x27;, error);
+                        	}
+                        }
+                        
+                        /**
+                         * Server initialization , it will be first method executed in the servers life cycle.
+                         * 
+                         * @method init
+                         * @private
+                         */
+                        Server.prototype.init = function() {
+                        	var instance = this;
+                        
+                        	/*
+                        	 * initializing the configuration init
+                        	 */
+                        	instance.use(simpleportal.configuration);
+                        	
+                        	/*
+                        	 * listening to on start event where we will register the router events
+                        	 */
+                        	instance.on(&#x27;start&#x27;, function(){
+                        		instance.router.register([simpleportal.serviceloader, simpleportal.viewloader, simpleportal.pluginloader, simpleportal.oauth, simpleportal.template], function(){
+                        			logger.getInstance().debug(&#x27;Main Server - on:start&#x27;, &#x27;Router registered successfully&#x27;);
+                        		});
+                        
+                        		instance.server.use(simpleportal.Response());
+                        		
+                        		instance.server.use(simpleportal.logger.getInstance().accessLog());
+                        		
+                        		instance.emit(&#x27;dispatch.pre&#x27;, {});
+                        		
+                        		simpleportal.util.callModuleFunction(simpleportal.startuploader, true, &#x27;start&#x27;, instance, function(){
+                        			logger.getInstance().debug(&#x27;Main Server - on:start&#x27;, &#x27;Startups started succesfully&#x27;);
+                        			
+                        			simpleportal.util.callModuleFunction(simpleportal.serviceloader, true, &#x27;start&#x27;, instance, function(){
+                        				logger.getInstance().debug(&#x27;Main Server - on:start&#x27;, &#x27;Startups inside service is loaded succesfully&#x27;);
+                        			});
+                        		});
+                        	});
+                        
+                        	instance.on(&#x27;dispatch.pre&#x27;, function(){
+                        		instance.emit(&#x27;dispatch.ready&#x27;, {});	
+                        	});
+                        	
+                        	instance.on(&#x27;dispatch.post&#x27;, function(){
+                        		instance.server.use(new simpleportal.Restfulmongo(simpleportal.serviceloader.serviceUrl));	
+                        	});
+                        	
+                        	instance.on(&#x27;dispatch.ready&#x27;, function(){
+                        		instance.server.use(instance.router.getDispatchHandler());
+                        		instance.emit(&#x27;dispatch.post&#x27;, {});
+                        	});
+                        	
+                        	instance.on(&#x27;services.ready&#x27;, function(){
+                        		instance.startServer();
+                        	});
+                        
+                        	instance.on(&#x27;restart&#x27;, function(){
+                        		console.log(&#x27;restart is called&#x27;);
+                        	});
+                        		
+                        	instance.on(&#x27;shutdown&#x27;, function(error){
+                        		simpleportal.util.callModuleFunction(simpleportal.serviceloader, true, &#x27;shutdown&#x27;, instance.configuration, function(){
+                        			instance.emit(&#x27;services.shutdown&#x27;);
+                        		});
+                        	});
+                        	
+                        	instance.on(&#x27;server.exit&#x27;, function(error){
+                        		process.exit();
+                        	});
+                        	
+                        	process.on (&#x27;SIGTERM&#x27;, function(){
+                        		instance.stopServer();
+                        	});
+                        	
+                        	process.on (&#x27;SIGINT&#x27;, function(){
+                        		instance.stopServer();
+                        	});
+                        	
+                        	/**
+                        	 * overriding the NODE js Response method!!!
+                        	 * 
+                        	 * @method send
+                        	 * 
+                        	 * @param {} status
+                        	 * @param {} headers
+                        	 * @param {} body
+                        	 * @private
+                        	 */
+                        	http.ServerResponse.prototype.send = function (status, headers, body) {
+                        		if(headers &amp;&amp; !(headers[&#x27;content-type&#x27;] || headers[&#x27;Content-Type&#x27;])){
+                        			headers[&#x27;Content-Type&#x27;] = &#x27;text/html; charset=UTF-8&#x27;;
+                        		}
+                        		
+                        		this.writeHead(status, headers);
+                        		this.write(body || &#x27;&#x27;);
+                        	    this.end();
+                        	};
+                        	
+                        	/**
+                        	 * Setting the content type of the response using a function
+                        	 * 
+                        	 * @method contentType
+                        	 * @param {string} value
+                        	 * 
+                        	 * @return contentType
+                        	 * @private
+                        	 */
+                        	http.ServerResponse.prototype.contentType = function(value){
+                        		if(value)
+                        			this.content_type = value;
+                        		
+                        		return this.content_type;
+                        	}
+                        	
+                        	/**
+                        	 * Sending the response as json 
+                        	 * 
+                        	 * @method json
+                        	 * 
+                        	 * @param {} body
+                        	 * @param {} error
+                        	 * @return
+                        	 * @private 
+                        	 */
+                        	http.ServerResponse.prototype.json = function(body, error){
+                        		simpleportal.util.sendServiceResponse(this, error, body);
+                        	}
+                        	
+                        
+                        	/**
+                        	 * Redirecting user request based on the status and the current request header 
+                        	 * 
+                        	 * @method redirect
+                        	 * @param {} url
+                        	 * @param {} status
+                        	 * @param {} req
+                        	 * @return
+                        	 * @private 
+                        	 */
+                        	http.ServerResponse.prototype.redirect = function(url, status, req){
+                        	  var app = this.app
+                        	    , base = &#x27;/&#x27;
+                        	    , status = status || 302
+                        	    , head = &#x27;HEAD&#x27; == req.method
+                        	    , body;
+                        
+                        	  // Setup redirect map
+                        	  var map = {
+                        	      back: req.header(&#x27;Referrer&#x27;, base)
+                        	    , home: base
+                        	  };
+                        
+                        	  // Support custom redirect map
+                        	  map.__proto__ = {};
+                        
+                        	  // Attempt mapped redirect
+                        	  var mapped = &#x27;function&#x27; == typeof map[url]
+                        	    ? map[url](req, this)
+                        	    : map[url];
+                        
+                        	  // Perform redirect
+                        	  url = mapped || url;
+                        
+                        	  // Relative
+                        	  if (!~url.indexOf(&#x27;://&#x27;)) {
+                        	    // Respect mount-point
+                        	    if (&#x27;/&#x27; != base &amp;&amp; 0 != url.indexOf(base)) url = base + url;
+                        
+                        	    // Absolute
+                        	    var host = req.headers.host
+                        	      , tls = req.connection.encrypted;
+                        	    url = &#x27;http&#x27; + (tls ? &#x27;s&#x27; : &#x27;&#x27;) + &#x27;://&#x27; + host + url;
+                        	  }
+                        
+                        	  // Support text/{plain,html} by default
+                        	  if (req.accepts(&#x27;html&#x27;)) {
+                        	    body = &#x27;&lt;p&gt;&#x27; + http.STATUS_CODES[status] + &#x27;. Redirecting to &lt;a href=&quot;&#x27; + url + &#x27;&quot;&gt;&#x27; + url + &#x27;&lt;/a&gt;&lt;/p&gt;&#x27;;
+                        	    this.header(&#x27;Content-Type&#x27;, &#x27;text/html&#x27;);
+                        	  } else {
+                        	    body = http.STATUS_CODES[status] + &#x27;. Redirecting to &#x27; + url;
+                        	    this.header(&#x27;Content-Type&#x27;, &#x27;text/plain&#x27;);
+                        	  }
+                        
+                        	  // Respond
+                        	  this.statusCode = status;
+                        	  this.header(&#x27;Location&#x27;, url);
+                        	  this.end(head ? null : body);
+                        	};
+                        	
+                        	var req = http.IncomingMessage.prototype;
+                        	
+                        	/**
+                        	 * Description
+                        	 * @method flash
+                        	 * @param {} type
+                        	 * @param {} msg
+                        	 * @return
+                        	 * @private
+                        	 */
+                        	req.flash = function(type, msg){
+                        	  if (this.session === undefined) throw Error(&#x27;req.flash() requires sessions&#x27;);
+                        	  var msgs = this.session.flash = this.session.flash || {};
+                        	  if (type &amp;&amp; msg) {
+                        	    var i = 2
+                        	      , args = arguments
+                        	      , formatters = this.app.flashFormatters || {};
+                        	    formatters.__proto__ = flashFormatters;
+                        	    msg = utils.miniMarkdown(msg);
+                        	    msg = msg.replace(/%([a-zA-Z])/g, function(_, format){
+                        	      var formatter = formatters[format];
+                        	      if (formatter) return formatter(utils.escape(args[i++]));
+                        	    });
+                        	    return (msgs[type] = msgs[type] || []).push(msg);
+                        	  } else if (type) {
+                        	    var arr = msgs[type];
+                        	    delete msgs[type];
+                        	    return arr || [];
+                        	  } else {
+                        	    this.session.flash = {};
+                        	    return msgs;
+                        	  }
+                        	};
+                        	
+                        
+                        	/**
+                        	 * Method for setting the response header
+                        	 * @method header
+                        	 * @param {} name
+                        	 * @param {} defaultValue
+                        	 * @return
+                        	 * @private 
+                        	 */
+                        	req.header = function(name, defaultValue){
+                        	  switch (name = name.toLowerCase()) {
+                        	    case &#x27;referer&#x27;:
+                        	    case &#x27;referrer&#x27;:
+                        	      return this.headers.referrer
+                        	        || this.headers.referer
+                        	        || defaultValue;
+                        	    default:
+                        	      return this.headers[name] || defaultValue;
+                        	  }
+                        	};
+                        	
+                        
+                        	/**
+                        	 * Method for reading the accept header from user request
+                        	 * @method accepts
+                        	 * @param {} type
+                        	 * @return
+                        	 * @private 
+                        	 */
+                        	req.accepts = function(type){
+                        	  var accept = this.header(&#x27;Accept&#x27;);
+                        
+                        	  // normalize extensions &quot;.json&quot; -&gt; &quot;json&quot;
+                        	  if (type &amp;&amp; &#x27;.&#x27; == type[0]) type = type.substr(1);
+                        
+                        	  // when Accept does not exist, or contains &#x27;*/*&#x27; return true
+                        	  if (!accept || ~accept.indexOf(&#x27;*/*&#x27;)) {
+                        	    return true;
+                        	  } else if (type) {
+                        	    // allow &quot;html&quot; vs &quot;text/html&quot; etc
+                        	    if (!~type.indexOf(&#x27;/&#x27;)) type = mime.lookup(type);
+                        
+                        	    // check if we have a direct match
+                        	    if (~accept.indexOf(type)) return true;
+                        
+                        	    // check if we have type/*
+                        	    type = type.split(&#x27;/&#x27;)[0] + &#x27;/*&#x27;;
+                        	    return !!~accept.indexOf(type);
+                        	  } else {
+                        	    return false;
+                        	  }
+                        	};
+                        	
+                        
+                        	/**
+                        	 * MEthod for reading the user header from the request
+                        	 * @method header
+                        	 * @param {} name
+                        	 * @param {} val
+                        	 * @return ThisExpression
+                        	 * @private
+                        	 */
+                        	http.ServerResponse.prototype.header = function(name, val){
+                        	  if (1 == arguments.length) return this.getHeader(name);
+                        	  this.setHeader(name, val);
+                        	  return this;
+                        	};
+                        
+                        }
+                        
+                        /**
+                         * Method for creating / starting the Simpleportal server
+                         * 
+                         * @method createServer
+                         */
+                        Server.prototype.createServer = function() {
+                        	var instance = this;
+                        
+                        	instance.init();
+                        }
+                        
+                        /**
+                         * Method used to initialize the server
+                         * 
+                         * @method initServer
+                         * 
+                         * @param {} configuration The server configuration
+                         * @private
+                         *  
+                         */
+                        Server.prototype.initServer = function(configuration){
+                        	logger.getInstance().debug(&#x27;Simple Portal-server&#x27;, &#x27;Initilizing the server started...&#x27;);
+                        	
+                        	var instance = this;
+                        	
+                        	instance.configuration = configuration;
+                        
+                        	instance.use(simpleportal.logger.getInstance());
+                        	instance.use(simpleportal.oauth);
+                        	instance.use(simpleportal.template);
+                        	
+                        	instance.use(simpleportal.db);
+                        	
+                        	instance.use(simpleportal.serviceloader);
+                        }
+                        
+                        /**
+                         * Overriden method for registering the various middlewares for the server.
+                         * 
+                         * @method use
+                         * 
+                         * @param {} module The module you want to use for the server.
+                         */
+                        Server.prototype.use = function(module){
+                        	var instance = this;
+                        	
+                        	if(module == simpleportal.db){
+                        		module.init(instance.configuration, function(error, dbInstance){
+                        			if(error)
+                        				logger.getInstance().error(&#x27;Simple Portal-server&#x27;, &#x27;There is some problem starting the local db, please make sure you configured things properly!!&#x27;);
+                        			instance.dbInstance = dbInstance;
+                        			instance.emit(&#x27;db.init&#x27;);
+                        		});
+                        	} else if(module == simpleportal.configuration){
+                        		module.init(function(configuration){
+                        			instance.initServer(configuration);
+                        		});
+                        	} else if(module == simpleportal.serviceloader){
+                        		instance.on(&#x27;db.init&#x27;, function(error){
+                        			simpleportal.serviceloader.updateConfiguration(instance.configuration);
+                        			simpleportal.pluginloader.updateConfiguration(instance.configuration);
+                        			simpleportal.viewloader.updateConfiguration(instance.configuration);
+                        			
+                        			instance.loadServices(function(error, data){
+                        				simpleportal.util.callModuleFunction(simpleportal.serviceloader, true, &#x27;init&#x27;, instance.configuration, function(){
+                        					logger.getInstance().info(&#x27;Simple Portal -server : use&#x27;, &#x27;calling service startup&#x27;);
+                        					
+                        					// calling modules onSatrtup function.
+                        					if(instance.configuration.callservicestartup)
+                        						simpleportal.util.callModuleFunction(simpleportal.serviceloader, true, &#x27;startup&#x27;, instance.configuration, function(){
+                        							instance.emit(&#x27;services.ready&#x27;);
+                        						});
+                        					else
+                        						instance.emit(&#x27;services.ready&#x27;);
+                        				});
+                        			}, false);
+                        		});
+                        	} else{ 
+                        		simpleportal.util.callModuleFunction(module, true, &#x27;init&#x27;, instance.configuration, function(){});	
+                        	}
+                        }
+                        
+                        /**
+                         * Method for openning the uris mentione din the plugins
+                         * 
+                         * @method loadPluginURI
+                         * 
+                         * @param {} pluginsetting Plugin settings 
+                         * @param {callback} callback The callback to excecute when complete
+                         * @private 
+                         */
+                        Server.prototype.loadPluginURI = function(pluginsetting, callback){
+                        	var instance = this;
+                        	logger.getInstance().info(&#x27;Simple Portal - server : loadPluginURI&#x27;, &#x27;loading services&#x27;);
+                        	
+                        	if(pluginsetting.plugintype==&#x27;webapp&#x27;){
+                        		var webappuri = pluginsetting.webappuri||pluginsetting.id;
+                        		
+                        		if(pluginsetting.installeddir &amp;&amp; pluginsetting.installed &amp;&amp; fs.existsSync(pluginsetting.installeddir + &#x27;/html5&#x27;)){
+                        			logger.getInstance().info(&#x27;Simple Portal - server : loadPluginURI&#x27; , &#x27;WEBAPP -&#x27; + webappuri  + &#x27; -- &#x27; + pluginsetting.installeddir);
+                        			
+                        			instance.server.use(webappuri, connect.static(pluginsetting.installeddir + &#x27;/html5&#x27;));
+                        		}	
+                        	}
+                        	
+                        	if(callback)
+                        		callback();
+                        }
+                        
+                        /**
+                         * Description
+                         * @method loadServices
+                         * @param {callback} callback The callback to excecute when complete
+                         * @param {} restart
+                         * @private 
+                         */
+                        Server.prototype.loadServices = function(callback, restart){
+                        	var instance = this;
+                        	logger.getInstance().info(&#x27;Simple Portal -server : loadServices&#x27;, &#x27;loading services&#x27;);
+                        	
+                        	simpleportal.serviceloader.loadServices(instance.configuration, function(){
+                        		if(!restart)
+                        			instance.loadPlugins(callback, restart);
+                        		else if(callback)
+                        			callback();
+                        	});
+                        }
+                        
+                        /**
+                         * Description
+                         * @method loadPlugins
+                         * @param {callback} callback The callback to excecute when complete
+                         * @param {} restart
+                         * @private 
+                         */
+                        Server.prototype.loadPlugins = function(callback, restart){
+                        	var instance = this;
+                        	logger.getInstance().info(&#x27;Simple Portal -server : loadPlugins&#x27;, &#x27;loading plugins&#x27;);
+                        	
+                        	simpleportal.pluginloader.loadPluginFromDirectory(&#x27;resources/public&#x27;, instance.configuration, function(perror, pdata){
+                        		simpleportal.pluginloader.loadPlugins(instance.configuration, function(error){
+                        			logger.getInstance().info(&#x27;Simple Portal -server : loadPlugins&#x27;, &#x27;loading plugins finished now searching inside public directory&#x27;);
+                        			
+                        			if(!restart)
+                        				instance.loadViews(callback, restart);
+                        			else if(callback)
+                        				callback();
+                        			/*
+                        			if(error&amp;&amp;error.length &gt; 0){
+                        				console.log(error);
+                        				callback(error);	
+                        			} else
+                        				simpleportal.pluginloader.loadPluginFromDirectory(&#x27;resources/public&#x27;, instance.configuration, function(perror, pdata){
+                        					if(!restart)
+                        						instance.loadViews(callback, restart);
+                        					else if(callback)
+                        						callback();
+                        				});
+                        				if(!restart)
+                        					instance.loadViews(callback, restart);
+                        				else if(callback)
+                        					callback();*/
+                        		});
+                        	});
+                        	/*
+                        	simpleportal.pluginloader.loadPlugins(instance.configuration, function(error){
+                        		logger.getInstance().info(&#x27;Simple Portal -server : loadPlugins&#x27;, &#x27;loading plugins finished now searching inside public directory&#x27;);
+                        		
+                        		if(error&amp;&amp;error.length &gt; 0){
+                        			console.log(error);
+                        			callback(error);	
+                        		} else
+                        			simpleportal.pluginloader.loadPluginFromDirectory(&#x27;resources/public&#x27;, instance.configuration, function(perror, pdata){
+                        				if(!restart)
+                        					instance.loadViews(callback, restart);
+                        				else if(callback)
+                        					callback();
+                        			});
+                        	});*/
+                        }
+                        
+                        /**
+                         * Description
+                         * @method loadViews
+                         * @param {callback} callback The callback to excecute when complete
+                         * @param {} restart
+                         * @private 
+                         */
+                        Server.prototype.loadViews = function(callback, restart){
+                        	var instance = this;
+                        	logger.getInstance().info(&#x27;Simple Portal -server : loadViews&#x27;, &#x27;loading views&#x27;);
+                        	
+                        	simpleportal.viewloader.loadViews(instance.configuration, function(){
+                        		if(!restart)
+                        			instance.loadStartups(callback, restart);
+                        		else if(callback)
+                        			callback();
+                        	});
+                        }
+                        
+                        /**
+                         * Description
+                         * @method loadStartups
+                         * @param {callback} callback The callback to excecute when complete
+                         * @param {} restart
+                         * @private 
+                         */
+                        Server.prototype.loadStartups = function(callback, restart){
+                        	var instance = this;
+                        	logger.getInstance().info(&#x27;Simple Portal -server : loadStartups&#x27;, &#x27;loading startups&#x27;);
+                        	
+                        	simpleportal.startuploader.loadStartups(instance.configuration, function(){
+                        		if(!restart)
+                        			instance.loadFilters(callback, restart);
+                        		else if(callback)
+                        			callback();
+                        	});
+                        }
+                        
+                        /**
+                         * Description
+                         * @method loadFilters
+                         * @param {callback} callback The callback to excecute when complete
+                         * @param {} restart
+                         * @private 
+                         */
+                        Server.prototype.loadFilters = function(callback, restart){
+                        	var instance = this;
+                        	logger.getInstance().info(&#x27;Simple Portal -server : loadFilters&#x27;, &#x27;loading views&#x27;);
+                        	
+                        	simpleportal.filterloader.loadFilters(instance.configuration, function(){
+                        		if(callback)
+                        			callback();
+                        	});
+                        }
+                        
+                        /**
+                         * Description
+                         * @method request
+                         * @param {} urlhandler
+                         * @private 
+                         */
+                        Server.prototype.request = function(urlhandler){
+                        	var instance = this;
+                        	
+                        	instance.router.dispatch.addUrlHandler(urlhandler)
+                        }
+                        
+                        /**
+                         * Method for adding new POST apis
+                         * 
+                         * @method post
+                         * @param {string} path URI for the api
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        Server.prototype.post = function(path, callback){
+                        	var instance = this;
+                        	var handler =[];
+                        	
+                        	var expressionField;
+                        	
+                        	var spec_index = path.indexOf(&#x27;/:&#x27;);
+                        	if(path.indexOf(&#x27;/:&#x27;) != -1){
+                        		expressionField = path.substring(spec_index + 2);
+                        		var endIndex = expressionField.indexOf(&#x27;/&#x27;);
+                        		if(endIndex != -1){
+                        			expressionField = expressionField.substring(0, endIndex);
+                        		}
+                        	}
+                        	
+                        	handler[&#x27;POST &#x27; + path] = function(request, reponse, next, group){
+                        		request[&#x27;params&#x27;] = request[&#x27;params&#x27;]||{};
+                        
+                        		//to make the old code work..
+                        		request[&#x27;path&#x27;] = request[&#x27;path&#x27;]||{};
+                        		
+                        		if(group) {
+                        			request[&#x27;params&#x27;][expressionField] = group;
+                        			
+                        			//to make the old code work..
+                        			request[&#x27;path&#x27;][expressionField] = group;
+                        			request[&#x27;pathGroup&#x27;] = group;
+                        		}
+                        		
+                        		callback(request, reponse);
+                        	}
+                        	
+                        	instance.router.dispatch.addUrlHandler(handler);
+                        }
+                        
+                        /**
+                         * MEthod for adding new GET apis
+                         * 
+                         * @method get
+                         * @param {string} path URI for the api
+                         * @param {callback} callback The callback to excecute when complete
+                         */
+                        Server.prototype.get = function(path, callback){
+                        	var instance = this;
+                        	var handler =[];
+                        	
+                        	var expressionField;
+                        	
+                        	var spec_index = path.indexOf(&#x27;/:&#x27;);
+                        	if(path.indexOf(&#x27;/:&#x27;) != -1){
+                        		expressionField = path.substring(spec_index + 2);
+                        		var endIndex = expressionField.indexOf(&#x27;/&#x27;);
+                        		if(endIndex != -1){
+                        			expressionField = expressionField.substring(0, endIndex);
+                        		}
+                        	}
+                        	
+                        	handler[path] = function(request, reponse, next, group){
+                        		request[&#x27;params&#x27;] = request[&#x27;params&#x27;]||{};
+                        
+                        		//to make the old code work..
+                        		request[&#x27;path&#x27;] = request[&#x27;path&#x27;]||{};
+                        		
+                        		if(group) {
+                        			request[&#x27;params&#x27;][expressionField] = group;
+                        			
+                        			//to make the old code work..
+                        			request[&#x27;path&#x27;][expressionField] = group;
+                        			request[&#x27;pathGroup&#x27;] = group;
+                        		}
+                        		
+                        		callback(request, reponse);
+                        	}
+                        	
+                        	instance.router.dispatch.addUrlHandler(handler);
+                        }
+                        
+                        /**
+                         * @property CONNECT
+                         * @type string 
+                         */
+                        Server.CONNECT = &#x27;connect&#x27;;
+                        
+                        /**
+                         * @property REST_SERVER
+                         * @type string 
+                         */
+                        Server.REST_SERVER = &#x27;rest_server&#x27;;
+                        
+                        /**
+                         * @property WEB_SERVER
+                         * @type string 
+                         */
+                        Server.WEB_SERVER = &#x27;web_server&#x27;;
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>
