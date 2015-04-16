@@ -1,13 +1,37 @@
+/**
+ * View Handler for `simpleportal.Server` can be accessed with /example
+ * 
+ * @module viewloader
+ * 
+ * @class exampleview
+ * 
+ * @static
+ */
 var exampleView = module.exports = {};
 
 var simpleportal = require("simpleportal");
 
 var util = simpleportal.util;
 var templateView = simpleportal.template;
-var exampleService = simpleportal.services.examples.service;
+var exampleService = simpleportal.serviceloader.examples.service;
 
+/**
+ * API view handlers required for `simpleportal.viewloader` middleware
+ * @property view
+ * 
+ * @type object
+ */
 exampleView.view = {};
 
+/**
+ * View handler : example (/example/hello)
+ * 
+ * @method view.hello
+ * 
+ * @param {} request
+ * @param {} response
+ * @param {} next
+ */
 exampleView.view.hello = function(request, response, next){
 	exampleService.hello(request, response, function(error, data){
 		if(error){
