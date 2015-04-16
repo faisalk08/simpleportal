@@ -1,0 +1,42 @@
+{
+    "port":"8088",
+	"host":"localhost",
+	"secure":false,
+	"homeuri":"/home",
+	"hidePort":false,
+	"callservicestartup":true,
+	"translation":true,
+	"osnotification":true,
+	"resources":{
+        "root":"resources/",
+        "template":{
+            "root":"public/templates",
+            "layout":"layout"
+        },
+        "publicdirs":["./resources/public"]
+    },
+   "oauth":{
+		"use" :"none"
+	},
+	"filter":{},
+	"services":{},
+	"db":{
+		"use":"mongodb",
+		"mongodb":{
+			"host":"localhost",
+			"port":"27017",
+			"dbName":"test_db",
+			"user1":"testuser",
+			"password1":"test-pwd", 
+			"authdb":"admin"
+		}
+	},
+	"logger":{
+		"root":"serverlog",
+		"stream":"file",
+		"log":"server.log",
+		"access":"access.log",
+		"console":"true",
+		"logtype":"debug"
+	}
+}
