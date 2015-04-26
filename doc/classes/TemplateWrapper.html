@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>simpleportal.Template - Simpleportal</title>
+    <title>TemplateWrapper - Simpleportal</title>
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -14,7 +14,7 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
-	    <img alt="Simpleportal" src="../../../default_/resources/public/simpleportal/favicon.ico" style="max-height: 65%;" title="Simpleportal">
+	    <img alt="Simpleportal" src="../../favicon.ico" style="max-height: 65%;" title="Simpleportal">
             Simpleportal
         </h1>
 	<div class="nav">
@@ -26,7 +26,7 @@
             </li>
         </div>
         <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
-            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/Csvparser", "classes/db", "classes/DBPool", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/simpleportal.Csv", "classes/simpleportal.CsvReader", "classes/simpleportal.DispatchWrapper", "classes/simpleportal.Template", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/CsvParser", "classes/CsvReader", "classes/db", "classes/DBPool", "classes/Dispatchwrapper", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Resource installer", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/TemplateWrapper", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
         </form>
     </div>
 </div>
@@ -51,9 +51,11 @@
 	                            <li><a href="../classes/Base64.html">Base64</a></li>
 	                            <li><a href="../classes/configuration.html">configuration</a></li>
 	                            <li><a href="../classes/CRUDService.html">CRUDService</a></li>
-	                            <li><a href="../classes/Csvparser.html">Csvparser</a></li>
+	                            <li><a href="../classes/CsvParser.html">CsvParser</a></li>
+	                            <li><a href="../classes/CsvReader.html">CsvReader</a></li>
 	                            <li><a href="../classes/db.html">db</a></li>
 	                            <li><a href="../classes/DBPool.html">DBPool</a></li>
+	                            <li><a href="../classes/Dispatchwrapper.html">Dispatchwrapper</a></li>
 	                            <li><a href="../classes/Encryption.html">Encryption</a></li>
 	                            <li><a href="../classes/filterloader.html">filterloader</a></li>
 	                            <li><a href="../classes/LocalCache.html">LocalCache</a></li>
@@ -63,6 +65,7 @@
 	                            <li><a href="../classes/oauth.html">oauth</a></li>
 	                            <li><a href="../classes/pluginloader.html">pluginloader</a></li>
 	                            <li><a href="../classes/PluginUtil.html">PluginUtil</a></li>
+	                            <li><a href="../classes/Resource installer.html">Resource installer</a></li>
 	                            <li><a href="../classes/Response.html">Response</a></li>
 	                            <li><a href="../classes/Restfulmongo.html">Restfulmongo</a></li>
 	                            <li><a href="../classes/router.html">router</a></li>
@@ -72,13 +75,10 @@
 	                            <li><a href="../classes/Service.StorageService.html">Service.StorageService</a></li>
 	                            <li><a href="../classes/serviceloader.html">serviceloader</a></li>
 	                            <li><a href="../classes/simpleportal.html">simpleportal</a></li>
-	                            <li><a href="../classes/simpleportal.Csv.html">simpleportal.Csv</a></li>
-	                            <li><a href="../classes/simpleportal.CsvReader.html">simpleportal.CsvReader</a></li>
-	                            <li><a href="../classes/simpleportal.DispatchWrapper.html">simpleportal.DispatchWrapper</a></li>
-	                            <li><a href="../classes/simpleportal.Template.html">simpleportal.Template</a></li>
 	                            <li><a href="../classes/SimplePortalOAuth.html">SimplePortalOAuth</a></li>
 	                            <li><a href="../classes/startuploader.html">startuploader</a></li>
 	                            <li><a href="../classes/template.html">template</a></li>
+	                            <li><a href="../classes/TemplateWrapper.html">TemplateWrapper</a></li>
 	                            <li><a href="../classes/util.html">util</a></li>
 	                            <li><a href="../classes/viewloader.html">viewloader</a></li>
 	                    </ul>
@@ -124,7 +124,7 @@
                 <div id="docs-main">
                     <div class="content">
                         <div class="page-header">
-                            <h1>simpleportal.Template <small>Class</small></h1>
+                            <h1>TemplateWrapper <small>Class</small></h1>
                         </div>
                         
                         <div class="well well-small">
@@ -141,13 +141,14 @@
                         
                         
                         <div class="well well-small">
-                            
+                            <p>Server side template engine where ejs|mustache template can be used for generating html content</p>
+                        
                         </div>
                         
                             <div class="constructor">
                                 <h2>Constructor</h2>
-                                <div id="method_simpleportal.Template" class="method item">
-                                    <h3 class="name"><code>simpleportal.Template</code></h3>
+                                <div id="method_TemplateWrapper" class="method item">
+                                    <h3 class="name"><code>TemplateWrapper</code></h3>
                                 
                                         <div class="args">
                                             <span class="paren">(</span><ul class="args-list inline commas">
@@ -239,15 +240,50 @@
                         
                                             <ul class="index-list properties">
                                                     <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_data" data-tablink="data">data</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_engine" data-tablink="engine">engine</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
                                                         <a href="#" data-tabid="#properties" data-anchor="#property_ENGINES" data-tablink="ENGINES">ENGINES</a>
+                        
+                                                            <span class="flag static">static</span>
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_error" data-tablink="error">error</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_exception" data-tablink="exception">exception</a>
                         
                                                     </li>
                                                     <li class="index-item property">
                                                         <a href="#" data-tabid="#properties" data-anchor="#property_EXCEPTION_TEMPLATE" data-tablink="EXCEPTION_TEMPLATE">EXCEPTION_TEMPLATE</a>
                         
+                                                            <span class="flag static">static</span>
                                                     </li>
                                                     <li class="index-item property">
                                                         <a href="#" data-tabid="#properties" data-anchor="#property_EXCEPTION_TEMPLATE_FILE" data-tablink="EXCEPTION_TEMPLATE_FILE">EXCEPTION_TEMPLATE_FILE</a>
+                        
+                                                            <span class="flag static">static</span>
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_file" data-tablink="file">file</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_html" data-tablink="html">html</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_partials" data-tablink="partials">partials</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_templateBody" data-tablink="templateBody">templateBody</a>
                         
                                                     </li>
                                             </ul>
@@ -274,7 +310,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_template.js.html#l143"><code>lib&#x2F;wrapper&#x2F;template.js:143</code></a>
+                                                    <a href="../files/lib_wrapper_template.js.html#l198"><code>lib&#x2F;wrapper&#x2F;template.js:198</code></a>
                                                     </p>
                                             
                                             
@@ -313,7 +349,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_template.js.html#l72"><code>lib&#x2F;wrapper&#x2F;template.js:72</code></a>
+                                                    <a href="../files/lib_wrapper_template.js.html#l127"><code>lib&#x2F;wrapper&#x2F;template.js:127</code></a>
                                                     </p>
                                             
                                             
@@ -380,7 +416,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_template.js.html#l117"><code>lib&#x2F;wrapper&#x2F;template.js:117</code></a>
+                                                    <a href="../files/lib_wrapper_template.js.html#l172"><code>lib&#x2F;wrapper&#x2F;template.js:172</code></a>
                                                     </p>
                                             
                                             
@@ -440,7 +476,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_template.js.html#l50"><code>lib&#x2F;wrapper&#x2F;template.js:50</code></a>
+                                                    <a href="../files/lib_wrapper_template.js.html#l105"><code>lib&#x2F;wrapper&#x2F;template.js:105</code></a>
                                                     </p>
                                             
                                             
@@ -468,9 +504,9 @@
                                     <div id="properties" class="tab-pane">
                                         <h2 class="off-left">Properties</h2>
                         
-                                            <div id="property_ENGINES" class="property item">
-                                                <h3 class="name"><code>ENGINES</code></h3>
-                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+                                            <div id="property_data" class="property item">
+                                                <h3 class="name"><code>data</code></h3>
+                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
                                             
@@ -479,7 +515,59 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_template.js.html#l29"><code>lib&#x2F;wrapper&#x2F;template.js:29</code></a>
+                                                    <a href="../files/lib_wrapper_template.js.html#l28"><code>lib&#x2F;wrapper&#x2F;template.js:28</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Data for rendering to the template</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="property_engine" class="property item">
+                                                <h3 class="name"><code>engine</code></h3>
+                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_wrapper_template.js.html#l70"><code>lib&#x2F;wrapper&#x2F;template.js:70</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Template engine used</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="property_ENGINES" class="property item">
+                                                <h3 class="name"><code>ENGINES</code></h3>
+                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+                                            
+                                            
+                                            
+                                                    <span class="flag final">final</span>
+                                            
+                                                    <span class="flag static">static</span>
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_wrapper_template.js.html#l78"><code>lib&#x2F;wrapper&#x2F;template.js:78</code></a>
                                                     </p>
                                             
                                             
@@ -492,9 +580,9 @@
                                             
                                             
                                             </div>
-                                            <div id="property_EXCEPTION_TEMPLATE" class="property item">
-                                                <h3 class="name"><code>EXCEPTION_TEMPLATE</code></h3>
-                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                            <div id="property_error" class="property item">
+                                                <h3 class="name"><code>error</code></h3>
+                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
                                             
                                             
                                             
@@ -503,7 +591,59 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_template.js.html#l44"><code>lib&#x2F;wrapper&#x2F;template.js:44</code></a>
+                                                    <a href="../files/lib_wrapper_template.js.html#l56"><code>lib&#x2F;wrapper&#x2F;template.js:56</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Error during template process</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="property_exception" class="property item">
+                                                <h3 class="name"><code>exception</code></h3>
+                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_wrapper_template.js.html#l63"><code>lib&#x2F;wrapper&#x2F;template.js:63</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Exception while fetching the data, or to show in to the html</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="property_EXCEPTION_TEMPLATE" class="property item">
+                                                <h3 class="name"><code>EXCEPTION_TEMPLATE</code></h3>
+                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                            
+                                            
+                                            
+                                                    <span class="flag final">final</span>
+                                            
+                                                    <span class="flag static">static</span>
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_wrapper_template.js.html#l97"><code>lib&#x2F;wrapper&#x2F;template.js:97</code></a>
                                                     </p>
                                             
                                             
@@ -522,12 +662,14 @@
                                             
                                             
                                             
+                                                    <span class="flag final">final</span>
                                             
+                                                    <span class="flag static">static</span>
                                             
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_template.js.html#l38"><code>lib&#x2F;wrapper&#x2F;template.js:38</code></a>
+                                                    <a href="../files/lib_wrapper_template.js.html#l89"><code>lib&#x2F;wrapper&#x2F;template.js:89</code></a>
                                                     </p>
                                             
                                             
@@ -535,6 +677,106 @@
                                             
                                                 <div class="description">
                                                     
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="property_file" class="property item">
+                                                <h3 class="name"><code>file</code></h3>
+                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_wrapper_template.js.html#l21"><code>lib&#x2F;wrapper&#x2F;template.js:21</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Template file path</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="property_html" class="property item">
+                                                <h3 class="name"><code>html</code></h3>
+                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_wrapper_template.js.html#l35"><code>lib&#x2F;wrapper&#x2F;template.js:35</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>formatted html</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="property_partials" class="property item">
+                                                <h3 class="name"><code>partials</code></h3>
+                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_wrapper_template.js.html#l49"><code>lib&#x2F;wrapper&#x2F;template.js:49</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>partials used in the template</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="property_templateBody" class="property item">
+                                                <h3 class="name"><code>templateBody</code></h3>
+                                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_wrapper_template.js.html#l42"><code>lib&#x2F;wrapper&#x2F;template.js:42</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Template text</p>
+                                            
                                                 </div>
                                             
                                             

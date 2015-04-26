@@ -3,14 +3,14 @@
     "description": "Simpleportal framework",
     "version": "1.0.0",
     "url": "https://github.com/faisalk08/simpleportal",
-    "logo":"./../../default_/resources/public/simpleportal/favicon.ico",
+    "logo":"./../favicon.ico",
     "options": {
         "linkNatives": "true",        
         "attributesEmit": "true",
         "selleck": "true",
         "ignorePaths": [ "node_modules" , "./default_/*"],
         "paths": "lib",
-        "outdir": "./doc",
+        "outdir": "./resources/apidoc",
         "themedir": "node_modules/yuidoc-bootstrap-theme",
         "helpers": ["node_modules/yuidoc-bootstrap-theme/helpers/helpers.js"]
     }

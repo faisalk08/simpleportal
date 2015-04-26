@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>simpleportal.CsvReader - Simpleportal</title>
+    <title>template - Simpleportal</title>
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -14,7 +14,7 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
-	    <img alt="Simpleportal" src="../../../default_/resources/public/simpleportal/favicon.ico" style="max-height: 65%;" title="Simpleportal">
+	    <img alt="Simpleportal" src="../../favicon.ico" style="max-height: 65%;" title="Simpleportal">
             Simpleportal
         </h1>
 	<div class="nav">
@@ -26,7 +26,7 @@
             </li>
         </div>
         <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
-            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/Csvparser", "classes/db", "classes/DBPool", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/simpleportal.Csv", "classes/simpleportal.CsvReader", "classes/simpleportal.DispatchWrapper", "classes/simpleportal.Template", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/__Base64", "classes/Base64", "classes/configuration", "classes/CRUDService", "classes/CsvParser", "classes/CsvReader", "classes/db", "classes/DBPool", "classes/Dispatchwrapper", "classes/Encryption", "classes/filterloader", "classes/LocalCache", "classes/Logger", "classes/logger", "classes/notificationcenter", "classes/oauth", "classes/pluginloader", "classes/PluginUtil", "classes/Resource installer", "classes/Response", "classes/Restfulmongo", "classes/router", "classes/Server", "classes/Service.CRUDService", "classes/Service.CUDService", "classes/Service.RemoteService", "classes/Service.RService", "classes/Service.StorageService", "classes/serviceloader", "classes/simpleportal", "classes/SimplePortalOAuth", "classes/startuploader", "classes/template", "classes/TemplateWrapper", "classes/util", "classes/viewloader", "modules/middleware", "modules/simpleportal", "modules/util", "modules/wrapper"]'>
         </form>
     </div>
 </div>
@@ -51,9 +51,11 @@
 	                            <li><a href="../classes/Base64.html">Base64</a></li>
 	                            <li><a href="../classes/configuration.html">configuration</a></li>
 	                            <li><a href="../classes/CRUDService.html">CRUDService</a></li>
-	                            <li><a href="../classes/Csvparser.html">Csvparser</a></li>
+	                            <li><a href="../classes/CsvParser.html">CsvParser</a></li>
+	                            <li><a href="../classes/CsvReader.html">CsvReader</a></li>
 	                            <li><a href="../classes/db.html">db</a></li>
 	                            <li><a href="../classes/DBPool.html">DBPool</a></li>
+	                            <li><a href="../classes/Dispatchwrapper.html">Dispatchwrapper</a></li>
 	                            <li><a href="../classes/Encryption.html">Encryption</a></li>
 	                            <li><a href="../classes/filterloader.html">filterloader</a></li>
 	                            <li><a href="../classes/LocalCache.html">LocalCache</a></li>
@@ -63,6 +65,7 @@
 	                            <li><a href="../classes/oauth.html">oauth</a></li>
 	                            <li><a href="../classes/pluginloader.html">pluginloader</a></li>
 	                            <li><a href="../classes/PluginUtil.html">PluginUtil</a></li>
+	                            <li><a href="../classes/Resource installer.html">Resource installer</a></li>
 	                            <li><a href="../classes/Response.html">Response</a></li>
 	                            <li><a href="../classes/Restfulmongo.html">Restfulmongo</a></li>
 	                            <li><a href="../classes/router.html">router</a></li>
@@ -72,13 +75,10 @@
 	                            <li><a href="../classes/Service.StorageService.html">Service.StorageService</a></li>
 	                            <li><a href="../classes/serviceloader.html">serviceloader</a></li>
 	                            <li><a href="../classes/simpleportal.html">simpleportal</a></li>
-	                            <li><a href="../classes/simpleportal.Csv.html">simpleportal.Csv</a></li>
-	                            <li><a href="../classes/simpleportal.CsvReader.html">simpleportal.CsvReader</a></li>
-	                            <li><a href="../classes/simpleportal.DispatchWrapper.html">simpleportal.DispatchWrapper</a></li>
-	                            <li><a href="../classes/simpleportal.Template.html">simpleportal.Template</a></li>
 	                            <li><a href="../classes/SimplePortalOAuth.html">SimplePortalOAuth</a></li>
 	                            <li><a href="../classes/startuploader.html">startuploader</a></li>
 	                            <li><a href="../classes/template.html">template</a></li>
+	                            <li><a href="../classes/TemplateWrapper.html">TemplateWrapper</a></li>
 	                            <li><a href="../classes/util.html">util</a></li>
 	                            <li><a href="../classes/viewloader.html">viewloader</a></li>
 	                    </ul>
@@ -124,106 +124,26 @@
                 <div id="docs-main">
                     <div class="content">
                         <div class="page-header">
-                            <h1>simpleportal.CsvReader <small>Class</small></h1>
+                            <h1>template <small>Class</small></h1>
                         </div>
                         
                         <div class="well well-small">
                         
-                                <div class="extends">
-                                    Extends EventEmitter
-                                </div>
                         
                                 <div class="foundat">
-                                    Defined in: <a href="../files/lib_wrapper_ya-csv.js.html#l12"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:12</code></a>
+                                    Defined in: <a href="../files/lib_template.js.html#l15"><code>lib&#x2F;template.js:15</code></a>
                                 </div>
                         
-                                    Module: <a href="../modules/wrapper.html">wrapper</a><br>
-                                    Parent Module: <a href="../modules/simpleportal.html">simpleportal</a>
+                                    Module: <a href="../modules/middleware.html">middleware</a>
                         
                         </div>
                         
                         
                         <div class="well well-small">
-                            <p>Provides Base CSV Reading capabilities</p>
+                            <p>Template middleware for <code>simpleportal.Server</code></p>
                         
                         </div>
                         
-                            <div class="constructor">
-                                <h2>Constructor</h2>
-                                <div id="method_simpleportal.CsvReader" class="method item">
-                                    <h3 class="name"><code>simpleportal.CsvReader</code></h3>
-                                
-                                        <div class="args">
-                                            <span class="paren">(</span><ul class="args-list inline commas">
-                                                <li class="arg">
-                                                        <code>readStream</code>
-                                                </li>
-                                                <li class="arg">
-                                                        <code>options</code>
-                                                </li>
-                                            </ul><span class="paren">)</span>
-                                        </div>
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                    <div class="meta">
-                                                <p>
-                                                Defined in
-                                        <a href="../files/lib_wrapper_ya-csv.js.html#l12"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:12</code></a>
-                                        </p>
-                                
-                                
-                                
-                                    </div>
-                                
-                                    <div class="description">
-                                        
-                                    </div>
-                                
-                                        <div class="params">
-                                            <h4>Parameters:</h4>
-                                
-                                            <ul class="params-list">
-                                                <li class="param">
-                                                        <code class="param-name">readStream</code>
-                                                        <span class="type">ReadStread</span>
-                                
-                                
-                                                    <div class="param-description">
-                                                        <p>An instance of the ReadStream Cl</p>
-                                
-                                                    </div>
-                                
-                                                </li>
-                                                <li class="param">
-                                                        <code class="param-name">options</code>
-                                                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
-                                
-                                
-                                                    <div class="param-description">
-                                                        <p>optional paramaters for the reader &lt;br/&gt;
-                                - separator {String}
-                                - quote {String}
-                                - escape {String}
-                                - comment {String}
-                                - columnNames {Boolean}
-                                - columnsFromHeader {Boolean}
-                                - nestedQuotes {Boolean}</p>
-                                
-                                                    </div>
-                                
-                                                </li>
-                                            </ul>
-                                        </div>
-                                
-                                
-                                </div>
-                            </div>
                         
                         <div>
                             <ul class="nav nav-tabs">
@@ -239,37 +159,41 @@
                                         <div class="index-section methods">
                                             <h3>Methods</h3>
                         
-                                            <ul class="index-list methods extends">
+                                            <ul class="index-list methods">
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_createCsvFileReader" data-tablink="createCsvFileReader">createCsvFileReader</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_cache" data-tablink="cache">cache</a>
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_createCsvFileWriter" data-tablink="createCsvFileWriter">createCsvFileWriter</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_compile" data-tablink="compile">compile</a>
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_createCsvStreamReader" data-tablink="createCsvStreamReader">createCsvStreamReader</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_compile_" data-tablink="compile_">compile_</a>
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_createCsvStreamWriter" data-tablink="createCsvStreamWriter">createCsvStreamWriter</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_detailPage" data-tablink="detailPage">detailPage</a>
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_CsvWriter" data-tablink="CsvWriter">CsvWriter</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_get" data-tablink="get">get</a>
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_destoy" data-tablink="destoy">destoy</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_init" data-tablink="init">init</a>
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_destroySoon" data-tablink="destroySoon">destroySoon</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_initRouter" data-tablink="initRouter">initRouter</a>
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_end" data-tablink="end">end</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_isStringEndsWith" data-tablink="isStringEndsWith">isStringEndsWith</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_listPage" data-tablink="listPage">listPage</a>
                         
                                                     </li>
                                                     <li class="index-item method">
@@ -277,19 +201,23 @@
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_pause" data-tablink="pause">pause</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_parseTemplateFile" data-tablink="parseTemplateFile">parseTemplateFile</a>
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_resume" data-tablink="resume">resume</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_read" data-tablink="read">read</a>
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_setColumnNames" data-tablink="setColumnNames">setColumnNames</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_readFile" data-tablink="readFile">readFile</a>
                         
                                                     </li>
                                                     <li class="index-item method">
-                                                        <a href="#" data-tabid="#methods" data-anchor="#method_writeRecord" data-tablink="writeRecord">writeRecord</a>
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_render" data-tablink="render">render</a>
+                        
+                                                    </li>
+                                                    <li class="index-item method">
+                                                        <a href="#" data-tabid="#methods" data-anchor="#method_renderPage" data-tablink="renderPage">renderPage</a>
                         
                                                     </li>
                                             </ul>
@@ -302,16 +230,16 @@
                                     <div id="methods" class="tab-pane">
                                         <h2 class="off-left">Methods</h2>
                         
-                                            <div id="method_createCsvFileReader" class="method item">
-                                                <h3 class="name"><code>createCsvFileReader</code></h3>
+                                            <div id="method_cache" class="method item">
+                                                <h3 class="name"><code>cache</code></h3>
                                             
                                                     <div class="args">
                                                         <span class="paren">(</span><ul class="args-list inline commas">
                                                             <li class="arg">
-                                                                    <code>path</code>
+                                                                    <code>dir</code>
                                                             </li>
                                                             <li class="arg">
-                                                                    <code>options</code>
+                                                                    <code>prefix</code>
                                                             </li>
                                                         </ul><span class="paren">)</span>
                                                     </div>
@@ -329,7 +257,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l249"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:249</code></a>
+                                                    <a href="../files/lib_template.js.html#l127"><code>lib&#x2F;template.js:127</code></a>
                                                     </p>
                                             
                                             
@@ -346,7 +274,7 @@
                                             
                                                         <ul class="params-list">
                                                             <li class="param">
-                                                                    <code class="param-name">path</code>
+                                                                    <code class="param-name">dir</code>
                                                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
@@ -356,7 +284,7 @@
                                             
                                                             </li>
                                                             <li class="param">
-                                                                    <code class="param-name">options</code>
+                                                                    <code class="param-name">prefix</code>
                                                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
@@ -372,22 +300,26 @@
                                                         <h4>Returns:</h4>
                                             
                                                         <div class="returns-description">
-                                                                <p>NewExpression</p>
-                                            
                                                         </div>
                                                     </div>
                                             
                                             </div>
-                                            <div id="method_createCsvFileWriter" class="method item">
-                                                <h3 class="name"><code>createCsvFileWriter</code></h3>
+                                            <div id="method_compile" class="method item">
+                                                <h3 class="name"><code>compile</code></h3>
                                             
                                                     <div class="args">
                                                         <span class="paren">(</span><ul class="args-list inline commas">
                                                             <li class="arg">
-                                                                    <code>path</code>
+                                                                    <code>templateBody</code>
                                                             </li>
                                                             <li class="arg">
-                                                                    <code>options</code>
+                                                                    <code>data</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>partials</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>callback</code>
                                                             </li>
                                                         </ul><span class="paren">)</span>
                                                     </div>
@@ -405,7 +337,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l353"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:353</code></a>
+                                                    <a href="../files/lib_template.js.html#l72"><code>lib&#x2F;template.js:72</code></a>
                                                     </p>
                                             
                                             
@@ -422,7 +354,7 @@
                                             
                                                         <ul class="params-list">
                                                             <li class="param">
-                                                                    <code class="param-name">path</code>
+                                                                    <code class="param-name">templateBody</code>
                                                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
@@ -432,7 +364,27 @@
                                             
                                                             </li>
                                                             <li class="param">
-                                                                    <code class="param-name">options</code>
+                                                                    <code class="param-name">data</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">partials</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">callback</code>
                                                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
@@ -448,22 +400,23 @@
                                                         <h4>Returns:</h4>
                                             
                                                         <div class="returns-description">
-                                                                <p>NewExpression</p>
-                                            
                                                         </div>
                                                     </div>
                                             
                                             </div>
-                                            <div id="method_createCsvStreamReader" class="method item">
-                                                <h3 class="name"><code>createCsvStreamReader</code></h3>
+                                            <div id="method_compile_" class="method item">
+                                                <h3 class="name"><code>compile_</code></h3>
                                             
                                                     <div class="args">
                                                         <span class="paren">(</span><ul class="args-list inline commas">
                                                             <li class="arg">
-                                                                    <code>readStream</code>
+                                                                    <code>templateBody</code>
                                                             </li>
                                                             <li class="arg">
-                                                                    <code>options</code>
+                                                                    <code>content</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>callback</code>
                                                             </li>
                                                         </ul><span class="paren">)</span>
                                                     </div>
@@ -481,7 +434,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l265"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:265</code></a>
+                                                    <a href="../files/lib_template.js.html#l105"><code>lib&#x2F;template.js:105</code></a>
                                                     </p>
                                             
                                             
@@ -498,7 +451,7 @@
                                             
                                                         <ul class="params-list">
                                                             <li class="param">
-                                                                    <code class="param-name">readStream</code>
+                                                                    <code class="param-name">templateBody</code>
                                                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
@@ -508,7 +461,17 @@
                                             
                                                             </li>
                                                             <li class="param">
-                                                                    <code class="param-name">options</code>
+                                                                    <code class="param-name">content</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">callback</code>
                                                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
@@ -524,19 +487,20 @@
                                                         <h4>Returns:</h4>
                                             
                                                         <div class="returns-description">
-                                                                <p>NewExpression</p>
-                                            
                                                         </div>
                                                     </div>
                                             
                                             </div>
-                                            <div id="method_createCsvStreamWriter" class="method item">
-                                                <h3 class="name"><code>createCsvStreamWriter</code></h3>
+                                            <div id="method_detailPage" class="method item">
+                                                <h3 class="name"><code>detailPage</code></h3>
                                             
                                                     <div class="args">
                                                         <span class="paren">(</span><ul class="args-list inline commas">
                                                             <li class="arg">
-                                                                    <code>writeStream</code>
+                                                                    <code>request</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>response</code>
                                                             </li>
                                                             <li class="arg">
                                                                     <code>options</code>
@@ -557,7 +521,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l368"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:368</code></a>
+                                                    <a href="../files/lib_template.js.html#l282"><code>lib&#x2F;template.js:282</code></a>
                                                     </p>
                                             
                                             
@@ -574,7 +538,7 @@
                                             
                                                         <ul class="params-list">
                                                             <li class="param">
-                                                                    <code class="param-name">writeStream</code>
+                                                                    <code class="param-name">request</code>
                                                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
@@ -584,73 +548,7 @@
                                             
                                                             </li>
                                                             <li class="param">
-                                                                    <code class="param-name">options</code>
-                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                     
-                                                                </div>
-                                            
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                            
-                                                    <div class="returns">
-                                                        <h4>Returns:</h4>
-                                            
-                                                        <div class="returns-description">
-                                                                <p>NewExpression</p>
-                                            
-                                                        </div>
-                                                    </div>
-                                            
-                                            </div>
-                                            <div id="method_CsvWriter" class="method item">
-                                                <h3 class="name"><code>CsvWriter</code></h3>
-                                            
-                                                    <div class="args">
-                                                        <span class="paren">(</span><ul class="args-list inline commas">
-                                                            <li class="arg">
-                                                                    <code>writeStream</code>
-                                                            </li>
-                                                            <li class="arg">
-                                                                    <code>options</code>
-                                                            </li>
-                                                        </ul><span class="paren">)</span>
-                                                    </div>
-                                            
-                                                    <span class="returns-inline">
-                                                        <span class="type"></span>
-                                                    </span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l283"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:283</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>Description</p>
-                                            
-                                                </div>
-                                            
-                                                    <div class="params">
-                                                        <h4>Parameters:</h4>
-                                            
-                                                        <ul class="params-list">
-                                                            <li class="param">
-                                                                    <code class="param-name">writeStream</code>
+                                                                    <code class="param-name">response</code>
                                                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
@@ -680,52 +578,17 @@
                                                     </div>
                                             
                                             </div>
-                                            <div id="method_destoy" class="method item">
-                                                <h3 class="name"><code>destoy</code></h3>
+                                            <div id="method_get" class="method item">
+                                                <h3 class="name"><code>get</code></h3>
                                             
-                                                    <span class="paren">()</span>
-                                            
-                                                    <span class="returns-inline">
-                                                        <span class="type"></span>
-                                                    </span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l71"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:71</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>Closes the readStream</p>
-                                            
-                                                </div>
-                                            
-                                            
-                                                    <div class="returns">
-                                                        <h4>Returns:</h4>
-                                            
-                                                        <div class="returns-description">
-                                                                <p>self</p>
-                                            
-                                                        </div>
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>templateName</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
                                                     </div>
                                             
-                                            </div>
-                                            <div id="method_destroySoon" class="method item">
-                                                <h3 class="name"><code>destroySoon</code></h3>
-                                            
-                                                    <span class="paren">()</span>
-                                            
                                                     <span class="returns-inline">
                                                         <span class="type"></span>
                                                     </span>
@@ -739,48 +602,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l81"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:81</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>Closes the readStream when its file stream has been drained</p>
-                                            
-                                                </div>
-                                            
-                                            
-                                                    <div class="returns">
-                                                        <h4>Returns:</h4>
-                                            
-                                                        <div class="returns-description">
-                                                                <p>self</p>
-                                            
-                                                        </div>
-                                                    </div>
-                                            
-                                            </div>
-                                            <div id="method_end" class="method item">
-                                                <h3 class="name"><code>end</code></h3>
-                                            
-                                                    <span class="paren">()</span>
-                                            
-                                                    <span class="returns-inline">
-                                                        <span class="type"></span>
-                                                    </span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l182"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:182</code></a>
+                                                    <a href="../files/lib_template.js.html#l215"><code>lib&#x2F;template.js:215</code></a>
                                                     </p>
                                             
                                             
@@ -792,6 +614,322 @@
                                             
                                                 </div>
                                             
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">templateName</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                <p>MemberExpression</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_init" class="method item">
+                                                <h3 class="name"><code>init</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>configuration</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type"></span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_template.js.html#l225"><code>lib&#x2F;template.js:225</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Description</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">configuration</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_initRouter" class="method item">
+                                                <h3 class="name"><code>initRouter</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>configuration</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>callback</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type"></span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_template.js.html#l388"><code>lib&#x2F;template.js:388</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Description</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">configuration</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">callback</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_isStringEndsWith" class="method item">
+                                                <h3 class="name"><code>isStringEndsWith</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>string</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>substring</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type"></span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_template.js.html#l402"><code>lib&#x2F;template.js:402</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>private util function</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">string</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">substring</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                                <p>LogicalExpression</p>
+                                            
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_listPage" class="method item">
+                                                <h3 class="name"><code>listPage</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>request</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>response</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>options</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type"></span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_template.js.html#l330"><code>lib&#x2F;template.js:330</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Description</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">request</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">response</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">options</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                             
                                                     <div class="returns">
                                                         <h4>Returns:</h4>
@@ -807,151 +945,13 @@
                                                     <div class="args">
                                                         <span class="paren">(</span><ul class="args-list inline commas">
                                                             <li class="arg">
-                                                                    <code>data</code>
+                                                                    <code>templateName</code>
                                                             </li>
-                                                        </ul><span class="paren">)</span>
-                                                    </div>
-                                            
-                                                    <span class="returns-inline">
-                                                        <span class="type"></span>
-                                                    </span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l95"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:95</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>Parses incoming data as a readable CSV file</p>
-                                            
-                                                </div>
-                                            
-                                                    <div class="params">
-                                                        <h4>Parameters:</h4>
-                                            
-                                                        <ul class="params-list">
-                                                            <li class="param">
-                                                                    <code class="param-name">data</code>
-                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
-                                            
-                                            
-                                                                <div class="param-description">
-                                                                    <p>Array of values to parse from the incommin file</p>
-                                            
-                                                                </div>
-                                            
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                            
-                                                    <div class="returns">
-                                                        <h4>Returns:</h4>
-                                            
-                                                        <div class="returns-description">
-                                                        </div>
-                                                    </div>
-                                            
-                                            </div>
-                                            <div id="method_pause" class="method item">
-                                                <h3 class="name"><code>pause</code></h3>
-                                            
-                                                    <span class="paren">()</span>
-                                            
-                                                    <span class="returns-inline">
-                                                        <span class="type"></span>
-                                                    </span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l51"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:51</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>Pauses the readStream</p>
-                                            
-                                                </div>
-                                            
-                                            
-                                                    <div class="returns">
-                                                        <h4>Returns:</h4>
-                                            
-                                                        <div class="returns-description">
-                                                                <p>self</p>
-                                            
-                                                        </div>
-                                                    </div>
-                                            
-                                            </div>
-                                            <div id="method_resume" class="method item">
-                                                <h3 class="name"><code>resume</code></h3>
-                                            
-                                                    <span class="paren">()</span>
-                                            
-                                                    <span class="returns-inline">
-                                                        <span class="type"></span>
-                                                    </span>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                                <div class="meta">
-                                                            <p>
-                                                            Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l61"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:61</code></a>
-                                                    </p>
-                                            
-                                            
-                                            
-                                                </div>
-                                            
-                                                <div class="description">
-                                                    <p>Resumes the readStream</p>
-                                            
-                                                </div>
-                                            
-                                            
-                                                    <div class="returns">
-                                                        <h4>Returns:</h4>
-                                            
-                                                        <div class="returns-description">
-                                                                <p>self</p>
-                                            
-                                                        </div>
-                                                    </div>
-                                            
-                                            </div>
-                                            <div id="method_setColumnNames" class="method item">
-                                                <h3 class="name"><code>setColumnNames</code></h3>
-                                            
-                                                    <div class="args">
-                                                        <span class="paren">(</span><ul class="args-list inline commas">
                                                             <li class="arg">
-                                                                    <code>names</code>
+                                                                    <code>content</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>callback</code>
                                                             </li>
                                                         </ul><span class="paren">)</span>
                                                     </div>
@@ -969,7 +969,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l220"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:220</code></a>
+                                                    <a href="../files/lib_template.js.html#l87"><code>lib&#x2F;template.js:87</code></a>
                                                     </p>
                                             
                                             
@@ -986,7 +986,27 @@
                                             
                                                         <ul class="params-list">
                                                             <li class="param">
-                                                                    <code class="param-name">names</code>
+                                                                    <code class="param-name">templateName</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">content</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">callback</code>
                                                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
@@ -1006,13 +1026,19 @@
                                                     </div>
                                             
                                             </div>
-                                            <div id="method_writeRecord" class="method item">
-                                                <h3 class="name"><code>writeRecord</code></h3>
+                                            <div id="method_parseTemplateFile" class="method item">
+                                                <h3 class="name"><code>parseTemplateFile</code></h3>
                                             
                                                     <div class="args">
                                                         <span class="paren">(</span><ul class="args-list inline commas">
                                                             <li class="arg">
-                                                                    <code>rec</code>
+                                                                    <code>file</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>content</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>callback</code>
                                                             </li>
                                                         </ul><span class="paren">)</span>
                                                     </div>
@@ -1030,7 +1056,7 @@
                                                 <div class="meta">
                                                             <p>
                                                             Defined in
-                                                    <a href="../files/lib_wrapper_ya-csv.js.html#l307"><code>lib&#x2F;wrapper&#x2F;ya-csv.js:307</code></a>
+                                                    <a href="../files/lib_template.js.html#l54"><code>lib&#x2F;template.js:54</code></a>
                                                     </p>
                                             
                                             
@@ -1047,7 +1073,375 @@
                                             
                                                         <ul class="params-list">
                                                             <li class="param">
-                                                                    <code class="param-name">rec</code>
+                                                                    <code class="param-name">file</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">content</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">callback</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_read" class="method item">
+                                                <h3 class="name"><code>read</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>file</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>name</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>callback</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type"></span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_template.js.html#l152"><code>lib&#x2F;template.js:152</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Description</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">file</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">name</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">callback</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_readFile" class="method item">
+                                                <h3 class="name"><code>readFile</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>file</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>cacheName</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>callback</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type"></span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_template.js.html#l178"><code>lib&#x2F;template.js:178</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Description</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">file</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">cacheName</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">callback</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_render" class="method item">
+                                                <h3 class="name"><code>render</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>file</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>content</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>callback</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type"></span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_template.js.html#l36"><code>lib&#x2F;template.js:36</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Description</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">file</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">content</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">callback</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            
+                                                    <div class="returns">
+                                                        <h4>Returns:</h4>
+                                            
+                                                        <div class="returns-description">
+                                                        </div>
+                                                    </div>
+                                            
+                                            </div>
+                                            <div id="method_renderPage" class="method item">
+                                                <h3 class="name"><code>renderPage</code></h3>
+                                            
+                                                    <div class="args">
+                                                        <span class="paren">(</span><ul class="args-list inline commas">
+                                                            <li class="arg">
+                                                                    <code>response</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>templateData</code>
+                                                            </li>
+                                                            <li class="arg">
+                                                                    <code>callback</code>
+                                                            </li>
+                                                        </ul><span class="paren">)</span>
+                                                    </div>
+                                            
+                                                    <span class="returns-inline">
+                                                        <span class="type"></span>
+                                                    </span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/lib_template.js.html#l247"><code>lib&#x2F;template.js:247</code></a>
+                                                    </p>
+                                            
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Description</p>
+                                            
+                                                </div>
+                                            
+                                                    <div class="params">
+                                                        <h4>Parameters:</h4>
+                                            
+                                                        <ul class="params-list">
+                                                            <li class="param">
+                                                                    <code class="param-name">response</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">templateData</code>
+                                                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                                            
+                                            
+                                                                <div class="param-description">
+                                                                     
+                                                                </div>
+                                            
+                                                            </li>
+                                                            <li class="param">
+                                                                    <code class="param-name">callback</code>
                                                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
                                             
                                             
