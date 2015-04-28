@@ -271,6 +271,13 @@
                         	else if(fs.existsSync(__dirname+&#x27;/../../resources/simpleportal/favicon.ico&#x27;))
                         		instance.server.use(connect.favicon(__dirname+&#x27;/../../resources/simpleportal/favicon.ico&#x27;));
                         	
+                        	if(instance.configureconnect)
+                        		instance.configureconnect();
+                        	else{
+                        		instance.server.use(connect.cookieParser(&#x27;keyboard cat&#x27;));
+                        		instance.server.use(connect.session({ secret:&#x27;keyboard cat&#x27;, cookie: { maxAge: 60000/*, secure:true */}}));
+                        	}
+                        
                         	if (fs.existsSync(staticResourceDir))
                         		instance.server.use(connect.static(staticResourceDir));
                         	
@@ -279,13 +286,6 @@
                         			if(fs.existsSync(resource))
                         				instance.server.use(connect.static(resource));
                         		});
-                        	}
-                        	
-                        	if(instance.configureconnect)
-                        		instance.configureconnect();
-                        	else{
-                        		instance.server.use(connect.cookieParser(&#x27;keyboard cat&#x27;));
-                        		instance.server.use(connect.session({ secret:&#x27;keyboard cat&#x27;, cookie: { maxAge: 60000/*, secure:true */}}));
                         	}
                         }
                         
@@ -329,10 +329,10 @@
                         		
                         		if(fs.existsSync(__dirname + &#x27;/../../resources&#x27;))
                         			instance.server.use(connect.static(__dirname + &#x27;/../../resources&#x27;));
-                        		
+                        		/*
                         		if(fs.existsSync(__dirname + &#x27;/../../doc&#x27;))
                         			instance.server.use(&#x27;/simpleportal/apidoc&#x27;, connect.static(__dirname + &#x27;/../../doc&#x27;));
-                        		
+                        		*/
                         		instance.emit(&#x27;start&#x27;, {});
                         
                         		server.listen(instance.configuration.port || 9665);

@@ -877,7 +877,7 @@
             "submodule": "wrapper",
             "namespace": "",
             "file": "lib/wrapper/service.js",
-            "line": 1824,
+            "line": 1860,
             "description": "RemoteService\n\nServcie wrapper for connecting to remote Service",
             "is_constructor": 1,
             "params": [
@@ -4371,7 +4371,30 @@
         },
         {
             "file": "lib/wrapper/service.js",
-            "line": 1841,
+            "line": 1825,
+            "description": "Getting the max value of a field in the collection",
+            "itemtype": "method",
+            "name": "maxValueFeasibilityDb",
+            "params": [
+                {
+                    "name": "field",
+                    "description": ""
+                },
+                {
+                    "name": "callback",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Service.StorageService",
+            "module": "simpleportal",
+            "submodule": "wrapper"
+        },
+        {
+            "file": "lib/wrapper/service.js",
+            "line": 1877,
             "description": "To add or update record, if the record is available then it will update the record, else it will add a new record",
             "itemtype": "method",
             "name": "add_update",
@@ -4405,7 +4428,7 @@
         },
         {
             "file": "lib/wrapper/service.js",
-            "line": 1890,
+            "line": 1926,
             "description": "To form the search parameters from the search object for search api",
             "itemtype": "method",
             "name": "searchqueryparams_",
@@ -4430,7 +4453,7 @@
         },
         {
             "file": "lib/wrapper/service.js",
-            "line": 1935,
+            "line": 1971,
             "description": "To get the search parameters as JSON object",
             "itemtype": "method",
             "name": "searchqueryparamsAsJSON",
@@ -4455,7 +4478,7 @@
         },
         {
             "file": "lib/wrapper/service.js",
-            "line": 1980,
+            "line": 2016,
             "description": "To get the server options for sending to the remote server request",
             "itemtype": "method",
             "name": "serach_remoteoptions",
@@ -4480,7 +4503,7 @@
         },
         {
             "file": "lib/wrapper/service.js",
-            "line": 2020,
+            "line": 2056,
             "description": "To search for records",
             "itemtype": "method",
             "name": "search",
@@ -4512,7 +4535,7 @@
         },
         {
             "file": "lib/wrapper/service.js",
-            "line": 2046,
+            "line": 2082,
             "description": "To ge the details of a record from the remote server",
             "itemtype": "method",
             "name": "details",
@@ -4544,7 +4567,7 @@
         },
         {
             "file": "lib/wrapper/service.js",
-            "line": 2091,
+            "line": 2127,
             "description": "To remove a record from the remote server",
             "itemtype": "method",
             "name": "remove",
@@ -7570,7 +7593,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 641,
+            "line": 645,
             "description": "To retreive query parameters as a key value pair",
             "itemtype": "method",
             "name": "getParamValues",
@@ -7589,7 +7612,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 669,
+            "line": 673,
             "description": "To make a url query string from the query parameters",
             "itemtype": "method",
             "name": "makeURLString",
@@ -7614,7 +7637,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 696,
+            "line": 700,
             "description": "To generate Id from a text",
             "itemtype": "method",
             "name": "generateId",
@@ -7632,7 +7655,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 712,
+            "line": 716,
             "description": "To get the array values from a value seperarted by a special charactar",
             "itemtype": "method",
             "name": "getArrayValues",
@@ -7658,7 +7681,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 748,
+            "line": 752,
             "description": "To make folder with parent tree",
             "itemtype": "method",
             "name": "mkdirParent",
@@ -7677,7 +7700,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 767,
+            "line": 771,
             "description": "To check whether a folder is avaiable if not create the folder",
             "itemtype": "method",
             "name": "checkDirSync",
@@ -7700,7 +7723,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 781,
+            "line": 785,
             "description": "To check whether a folder is avaiable if not create the folder",
             "itemtype": "method",
             "name": "checkDir",
@@ -7721,7 +7744,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 805,
+            "line": 809,
             "description": "To move a file from one location to another",
             "itemtype": "method",
             "name": "moveFile",
@@ -7749,7 +7772,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 828,
+            "line": 832,
             "description": "To check whether the value is found in the array",
             "itemtype": "method",
             "name": "arraycontains",
@@ -7773,7 +7796,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 845,
+            "line": 849,
             "description": "To check whether the value is found in the object array",
             "itemtype": "method",
             "name": "arraycontains",
@@ -7797,7 +7820,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 862,
+            "line": 866,
             "description": "To clone a javascript object",
             "itemtype": "method",
             "name": "clone",
@@ -7820,7 +7843,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 890,
+            "line": 894,
             "description": "To read a file and parsing as json object",
             "itemtype": "method",
             "name": "readJSONFile",
@@ -7839,7 +7862,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 918,
+            "line": 922,
             "description": "To extend a json object with another object",
             "itemtype": "method",
             "name": "extendJSON",
@@ -7858,7 +7881,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 937,
+            "line": 941,
             "description": "To delete a folder recursively",
             "itemtype": "method",
             "name": "deleteFolderRecursiveSync",
@@ -7873,7 +7896,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 963,
+            "line": 967,
             "description": "To get the file path relative to the seevers main process",
             "itemtype": "method",
             "name": "getServerPath",
@@ -7897,7 +7920,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 987,
+            "line": 991,
             "description": "To get the extension of a file from the file path",
             "itemtype": "method",
             "name": "getExtension",
@@ -7916,7 +7939,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 1000,
+            "line": 1004,
             "description": "Description",
             "itemtype": "method",
             "name": "capitaliseFirstLetter",
@@ -7934,7 +7957,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 1013,
+            "line": 1017,
             "description": "Description",
             "itemtype": "method",
             "name": "lowercaseFirstLetter",
@@ -7952,7 +7975,7 @@
         },
         {
             "file": "lib/util.js",
-            "line": 1026,
+            "line": 1030,
             "description": "To download|get the file from a remote url",
             "itemtype": "method",
             "name": "downloadFile",

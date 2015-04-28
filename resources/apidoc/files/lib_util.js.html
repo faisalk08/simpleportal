@@ -723,48 +723,52 @@
                         	if(error &amp;&amp; typeof error == &#x27;object&#x27; &amp;&amp; error+&#x27;&#x27; ==&#x27;{}&#x27;)
                         		error=null;
                         	
-                        	if(error){
-                        		logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, error);
-                        		body = JSON.stringify({exception:error});
-                        	} else if(results &amp;&amp; results.contentType){
-                        		body = JSON.stringify(results.data);
-                        	}
-                        	
-                        	if(response.callback){
-                        		body = response.callback.replace(/[^\w$.]/g, &#x27;&#x27;) + &#x27;(&#x27; + body + &#x27;);&#x27;;
-                        		results.contentType = &#x27;text/javascript&#x27;;
-                        		headers[&#x27;Content-Type&#x27;] = &#x27;text/javascript&#x27;;
-                        	}
+                        	if(response.headerSent){
+                        		logger.getInstance().warn(&#x27;Simple Portal : util : sendServiceResponse&#x27;, &#x27;Response header for this request is already sendt&#x27;);
+                        	}else{
+                        		if(error){
+                        			logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, error);
+                        			body = JSON.stringify({exception:error});
+                        		} else if(results &amp;&amp; results.contentType){
+                        			body = JSON.stringify(results.data);
+                        		}
+                        		
+                        		if(response.callback){
+                        			body = response.callback.replace(/[^\w$.]/g, &#x27;&#x27;) + &#x27;(&#x27; + body + &#x27;);&#x27;;
+                        			results.contentType = &#x27;text/javascript&#x27;;
+                        			headers[&#x27;Content-Type&#x27;] = &#x27;text/javascript&#x27;;
+                        		}
                         
-                        	if(error &amp;&amp; error == &#x27;Permission denied&#x27;){
-                        		logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, error);
-                        		headers[&#x27;Content-Type&#x27;] = &#x27;application/json; charset=UTF-8&#x27;;
-                        		response.send(403, headers, body);
-                        	} else if(error){
-                        		logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, error);
-                        		headers[&#x27;Content-Type&#x27;] = &#x27;application/json; charset=UTF-8&#x27;;
-                        		response.send(400, headers, body);
-                        	} else if(results &amp;&amp; results.loginRequired){
-                        		logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, &#x27;Login required&#x27;);
-                        		var httpstatus = 301;
-                        		if(results.httpstatus)
-                        			httpstatus = results.httpstatus;
-                        		headers[&#x27;Location&#x27;] = &#x27;/oauth/login&#x27;;
-                        		
-                        		response.send(httpstatus, headers);
-                        	} else if(results &amp;&amp; results.redirectUrl){
-                        		var httpstatus = 301;
-                        		if(results.httpstatus)
-                        			httpstatus = results.httpstatus;
-                        		headers[&#x27;Location&#x27;] = results.redirectUrl;
-                        		response.send(httpstatus, headers);
-                        	} else if(results &amp;&amp; results.contentType){
-                        		headers[&#x27;Content-Type&#x27;] = results.contentType;
-                        		response.send(200, headers, body);
-                        	} else {
-                        		headers[&#x27;Content-Type&#x27;] = &#x27;application/json; charset=UTF-8&#x27;;
-                        		
-                        		response.send(200, headers, body);
+                        		if(error &amp;&amp; error == &#x27;Permission denied&#x27;){
+                        			logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, error);
+                        			headers[&#x27;Content-Type&#x27;] = &#x27;application/json; charset=UTF-8&#x27;;
+                        			response.send(403, headers, body);
+                        		} else if(error){
+                        			logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, error);
+                        			headers[&#x27;Content-Type&#x27;] = &#x27;application/json; charset=UTF-8&#x27;;
+                        			response.send(400, headers, body);
+                        		} else if(results &amp;&amp; results.loginRequired){
+                        			logger.getInstance().error(&#x27;Simple Portal : util : sendServiceResponse&#x27;, &#x27;Login required&#x27;);
+                        			var httpstatus = 301;
+                        			if(results.httpstatus)
+                        				httpstatus = results.httpstatus;
+                        			headers[&#x27;Location&#x27;] = &#x27;/oauth/login&#x27;;
+                        			
+                        			response.send(httpstatus, headers);
+                        		} else if(results &amp;&amp; results.redirectUrl){
+                        			var httpstatus = 301;
+                        			if(results.httpstatus)
+                        				httpstatus = results.httpstatus;
+                        			headers[&#x27;Location&#x27;] = results.redirectUrl;
+                        			response.send(httpstatus, headers);
+                        		} else if(results &amp;&amp; results.contentType){
+                        			headers[&#x27;Content-Type&#x27;] = results.contentType;
+                        			response.send(200, headers, body);
+                        		} else {
+                        			headers[&#x27;Content-Type&#x27;] = &#x27;application/json; charset=UTF-8&#x27;;
+                        			
+                        			response.send(200, headers, body);
+                        		}	
                         	}
                         }
                         
