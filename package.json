@@ -22,7 +22,6 @@
     "mongodb": "",
     "oauth": "",
     "connect-mongo": "",
-    "send": "",
     "mime": "",
     "wrench":""
   },
