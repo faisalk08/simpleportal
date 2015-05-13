@@ -1,5 +1,22 @@
 var util = require('./../lib/util');
 
+exports['simpleportal.util.extendJSON'] = function (test) {
+	var obj1={a:'b',c:'d',e:'f'};
+	var obj2={b:'a',d:'c',f:'e'};
+	var obj3={b:'a',d:'c',f:{g:'h', h:'i'}}
+	var obj4={b:'a',d:'c',f:[{adf:'asab'}, {a:'b'}]}
+	var obj5={b:'av',d:'cc',f:[{aa:'11'},{a:'d'}, {c:'d'}]}
+	
+	test.equal(Object.keys(util.extendJSON(obj1, obj2)).length, 6, 'this assertion should pass');
+	test.equal(util.extendJSON(obj1, obj2).a, 'b', 'this assertion should pass');
+	test.equal(util.extendJSON(obj1, obj2).b, 'a', 'this assertion should pass');
+	
+	test.equal(Object.keys(util.extendJSON(obj1, obj3).f).length, 2, 'this assertion should pass');
+	test.equal(util.extendJSON(obj1, obj3).f.h, 'i', 'this assertion should pass');
+	
+	test.done();
+}
+
 exports['simpleportal.util.generateId'] = function (test) {
     test.equal(util.generateId('A_E-I.,O+*#U9012?'), 'ae-iou9012', 'this assertion should pass');
     test.equal(util.generateId('A_E-I.,O+*#U9012?'), 'ae-iou9012', 'this assertion should pass');
