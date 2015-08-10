@@ -1,5 +1,6 @@
-/* Retreive the editor settins from the server */
-$.get('editorsettings', function(editorsettings){
+/* Retrieve the editor settings from the server */
+
+$.get(window.location.pathname + 'editorsettings' + location.search, function(editorsettings){
 	if(editorsettings)
 		loadConfigurationForm(editorsettings);
 });
@@ -20,7 +21,7 @@ function loadConfigurationForm(editorsettings){
 		tabs:[],
 		fields:[],
 		record:{},
-		onChange:function(event){
+		onChange:function(event, onemore, index){
 			var obj = this;
 			
 			if(event.target.indexOf('db__mongodb') != -1){
@@ -30,14 +31,21 @@ function loadConfigurationForm(editorsettings){
 			
 			if(Object.keys(obj.getChanges()).length > 0)
 				$('.w2ui-buttons [name=save]').addClass('btn-success');
-			
+			/*
+			if(/__new/.test(event.target)){
+				console.log(onemore);
+				window.open('/configuration/subeditor/?ajax=true&category=services&categoryid='+event.value_new.id, "details", "titlebar=no&toolbar=no&location=no");
+			}
+			*/
 			return true;
 		}
 	};
 	
 	/* Extending editor options from the remote server */
 	var editoroptions = $.extend(defaults, editorsettings);
-
+	editoroptions.formURL=editoroptions.formURL+ location.search;
+	editoroptions.url =editoroptions.url+ location.search;
+	
 	editoroptions.actions = {
 		"reset": function () {
 			this.clear();
@@ -59,7 +67,6 @@ function loadConfigurationForm(editorsettings){
 	};
 	
 	function callRemoteServer(options){
-	
 		var defaults = {
 			type: "POST",
 			url: editoroptions.url,
@@ -83,6 +90,7 @@ function loadConfigurationForm(editorsettings){
 						if(responseJSON.status == 'success'){
 							if(options.success)
 								options.success(responseJSON);
+							
 							alert('Successfull message from server');
 						}else{
 							if(options.error)
@@ -90,6 +98,8 @@ function loadConfigurationForm(editorsettings){
 							
 							if(responseJSON.message.message)
 								alert('Error from Server - ERROR:-' + responseJSON.message.message);
+							else if(responseJSON.message)
+								alert('Error from Server - ' + responseJSON.message);
 							else
 								alert('Error from Server');
 						}
@@ -128,6 +138,31 @@ function loadConfigurationForm(editorsettings){
 		}
 	});
 	
+	if(editoroptions.rootfield && editoroptions.rootfield.indexOf("__new") >= -1 ) {
+		if(!editoroptions.record[editoroptions.rootfield])
+			editoroptions.record[editoroptions.rootfield]='new';
+		if(editoroptions.tabs&&editoroptions.tabs.length > 0)
+			editoroptions.tabs[0].fields.push({html:{caption:'Name / Title - '}, field:editoroptions.rootfield});
+		
+		editoroptions.fields.push({html:{caption:'Name / Title - '}, field:editoroptions.rootfield});
+		/*<div class="w2ui-field w2ui-span8" style="clear: both">
+			<label>Title | Name :</label>
+			<div>
+				<input name="<%= rootfield %>" type="<%= 'text' %>" maxlength="100" style="width: 250px !important;" value='<%= rootfield %>'>
+			</div>
+		</div>*/
+	}
+	
+	console.log(editoroptions);
+	
 	/* Creating the w2Ui form using the configuration from server */
-	$('#'+ editoroptions.name).w2form(editoroptions);
+	var w2uieditor = $('#'+ editoroptions.name).w2form(editoroptions);
+	
+	w2uieditor.on("action", function(event, element){
+		if($(element.originalEvent.target).hasClass('subcategory')){
+			console.log('Target to open -- '+ element.target);
+			window.open('/configuration/subeditor/?category='+element.target+'&categoryid=new', "details", "titlebar=no&toolbar=no&location=no");
+		}
+	});
+	
 }

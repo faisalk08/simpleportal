@@ -5,12 +5,35 @@
 		var tab = tabs[tabindex];
 %>
 	<div class="w2ui-page page-<%= index++ %>">
-	<%for(var i in tab.fields){
+<% 	if(rootfield && rootfield.indexOf("__new") >= -1 ) { %>
+		<div class="w2ui-field w2ui-span8" style="clear: both">
+			<label>Title | Name :</label>
+			<div>
+				<input name="<%= rootfield %>" type="<%= 'text' %>" maxlength="100" style="width: 250px !important;" value='<%= rootfield %>'>
+			</div>
+		</div>
+<%	}
+%>
+<%	for(var i in tab.fields){
 		var field = tab.fields[i];
 		if(!field.html)
 			field.html={caption:field.field};
-	%>
-		<%if(field.type&&field.type=='checkbox'){%>
+%>
+		<%if(typeof field.html.category !== 'undefined'){%>
+			<br/>
+			<b><%= field.html.category %></b>
+			<hr/>
+				<div class="w2ui-page page-<%= field.html.category %>" style="height: 480px; display:block;" category="<%= field.html.category %>"></div>
+			<br/>
+		<%}%>
+		<%if(field.type && field.type=='new'){%>
+			<div class="w2ui-field w2ui-span8" style="clear: both">
+				<label><%= field.html.caption || field.field %>:</label>
+				<div>
+					<input type='button' data-category="<%= field.field.replace("__new", "")%>" value='<%= field.field.replace("__new", "")%>' class='subcategory'/>
+				</div>
+			</div>
+		<%}else if(field.type&&field.type=='checkbox'){%>
 			<div class="w2ui-field w2ui-span8" style="clear: both">
 				<label><%= field.html.caption || field.field %>:</label>
 				<div>
@@ -32,17 +55,19 @@
 				</div>
 			</div>
 		<%}%>
-	<%}%>
-	<%if(tab.buttons){%>
+<%
+	}
+%>
+<%if(tab.buttons){%>
 	<br/>
 	<hr/>
 	<br/>
-	<%
+<%
 		for(var i in tab.buttons){
 			var field = tab.buttons[i];
 			if(!field.html)
 				field.html={caption:field.field};
-	%>
+%>
 		<%if(field.type&&field.type=='link'){%>
 			<div class='pull-right'><a target='new' href='<%= field.action %>'><%= field.html.caption || field.field %></a></div>
 		<%}else{%>
@@ -51,14 +76,20 @@
 			</div>
 		<%}%>
 	<br/>
-	<%
+<%
 		}
 	}
-	%>
-	</div>
-<%}%>
+%>
+</div>
+<%
+}
+%>	
 	<div class="w2ui-buttons pull-right">
-		<button class="btn" name="reset">Reset</button>
-		<button class="btn" name="save">Update</button>
+		<%if(index == 0){%>
+			<font class='w2ui-error'>No fields to configure</font></br></br>
+		<%}else{%>
+			<button class="btn" name="reset">Reset</button>
+			<button class="btn" name="save">Update</button>
+		<%}%>
 	</div>
-</diV>
+</div>
