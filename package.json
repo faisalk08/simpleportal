@@ -2,7 +2,7 @@
   "name": "simpleportal",
   "keywords": ["simple", "portal"],
   "description": "Simpleportal framework required for a web server wrapped ontop of connect.js",
-  "version": "0.2.21",
+  "version": "0.2.22",
   "author": "Faisal Kottarathil <faisalk08@gmail.com>",
   "directories" : {
     "lib" : "./lib"
