@@ -1,17 +1,16 @@
 {
-    "name": "Simpleportal",
+    "name": "< Simpleportal >",
     "description": "Simpleportal framework",
-    "version": "1.0.0",
+    "version": "0.2.23",
     "url": "https://github.com/faisalk08/simpleportal",
-    "logo":"./../favicon.ico",
     "options": {
         "linkNatives": "true",        
         "attributesEmit": "true",
         "selleck": "true",
         "ignorePaths": [ "node_modules" , "./default_/*"],
         "paths": "lib",
-        "outdir": "./resources/apidoc",
-        "themedir": "node_modules/yuidoc-bootstrap-theme",
-        "helpers": ["node_modules/yuidoc-bootstrap-theme/helpers/helpers.js"]
+        "outdir": "./server/resources/public/apidoc/simpleportal",
+        "themedir": "./../../node_modules/yuidoc-bootstrap-theme",
+        "helpers": ["./../../node_modules/yuidoc-bootstrap-theme/helpers/helpers.js"]
     }
 }

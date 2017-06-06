@@ -8,6 +8,7 @@
 	"translation":true,
 	"osnotification":true,
 	"resources":{
+		"autoinstall":true,
         "root":"resources/",
         "template":{
             "root":"public/templates",

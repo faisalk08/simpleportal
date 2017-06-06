@@ -1,7 +1,7 @@
 {
   "name": "simpleportal",
   "keywords": ["simple", "portal"],
-  "description": "Simpleportal framework required for a web server wrapped ontop of connect.js",
+  "description": "Simpleportal framework required for a web server wrapped on top of connect.js",
   "version": "0.2.23",
   "author": "Faisal Kottarathil <faisalk08@gmail.com>",
   "directories" : {
@@ -18,12 +18,17 @@
     "mustache": ">= 0.3.0",
     "ejs": "",
     "connect": "2.16.2",
+    "connect-mongo": "0.8.0",
     "dispatch": "",
     "mongodb": "",
     "oauth": "",
-    "connect-mongo": "",
+    "oauth2-server":"",
+    "passport": "",
+    "passport-local": "",
     "mime": "",
-    "wrench":""
+    "validator": "",
+    "wrench":"1.5.8",
+    "moment":"", "csvtojson":""
   },
   "licenses": [ { "type": "MIT" } ]
 }
