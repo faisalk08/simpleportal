@@ -2,5 +2,16 @@
 	"title":"Simpleportal",
 	"id":"simpleportal",
 	"plugintype":"resource",
-	"version":"2.0"
+	"version":"2.0", 
+	"buildprops":{
+		"minify":true,
+		"resource":[
+            {
+            	"subpath":"./server","type":"directory",
+            	"files":[
+					"simpleportal-server-core"
+    	       ]
+            }
+        ]
+	}
 }
