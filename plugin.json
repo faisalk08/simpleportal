@@ -1,17 +1,29 @@
 {
-	"title":"Simpleportal",
-	"id":"simpleportal",
-	"plugintype":"resource",
-	"version":"2.0", 
-	"buildprops":{
-		"minify":true,
-		"resource":[
-            {
-            	"subpath":"./server","type":"directory",
-            	"files":[
+	"title": "Simpleportal",
+	"id": "simpleportal",
+	"plugintype": "resource",
+	"buildprops": {
+		"minify": true,
+		"npm": true,
+		"apidoc": true,
+		"resource": [
+			{
+				"subpath": "./server",
+				"type": "directory",
+				"files": [
 					"simpleportal-server-core"
-    	       ]
-            }
-        ]
-	}
+				]
+			}
+		],
+		"yuidoc": {
+			"options": {
+				"paths": [
+					"lib",
+					"server"
+				]
+			}
+		}
+	},
+	"versioninfo": "Simpleportal v3.35.3 (June 28th 2017, 12:58:37 pm)",
+	"version": "3.35.3"
 }

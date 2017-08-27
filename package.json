@@ -1,34 +1,46 @@
 {
-  "name": "simpleportal",
-  "keywords": ["simple", "portal"],
-  "description": "Simpleportal framework required for a web server wrapped on top of connect.js",
-  "version": "2.0.0",
-  "author": "Faisal Kottarathil <faisalk08@gmail.com>",
-  "directories" : {
-    "lib" : "./lib"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/faisalk08/simpleportal.git"
-  },
-  "homepage": "https://github.com/faisalk08/simpleportal",
-  "main": "./lib/simpleportal.js",
-  "engines": { "node": ">= 0.4.0" },
-  "dependencies" : {
-    "mustache": ">= 0.3.0",
-    "ejs": "",
-    "connect": "2.16.2",
-    "connect-mongo": "0.8.0",
-    "dispatch": "",
-    "mongodb": "",
-    "oauth": "",
-    "oauth2-server":"",
-    "passport": "",
-    "passport-local": "",
-    "mime": "",
-    "validator": "",
-    "wrench":"1.5.8",
-    "moment":"", "csvtojson":""
-  },
-  "licenses": [ { "type": "MIT" } ]
+	"name": "simpleportal",
+	"keywords": [
+		"simple",
+		"portal"
+	],
+	"description": "Simpleportal framework required for a web server wrapped on top of connect.js",
+	"version": "2.0.0",
+	"author": "Faisal Kottarathil <faisalk08@gmail.com>",
+	"directories": {
+		"lib": "./lib"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/faisalk08/simpleportal.git"
+	},
+	"homepage": "https://github.com/faisalk08/simpleportal",
+	"main": "./lib/simpleportal.js",
+	"engines": {
+		"node": ">= 0.4.0"
+	},
+	"dependencies": {
+		"mustache": ">= 0.3.0",
+		"ejs": "",
+		"connect": "2.16.2",
+		"connect-mongo": "0.8.0",
+		"dispatch": "",
+		"mongodb": "",
+		"oauth": "",
+		"oauth2-server": "",
+		"passport": "",
+		"passport-local": "",
+		"mime": "",
+		"validator": "",
+		"wrench": "1.5.8",
+		"moment": "",
+		"csvtojson": "",
+		"adm-zip":"",
+    	"is-running":""
+	},
+	"licenses": [
+		{
+			"type": "MIT"
+		}
+	]
 }
